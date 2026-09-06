@@ -1,0 +1,9 @@
+{
+  "name": "BetGuard",
+  "displayName": "BetGuard",
+  "extra": {
+    "eas": {
+      "projectId": "886da69f-6c8a-4523-8a33-0a0590bed748"
+    }
+  }
+}
