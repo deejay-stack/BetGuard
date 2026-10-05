@@ -1,0 +1,52 @@
+{
+    "model": "Character TF-IDF + lexical domain features + Logistic Regression",
+    "train_size": 507,
+    "validation_size": 169,
+    "test_size": 170,
+    "f1_threshold_test_metrics": {
+        "threshold": 0.49930907524659235,
+        "accuracy": 0.8647058823529412,
+        "precision": 0.8369565217391305,
+        "recall": 0.9058823529411765,
+        "f1": 0.8700564971751412,
+        "roc_auc": 0.9248442906574394,
+        "average_precision": 0.8888705590316868,
+        "true_negatives": 70,
+        "false_positives": 15,
+        "false_negatives": 8,
+        "true_positives": 77,
+        "confusion_matrix": [
+            [
+                70,
+                15
+            ],
+            [
+                8,
+                77
+            ]
+        ]
+    },
+    "precision_threshold_test_metrics": {
+        "threshold": 0.6088711596607751,
+        "accuracy": 0.8647058823529412,
+        "precision": 0.8780487804878049,
+        "recall": 0.8470588235294118,
+        "f1": 0.8622754491017964,
+        "roc_auc": 0.9248442906574394,
+        "average_precision": 0.8888705590316868,
+        "true_negatives": 75,
+        "false_positives": 10,
+        "false_negatives": 13,
+        "true_positives": 72,
+        "confusion_matrix": [
+            [
+                75,
+                10
+            ],
+            [
+                13,
+                72
+            ]
+        ]
+    }
+}

@@ -1,0 +1,9 @@
+domain,label,source,category,domain_family,gambling_probability,predicted_label,correct,error_type
+bet-at-home.com,1,verified_gambling,gambling,bet-at-home.com,0.2632096992004422,0,False,false_negative
+mobile.betboro.com,1,verified_gambling,gambling,betboro.com,0.4022084248132214,0,False,false_negative
+ggbbbet.net,1,verified_gambling,gambling,ggbbbet.net,0.40875214210288624,0,False,false_negative
+kajotgames.com,1,verified_gambling,gambling,kajotgames.com,0.4333057855114132,0,False,false_negative
+hippodromeonline.com,1,verified_gambling,gambling,hippodromeonline.com,0.43835440978296897,0,False,false_negative
+slamz.com,1,verified_gambling,gambling,slamz.com,0.4603650255210064,0,False,false_negative
+gamebookers.com,1,verified_gambling,gambling,gamebookers.com,0.4879181398851533,0,False,false_negative
+hacksawgaming.com,1,verified_gambling,gambling,hacksawgaming.com,0.4982508348193405,0,False,false_negative

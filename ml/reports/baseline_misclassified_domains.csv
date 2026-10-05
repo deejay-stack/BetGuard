@@ -1,0 +1,25 @@
+domain,label,source,category,domain_family,gambling_probability,predicted_label,correct
+topshift.com,0,UT1_non_gambling_category,games,topshift.com,0.6723324829549954,1,False
+game-focus.com,0,UT1_non_gambling_category,games,game-focus.com,0.5931721391754439,1,False
+tokcount.com,0,UT1_non_gambling_category,social_networks,tokcount.com,0.5857504301856503,1,False
+castpost.com,0,UT1_non_gambling_category,audio-video,castpost.com,0.5763634189711235,1,False
+ab-cds.com,0,UT1_non_gambling_category,shopping,ab-cds.com,0.5568231485734702,1,False
+mcb1980.com,0,UT1_non_gambling_category,bank,mcb1980.com,0.5333854657158871,1,False
+juegopc10.com,0,UT1_non_gambling_category,games,juegopc10.com,0.5326693557593548,1,False
+jeux-pour-enfants.com,0,UT1_non_gambling_category,"child, games",jeux-pour-enfants.com,0.5136818764045283,1,False
+godcures.online,0,UT1_non_gambling_category,jobsearch,godcures.online,0.512415870844547,1,False
+3chardons.com,0,UT1_non_gambling_category,child,3chardons.com,0.5085418451338174,1,False
+doingtobeing.com,0,UT1_non_gambling_category,jobsearch,doingtobeing.com,0.5056528976250148,1,False
+dosgamer.com,0,UT1_non_gambling_category,games,dosgamer.com,0.5051105223120361,1,False
+capoeuropa.com,0,UT1_non_gambling_category,sports,capoeuropa.com,0.5037909038556102,1,False
+filmstreaming.cc,0,UT1_non_gambling_category,audio-video,filmstreaming.cc,0.5032503267753504,1,False
+deviantart.com,0,UT1_non_gambling_category,social_networks,deviantart.com,0.501725312772735,1,False
+750g.com,0,UT1_non_gambling_category,cooking,750g.com,0.5000292711644974,1,False
+tricentury.com,0,UT1_non_gambling_category,bank,tricentury.com,0.49516088163641303,1,False
+euchrelinks.com,0,UT1_non_gambling_category,games,euchrelinks.com,0.4941810945123348,1,False
+playtime.com.ph,1,verified_gambling,gambling,playtime.com.ph,0.472809714152063,0,False
+kajotgames.com,1,verified_gambling,gambling,kajotgames.com,0.4257570626015963,0,False
+slamz.com,1,verified_gambling,gambling,slamz.com,0.4146710891793921,0,False
+haha777.world,1,verified_gambling,gambling,haha777.world,0.40142018532689305,0,False
+babu88bd.com,1,verified_gambling,gambling,babu88bd.com,0.37939079211851445,0,False
+w88kub.com,1,verified_gambling,gambling,w88kub.com,0.34083118957989655,0,False

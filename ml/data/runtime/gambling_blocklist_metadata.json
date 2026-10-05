@@ -1,0 +1,13 @@
+{
+    "updated_at_utc": "2026-10-03T12:32:46.484890+00:00",
+    "total_unique_domains": 359736,
+    "successful_sources": [
+        "Block List Project",
+        "UT1 Gambling"
+    ],
+    "failed_sources": [],
+    "source_counts": {
+        "Block List Project": 342623,
+        "UT1 Gambling": 38038
+    }
+}

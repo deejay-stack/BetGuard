@@ -1,0 +1,99 @@
+domain,label,meaning,source,domain_family
+casino.fanatics.com,1,gambling,NJ DGE,fanatics.com
+play.monopolycasinous.com,1,gambling,NJ DGE,monopolycasinous.com
+wheeloffortunecasino.com,1,gambling,NJ DGE,wheeloffortunecasino.com
+nj.embercasino.com,1,gambling,NJ DGE,embercasino.com
+nj.betinia.com,1,gambling,NJ DGE,betinia.com
+nj.playvegasclub.com,1,gambling,NJ DGE,playvegasclub.com
+betocean.com,1,gambling,NJ DGE,betocean.com
+nj.playstar.com,1,gambling,NJ DGE,playstar.com
+jackiecasino.playstar.com,1,gambling,NJ DGE,playstar.com
+rwbetnj.com,1,gambling,NJ DGE,rwbetnj.com
+hollywoodcasino.com,1,gambling,NJ DGE,hollywoodcasino.com
+pokerstarsnj.com,1,gambling,NJ DGE,pokerstarsnj.com
+sportsbook.caesars.com,1,gambling,NJ DGE,caesars.com
+nj.primesports.com,1,gambling,NJ DGE,primesports.com
+midoricasino.com,1,gambling,PAGCOR,midoricasino.com
+solaireonlinecasino.com,1,gambling,PAGCOR,solaireonlinecasino.com
+dheightscasino.com,1,gambling,PAGCOR,dheightscasino.com
+thunderbirdonlinerizal.com,1,gambling,PAGCOR,thunderbirdonlinerizal.com
+laviergp.com,1,gambling,PAGCOR,laviergp.com
+winfordonline.com,1,gambling,PAGCOR,winfordonline.com
+casinoplus.com.ph,1,gambling,PAGCOR,casinoplus.com.ph
+fortunegatecasino.com,1,gambling,PAGCOR,fortunegatecasino.com
+casinofortunegate.com,1,gambling,PAGCOR,casinofortunegate.com
+fgc88.com,1,gambling,PAGCOR,fgc88.com
+livebet.ph,1,gambling,PAGCOR,livebet.ph
+peryaplus.com,1,gambling,PAGCOR,peryaplus.com
+efesbetcasino514.com,1,gambling,PAGCOR warning,efesbetcasino514.com
+og7777.org,1,gambling,PAGCOR warning,og7777.org
+mpo500.com,1,gambling,PAGCOR warning,mpo500.com
+qq88.com,1,gambling,PAGCOR warning,qq88.com
+mpo2121.com,1,gambling,PAGCOR warning,mpo2121.com
+lgolive.com,1,gambling,PAGCOR warning,lgolive.com
+napolibet.com,1,gambling,PAGCOR warning,napolibet.com
+kratosbet.com,1,gambling,PAGCOR warning,kratosbet.com
+mpossport.com,1,gambling,PAGCOR warning,mpossport.com
+efsanebahis434.com,1,gambling,PAGCOR warning,efsanebahis434.com
+cazeus2.com,1,gambling,PAGCOR warning,cazeus2.com
+apple.com,0,non-gambling,curated benign control - technology,apple.com
+adobe.com,0,non-gambling,curated benign control - technology,adobe.com
+oracle.com,0,non-gambling,curated benign control - technology,oracle.com
+ibm.com,0,non-gambling,curated benign control - technology,ibm.com
+intel.com,0,non-gambling,curated benign control - technology,intel.com
+amd.com,0,non-gambling,curated benign control - technology,amd.com
+nvidia.com,0,non-gambling,curated benign control - technology,nvidia.com
+python.org,0,non-gambling,curated benign control - software,python.org
+pypi.org,0,non-gambling,curated benign control - software,pypi.org
+nodejs.org,0,non-gambling,curated benign control - software,nodejs.org
+npmjs.com,0,non-gambling,curated benign control - software,npmjs.com
+docker.com,0,non-gambling,curated benign control - software,docker.com
+kubernetes.io,0,non-gambling,curated benign control - software,kubernetes.io
+apache.org,0,non-gambling,curated benign control - software,apache.org
+nginx.org,0,non-gambling,curated benign control - software,nginx.org
+ubuntu.com,0,non-gambling,curated benign control - software,ubuntu.com
+debian.org,0,non-gambling,curated benign control - software,debian.org
+mozilla.org,0,non-gambling,curated benign control - software,mozilla.org
+cloudflare.com,0,non-gambling,curated benign control - internet infrastructure,cloudflare.com
+digitalocean.com,0,non-gambling,curated benign control - cloud,digitalocean.com
+heroku.com,0,non-gambling,curated benign control - cloud,heroku.com
+zoom.us,0,non-gambling,curated benign control - productivity,zoom.us
+slack.com,0,non-gambling,curated benign control - productivity,slack.com
+notion.so,0,non-gambling,curated benign control - productivity,notion.so
+dropbox.com,0,non-gambling,curated benign control - productivity,dropbox.com
+box.com,0,non-gambling,curated benign control - productivity,box.com
+canva.com,0,non-gambling,curated benign control - design,canva.com
+figma.com,0,non-gambling,curated benign control - design,figma.com
+coursera.org,0,non-gambling,curated benign control - education,coursera.org
+edx.org,0,non-gambling,curated benign control - education,edx.org
+khanacademy.org,0,non-gambling,curated benign control - education,khanacademy.org
+mit.edu,0,non-gambling,curated benign control - education,mit.edu
+stanford.edu,0,non-gambling,curated benign control - education,stanford.edu
+harvard.edu,0,non-gambling,curated benign control - education,harvard.edu
+cam.ac.uk,0,non-gambling,curated benign control - education,cam.ac.uk
+ox.ac.uk,0,non-gambling,curated benign control - education,ox.ac.uk
+who.int,0,non-gambling,curated benign control - health,who.int
+cdc.gov,0,non-gambling,curated benign control - health,cdc.gov
+nih.gov,0,non-gambling,curated benign control - health,nih.gov
+unicef.org,0,non-gambling,curated benign control - international organization,unicef.org
+un.org,0,non-gambling,curated benign control - international organization,un.org
+worldbank.org,0,non-gambling,curated benign control - finance institution,worldbank.org
+imf.org,0,non-gambling,curated benign control - finance institution,imf.org
+nasa.gov,0,non-gambling,curated benign control - government/science,nasa.gov
+noaa.gov,0,non-gambling,curated benign control - government/science,noaa.gov
+bbc.com,0,non-gambling,curated benign control - news,bbc.com
+reuters.com,0,non-gambling,curated benign control - news,reuters.com
+apnews.com,0,non-gambling,curated benign control - news,apnews.com
+nytimes.com,0,non-gambling,curated benign control - news,nytimes.com
+theguardian.com,0,non-gambling,curated benign control - news,theguardian.com
+vimeo.com,0,non-gambling,curated benign control - media,vimeo.com
+archive.org,0,non-gambling,curated benign control - archive,archive.org
+medium.com,0,non-gambling,curated benign control - publishing,medium.com
+wordpress.org,0,non-gambling,curated benign control - publishing,wordpress.org
+openstreetmap.org,0,non-gambling,curated benign control - mapping,openstreetmap.org
+etsy.com,0,non-gambling,curated benign control - shopping,etsy.com
+ikea.com,0,non-gambling,curated benign control - shopping,ikea.com
+ebay.com,0,non-gambling,curated benign control - shopping,ebay.com
+linkedin.com,0,non-gambling,curated benign control - professional networking,linkedin.com
+booking.com,0,non-gambling,curated benign control - travel,booking.com
+tripadvisor.com,0,non-gambling,curated benign control - travel,tripadvisor.com

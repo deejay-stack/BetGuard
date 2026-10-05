@@ -1,0 +1,6 @@
+{
+    "threshold": 0.48498417601354515,
+    "selected_using": "validation F1",
+    "positive_class": 1,
+    "positive_class_name": "gambling"
+}

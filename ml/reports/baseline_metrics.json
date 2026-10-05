@@ -1,0 +1,28 @@
+{
+    "model": "Character TF-IDF + Logistic Regression",
+    "dataset_size": 846,
+    "train_size": 507,
+    "validation_size": 169,
+    "test_size": 170,
+    "selected_threshold": 0.48498417601354515,
+    "validation_f1": 0.8771929824561403,
+    "test_metrics": {
+        "threshold": 0.48498417601354515,
+        "accuracy": 0.8588235294117647,
+        "precision": 0.8144329896907216,
+        "recall": 0.9294117647058824,
+        "f1": 0.8681318681318682,
+        "roc_auc": 0.9611764705882353,
+        "average_precision": 0.9656206408747304,
+        "confusion_matrix": [
+            [
+                67,
+                18
+            ],
+            [
+                6,
+                79
+            ]
+        ]
+    }
+}

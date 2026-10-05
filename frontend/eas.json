@@ -1,0 +1,31 @@
+{
+  "cli": {
+    "version": ">= 23.2.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleDevelopmentDebug"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleProductionRelease"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle",
+        "gradleCommand": ":app:bundleProductionRelease"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

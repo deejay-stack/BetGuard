@@ -1,0 +1,99 @@
+domain,true_label,meaning,label_source,enforcement_action,intervention,risk_status,decision_source,blocklist_match,ml_score,hard_block_prediction,intervention_prediction,ml_candidate_prediction,ml_warning_prediction,ml_autoblock_prediction
+casino.fanatics.com,1,gambling,NJ DGE,BLOCK,BLOCK,high,ml_high_risk,,0.8334126500542849,1,1,1,1,1
+play.monopolycasinous.com,1,gambling,NJ DGE,BLOCK,BLOCK,verified_gambling,verified_gambling_blocklist,monopolycasinous.com,0.8568753568703222,1,1,1,1,1
+wheeloffortunecasino.com,1,gambling,NJ DGE,BLOCK,BLOCK,high,ml_high_risk,,0.8424998032741701,1,1,1,1,1
+nj.embercasino.com,1,gambling,NJ DGE,BLOCK,BLOCK,high,ml_high_risk,,0.8767854882210749,1,1,1,1,1
+nj.betinia.com,1,gambling,NJ DGE,BLOCK,BLOCK,verified_gambling,verified_gambling_blocklist,betinia.com,0.695516866391235,1,1,1,1,0
+nj.playvegasclub.com,1,gambling,NJ DGE,ALLOW,WARN,suspicious,ml_warning,,0.5327715677662332,0,1,1,1,0
+betocean.com,1,gambling,NJ DGE,ALLOW,WARN,suspicious,ml_warning,,0.5608985707371822,0,1,1,1,0
+nj.playstar.com,1,gambling,NJ DGE,ALLOW,WARN,suspicious,ml_warning,,0.5852630004664628,0,1,1,1,0
+jackiecasino.playstar.com,1,gambling,NJ DGE,BLOCK,BLOCK,high,ml_high_risk,,0.8325617486667259,1,1,1,1,1
+rwbetnj.com,1,gambling,NJ DGE,BLOCK,BLOCK,high,ml_high_risk,,0.750911754048355,1,1,1,1,1
+hollywoodcasino.com,1,gambling,NJ DGE,BLOCK,BLOCK,high,ml_high_risk,,0.8113556276428061,1,1,1,1,1
+pokerstarsnj.com,1,gambling,NJ DGE,ALLOW,WARN,suspicious,ml_warning,,0.6422495541208759,0,1,1,1,0
+sportsbook.caesars.com,1,gambling,NJ DGE,BLOCK,BLOCK,verified_gambling,verified_gambling_blocklist,caesars.com,0.5214719046195107,1,1,1,1,0
+nj.primesports.com,1,gambling,NJ DGE,ALLOW,WARN,suspicious,ml_warning,,0.557411065390972,0,1,1,1,0
+midoricasino.com,1,gambling,PAGCOR,BLOCK,BLOCK,high,ml_high_risk,,0.8723071007212464,1,1,1,1,1
+solaireonlinecasino.com,1,gambling,PAGCOR,BLOCK,BLOCK,high,ml_high_risk,,0.8604566026847679,1,1,1,1,1
+dheightscasino.com,1,gambling,PAGCOR,BLOCK,BLOCK,high,ml_high_risk,,0.8708785629102084,1,1,1,1,1
+thunderbirdonlinerizal.com,1,gambling,PAGCOR,ALLOW,WARN,suspicious,ml_warning,,0.5350245977066282,0,1,1,1,0
+laviergp.com,1,gambling,PAGCOR,ALLOW,NONE,low,ml_low_risk,,0.31930316695972594,0,0,0,0,0
+winfordonline.com,1,gambling,PAGCOR,ALLOW,WARN,suspicious,ml_warning,,0.5566270246990654,0,1,1,1,0
+casinoplus.com.ph,1,gambling,PAGCOR,BLOCK,BLOCK,verified_gambling,verified_gambling_blocklist,casinoplus.com.ph,0.8111907863955704,1,1,1,1,1
+fortunegatecasino.com,1,gambling,PAGCOR,BLOCK,BLOCK,high,ml_high_risk,,0.8537850182419546,1,1,1,1,1
+casinofortunegate.com,1,gambling,PAGCOR,ALLOW,WARN,suspicious,ml_warning,,0.6845518876549167,0,1,1,1,0
+fgc88.com,1,gambling,PAGCOR,ALLOW,WARN,suspicious,ml_warning,,0.6793347471113332,0,1,1,1,0
+livebet.ph,1,gambling,PAGCOR,BLOCK,BLOCK,high,ml_high_risk,,0.7826538896726183,1,1,1,1,1
+peryaplus.com,1,gambling,PAGCOR,ALLOW,WARN,suspicious,ml_warning,,0.6610830574336432,0,1,1,1,0
+efesbetcasino514.com,1,gambling,PAGCOR warning,BLOCK,BLOCK,high,ml_high_risk,,0.8321495292094587,1,1,1,1,1
+og7777.org,1,gambling,PAGCOR warning,ALLOW,NONE,low,ml_low_risk,,0.2136419305295678,0,0,0,0,0
+mpo500.com,1,gambling,PAGCOR warning,ALLOW,WARN,suspicious,ml_warning,,0.5333854657158871,0,1,1,1,0
+qq88.com,1,gambling,PAGCOR warning,ALLOW,WARN,suspicious,ml_warning,,0.6793347471113332,0,1,1,1,0
+mpo2121.com,1,gambling,PAGCOR warning,ALLOW,NONE,low,ml_low_risk,,0.45157704846703584,0,0,0,0,0
+lgolive.com,1,gambling,PAGCOR warning,ALLOW,NONE,low,ml_low_risk,,0.39987833121353555,0,0,0,0,0
+napolibet.com,1,gambling,PAGCOR warning,BLOCK,BLOCK,high,ml_high_risk,,0.8715793971633238,1,1,1,1,1
+kratosbet.com,1,gambling,PAGCOR warning,BLOCK,BLOCK,high,ml_high_risk,,0.8434380755183919,1,1,1,1,1
+mpossport.com,1,gambling,PAGCOR warning,ALLOW,WARN,suspicious,ml_warning,,0.5313750062123588,0,1,1,1,0
+efsanebahis434.com,1,gambling,PAGCOR warning,ALLOW,NONE,low,ml_low_risk,,0.4311209747778247,0,0,0,0,0
+cazeus2.com,1,gambling,PAGCOR warning,BLOCK,BLOCK,verified_gambling,verified_gambling_blocklist,cazeus2.com,0.569539368310803,1,1,1,1,0
+apple.com,0,non-gambling,curated benign control - technology,ALLOW,NONE,low,ml_low_risk,,0.3280448388612411,0,0,0,0,0
+adobe.com,0,non-gambling,curated benign control - technology,ALLOW,NONE,low,ml_low_risk,,0.38744403842688985,0,0,0,0,0
+oracle.com,0,non-gambling,curated benign control - technology,ALLOW,NONE,low,ml_low_risk,,0.35326866363493026,0,0,0,0,0
+ibm.com,0,non-gambling,curated benign control - technology,ALLOW,NONE,low,ml_low_risk,,0.5007344669528018,0,0,0,0,0
+intel.com,0,non-gambling,curated benign control - technology,ALLOW,NONE,low,ml_low_risk,,0.4282426963844894,0,0,0,0,0
+amd.com,0,non-gambling,curated benign control - technology,ALLOW,NONE,low,ml_low_risk,,0.37939079211851445,0,0,0,0,0
+nvidia.com,0,non-gambling,curated benign control - technology,ALLOW,NONE,low,ml_low_risk,,0.5058314607836656,0,0,0,0,0
+python.org,0,non-gambling,curated benign control - software,ALLOW,NONE,low,ml_low_risk,,0.18897028172157876,0,0,0,0,0
+pypi.org,0,non-gambling,curated benign control - software,ALLOW,NONE,low,ml_low_risk,,0.1343276056848765,0,0,0,0,0
+nodejs.org,0,non-gambling,curated benign control - software,ALLOW,NONE,low,ml_low_risk,,0.17641703544502305,0,0,0,0,0
+npmjs.com,0,non-gambling,curated benign control - software,ALLOW,WARN,suspicious,ml_warning,,0.5568231485734702,0,1,1,1,0
+docker.com,0,non-gambling,curated benign control - software,ALLOW,NONE,low,ml_low_risk,,0.4849987376306591,0,0,0,0,0
+kubernetes.io,0,non-gambling,curated benign control - software,ALLOW,NONE,low,ml_low_risk,,0.3497186497676965,0,0,0,0,0
+apache.org,0,non-gambling,curated benign control - software,ALLOW,NONE,low,ml_low_risk,,0.14948944440917486,0,0,0,0,0
+nginx.org,0,non-gambling,curated benign control - software,ALLOW,NONE,low,ml_low_risk,,0.1343276056848765,0,0,0,0,0
+ubuntu.com,0,non-gambling,curated benign control - software,ALLOW,NONE,low,ml_low_risk,,0.36034450145426333,0,0,0,0,0
+debian.org,0,non-gambling,curated benign control - software,ALLOW,NONE,low,ml_low_risk,,0.1914808802555662,0,0,0,0,0
+mozilla.org,0,non-gambling,curated benign control - software,ALLOW,NONE,low,ml_low_risk,,0.20772423317553299,0,0,0,0,0
+cloudflare.com,0,non-gambling,curated benign control - internet infrastructure,ALLOW,NONE,low,ml_low_risk,,0.27311453515593936,0,0,0,0,0
+digitalocean.com,0,non-gambling,curated benign control - cloud,ALLOW,NONE,low,ml_low_risk,,0.42711615167840944,0,0,0,0,0
+heroku.com,0,non-gambling,curated benign control - cloud,ALLOW,NONE,low,ml_low_risk,,0.38245053193316614,0,0,0,0,0
+zoom.us,0,non-gambling,curated benign control - productivity,ALLOW,NONE,low,ml_low_risk,,0.39499097299164065,0,0,0,0,0
+slack.com,0,non-gambling,curated benign control - productivity,ALLOW,NONE,low,ml_low_risk,,0.3783140992251018,0,0,0,0,0
+notion.so,0,non-gambling,curated benign control - productivity,ALLOW,NONE,low,ml_low_risk,,0.2917222871169511,0,0,0,0,0
+dropbox.com,0,non-gambling,curated benign control - productivity,ALLOW,NONE,low,ml_low_risk,,0.4047649559069478,0,0,0,0,0
+box.com,0,non-gambling,curated benign control - productivity,ALLOW,NONE,low,ml_low_risk,,0.3914824451276681,0,0,0,0,0
+canva.com,0,non-gambling,curated benign control - design,ALLOW,NONE,low,ml_low_risk,,0.4920635309612588,0,0,0,0,0
+figma.com,0,non-gambling,curated benign control - design,ALLOW,WARN,suspicious,ml_warning,,0.5384526989626498,0,1,1,1,0
+coursera.org,0,non-gambling,curated benign control - education,ALLOW,NONE,low,ml_low_risk,,0.19216011077421666,0,0,0,0,0
+edx.org,0,non-gambling,curated benign control - education,ALLOW,NONE,low,ml_low_risk,,0.1343276056848765,0,0,0,0,0
+khanacademy.org,0,non-gambling,curated benign control - education,ALLOW,NONE,low,ml_low_risk,,0.22450928728645103,0,0,0,0,0
+mit.edu,0,non-gambling,curated benign control - education,ALLOW,NONE,low,ml_low_risk,,0.3547545853174052,0,0,0,0,0
+stanford.edu,0,non-gambling,curated benign control - education,ALLOW,NONE,low,ml_low_risk,,0.30148283353054633,0,0,0,0,0
+harvard.edu,0,non-gambling,curated benign control - education,ALLOW,NONE,low,ml_low_risk,,0.3426523413811847,0,0,0,0,0
+cam.ac.uk,0,non-gambling,curated benign control - education,ALLOW,NONE,low,ml_low_risk,,0.40020167103698007,0,0,0,0,0
+ox.ac.uk,0,non-gambling,curated benign control - education,ALLOW,NONE,low,ml_low_risk,,0.5080716619724069,0,0,0,0,0
+who.int,0,non-gambling,curated benign control - health,ALLOW,NONE,low,ml_low_risk,,0.3788449545432293,0,0,0,0,0
+cdc.gov,0,non-gambling,curated benign control - health,ALLOW,NONE,low,ml_low_risk,,0.34309222422925484,0,0,0,0,0
+nih.gov,0,non-gambling,curated benign control - health,ALLOW,NONE,low,ml_low_risk,,0.34309222422925484,0,0,0,0,0
+unicef.org,0,non-gambling,curated benign control - international organization,ALLOW,NONE,low,ml_low_risk,,0.17985318299925904,0,0,0,0,0
+un.org,0,non-gambling,curated benign control - international organization,ALLOW,NONE,low,ml_low_risk,,0.23512543797177915,0,0,0,0,0
+worldbank.org,0,non-gambling,curated benign control - finance institution,ALLOW,NONE,low,ml_low_risk,,0.15445772762932605,0,0,0,0,0
+imf.org,0,non-gambling,curated benign control - finance institution,ALLOW,NONE,low,ml_low_risk,,0.1343276056848765,0,0,0,0,0
+nasa.gov,0,non-gambling,curated benign control - government/science,ALLOW,NONE,low,ml_low_risk,,0.42581813735221163,0,0,0,0,0
+noaa.gov,0,non-gambling,curated benign control - government/science,ALLOW,NONE,low,ml_low_risk,,0.34309222422925484,0,0,0,0,0
+bbc.com,0,non-gambling,curated benign control - news,ALLOW,NONE,low,ml_low_risk,,0.42121778977101987,0,0,0,0,0
+reuters.com,0,non-gambling,curated benign control - news,ALLOW,NONE,low,ml_low_risk,,0.45763270762557784,0,0,0,0,0
+apnews.com,0,non-gambling,curated benign control - news,ALLOW,NONE,low,ml_low_risk,,0.33347259599074763,0,0,0,0,0
+nytimes.com,0,non-gambling,curated benign control - news,ALLOW,NONE,low,ml_low_risk,,0.2978776603904212,0,0,0,0,0
+theguardian.com,0,non-gambling,curated benign control - news,ALLOW,NONE,low,ml_low_risk,,0.37371884302390485,0,0,0,0,0
+vimeo.com,0,non-gambling,curated benign control - media,ALLOW,NONE,low,ml_low_risk,,0.44073096702973613,0,0,0,0,0
+archive.org,0,non-gambling,curated benign control - archive,ALLOW,NONE,low,ml_low_risk,,0.23882832287987227,0,0,0,0,0
+medium.com,0,non-gambling,curated benign control - publishing,ALLOW,NONE,low,ml_low_risk,,0.38582042494970087,0,0,0,0,0
+wordpress.org,0,non-gambling,curated benign control - publishing,ALLOW,NONE,low,ml_low_risk,,0.17463223614703777,0,0,0,0,0
+openstreetmap.org,0,non-gambling,curated benign control - mapping,ALLOW,NONE,low,ml_low_risk,,0.23526415749215887,0,0,0,0,0
+etsy.com,0,non-gambling,curated benign control - shopping,ALLOW,WARN,suspicious,ml_warning,,0.6497044390405231,0,1,1,1,0
+ikea.com,0,non-gambling,curated benign control - shopping,ALLOW,WARN,suspicious,ml_warning,,0.5384526989626498,0,1,1,1,0
+ebay.com,0,non-gambling,curated benign control - shopping,ALLOW,WARN,suspicious,ml_warning,,0.6450579480014387,0,1,1,1,0
+linkedin.com,0,non-gambling,curated benign control - professional networking,ALLOW,WARN,suspicious,ml_warning,,0.5316210294572213,0,1,1,1,0
+booking.com,0,non-gambling,curated benign control - travel,ALLOW,WARN,suspicious,ml_warning,,0.5830494542728878,0,1,1,1,0
+tripadvisor.com,0,non-gambling,curated benign control - travel,ALLOW,WARN,suspicious,ml_warning,,0.5264329758514925,0,1,1,1,0

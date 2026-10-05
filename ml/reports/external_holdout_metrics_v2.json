@@ -1,0 +1,114 @@
+{
+    "holdout_size": 98,
+    "warning_threshold": 0.512117,
+    "automatic_block_threshold": 0.7,
+    "hard_block_metrics": {
+        "accuracy": 0.8163265306122449,
+        "precision": 1.0,
+        "recall": 0.5135135135135135,
+        "f1": 0.6785714285714286,
+        "true_negatives": 61,
+        "false_positives": 0,
+        "false_negatives": 18,
+        "true_positives": 19,
+        "confusion_matrix": [
+            [
+                61,
+                0
+            ],
+            [
+                18,
+                19
+            ]
+        ]
+    },
+    "intervention_metrics": {
+        "accuracy": 0.8673469387755102,
+        "precision": 0.8,
+        "recall": 0.8648648648648649,
+        "f1": 0.8311688311688312,
+        "true_negatives": 53,
+        "false_positives": 8,
+        "false_negatives": 5,
+        "true_positives": 32,
+        "confusion_matrix": [
+            [
+                53,
+                8
+            ],
+            [
+                5,
+                32
+            ]
+        ]
+    },
+    "ml_only_candidate_threshold": {
+        "accuracy": 0.8673469387755102,
+        "precision": 0.8,
+        "recall": 0.8648648648648649,
+        "f1": 0.8311688311688312,
+        "true_negatives": 53,
+        "false_positives": 8,
+        "false_negatives": 5,
+        "true_positives": 32,
+        "confusion_matrix": [
+            [
+                53,
+                8
+            ],
+            [
+                5,
+                32
+            ]
+        ]
+    },
+    "ml_only_warning_threshold": {
+        "accuracy": 0.8673469387755102,
+        "precision": 0.8,
+        "recall": 0.8648648648648649,
+        "f1": 0.8311688311688312,
+        "true_negatives": 53,
+        "false_positives": 8,
+        "false_negatives": 5,
+        "true_positives": 32,
+        "confusion_matrix": [
+            [
+                53,
+                8
+            ],
+            [
+                5,
+                32
+            ]
+        ]
+    },
+    "ml_only_autoblock_threshold": {
+        "accuracy": 0.7857142857142857,
+        "precision": 1.0,
+        "recall": 0.43243243243243246,
+        "f1": 0.6037735849056604,
+        "true_negatives": 61,
+        "false_positives": 0,
+        "false_negatives": 21,
+        "true_positives": 16,
+        "confusion_matrix": [
+            [
+                61,
+                0
+            ],
+            [
+                21,
+                16
+            ]
+        ]
+    },
+    "pipeline": {
+        "gambling_blocklist_blocked": 5,
+        "gambling_ml_blocked": 14,
+        "gambling_warned": 13,
+        "gambling_no_intervention": 5,
+        "benign_blocked": 0,
+        "benign_warned": 8,
+        "benign_clean_allow": 53
+    }
+}

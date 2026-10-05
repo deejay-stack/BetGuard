@@ -1,0 +1,93 @@
+{
+    "holdout_size": 98,
+    "gambling_count": 37,
+    "benign_count": 61,
+    "runtime_engine": {
+        "accuracy": 0.8163265306122449,
+        "precision": 1.0,
+        "recall": 0.5135135135135135,
+        "f1": 0.6785714285714286,
+        "true_negatives": 61,
+        "false_positives": 0,
+        "false_negatives": 18,
+        "true_positives": 19,
+        "confusion_matrix": [
+            [
+                61,
+                0
+            ],
+            [
+                18,
+                19
+            ]
+        ]
+    },
+    "ml_only_candidate_threshold": {
+        "accuracy": 0.8673469387755102,
+        "precision": 0.8,
+        "recall": 0.8648648648648649,
+        "f1": 0.8311688311688312,
+        "true_negatives": 53,
+        "false_positives": 8,
+        "false_negatives": 5,
+        "true_positives": 32,
+        "confusion_matrix": [
+            [
+                53,
+                8
+            ],
+            [
+                5,
+                32
+            ]
+        ]
+    },
+    "ml_only_suspicious_threshold": {
+        "accuracy": 0.826530612244898,
+        "precision": 0.8846153846153846,
+        "recall": 0.6216216216216216,
+        "f1": 0.7301587301587301,
+        "true_negatives": 58,
+        "false_positives": 3,
+        "false_negatives": 14,
+        "true_positives": 23,
+        "confusion_matrix": [
+            [
+                58,
+                3
+            ],
+            [
+                14,
+                23
+            ]
+        ]
+    },
+    "ml_only_autoblock_threshold": {
+        "accuracy": 0.7857142857142857,
+        "precision": 1.0,
+        "recall": 0.43243243243243246,
+        "f1": 0.6037735849056604,
+        "true_negatives": 61,
+        "false_positives": 0,
+        "false_negatives": 21,
+        "true_positives": 16,
+        "confusion_matrix": [
+            [
+                61,
+                0
+            ],
+            [
+                21,
+                16
+            ]
+        ]
+    },
+    "pipeline_analysis": {
+        "gambling_blocklist_caught": 5,
+        "gambling_ml_high_risk_caught": 14,
+        "gambling_review_status": 6,
+        "gambling_allowed_or_missed": 18,
+        "benign_automatically_blocked": 0,
+        "benign_review_status": 3
+    }
+}

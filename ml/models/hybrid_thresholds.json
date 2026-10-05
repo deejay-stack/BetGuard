@@ -1,0 +1,11 @@
+{
+    "f1_threshold": 0.49930907524659235,
+    "f1_validation_score": 0.8654970760233918,
+    "precision_target": 0.9,
+    "precision_threshold": 0.6088711596607751,
+    "precision_threshold_validation": {
+        "precision": 0.9054054054054054,
+        "recall": 0.788235294117647,
+        "f1": 0.8427672955974842
+    }
+}

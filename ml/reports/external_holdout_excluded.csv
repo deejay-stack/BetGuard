@@ -1,0 +1,29 @@
+domain,label,meaning,source,domain_family,exclusion_reason
+play.ballybet.com,1,gambling,NJ DGE,ballybet.com,domain family already present in training dataset
+borgataonline.com,1,gambling,NJ DGE,borgataonline.com,domain family already present in training dataset
+nj.partycasino.com,1,gambling,NJ DGE,partycasino.com,domain family already present in training dataset
+nj.partypoker.com,1,gambling,NJ DGE,partypoker.com,domain family already present in training dataset
+nj.betmgm.com,1,gambling,NJ DGE,betmgm.com,domain family already present in training dataset
+stardustcasino.com,1,gambling,NJ DGE,stardustcasino.com,domain family already present in training dataset
+casino.jackpocket.com,1,gambling,NJ DGE,jackpocket.com,domain family already present in training dataset
+nj.betparx.com,1,gambling,NJ DGE,betparx.com,domain family already present in training dataset
+caesarspalaceonline.com,1,gambling,NJ DGE,caesarspalaceonline.com,domain family already present in training dataset
+horseshoeonlinecasino.com,1,gambling,NJ DGE,horseshoeonlinecasino.com,domain family already present in training dataset
+wsop.com,1,gambling,NJ DGE,wsop.com,domain family already present in training dataset
+tropicanacasino.com,1,gambling,NJ DGE,tropicanacasino.com,domain family already present in training dataset
+casino.fanduel.com,1,gambling,NJ DGE,fanduel.com,domain family already present in training dataset
+poker.fanduel.com,1,gambling,NJ DGE,fanduel.com,domain family already present in training dataset
+goldennuggetcasino.com,1,gambling,NJ DGE,goldennuggetcasino.com,domain family already present in training dataset
+nj-casino.goldennuggetcasino.com,1,gambling,NJ DGE,goldennuggetcasino.com,domain family already present in training dataset
+nj.betrivers.com,1,gambling,NJ DGE,betrivers.com,domain family already present in training dataset
+hardrock.bet,1,gambling,NJ DGE,hardrock.bet,domain family already present in training dataset
+resortscasino.com,1,gambling,NJ DGE,resortscasino.com,domain family already present in training dataset
+thescore.bet,1,gambling,NJ DGE,thescore.bet,domain family already present in training dataset
+casino.draftkings.com,1,gambling,NJ DGE,draftkings.com,domain family already present in training dataset
+mohegansuncasino.com,1,gambling,NJ DGE,mohegansuncasino.com,domain family already present in training dataset
+sportsbook.fanduel.com,1,gambling,NJ DGE,fanduel.com,domain family already present in training dataset
+sportsbook.draftkings.com,1,gambling,NJ DGE,draftkings.com,domain family already present in training dataset
+hannliveonline.com,1,gambling,PAGCOR,hannliveonline.com,domain family already present in training dataset
+okadaonlinecasino.com,1,gambling,PAGCOR,okadaonlinecasino.com,domain family already present in training dataset
+soundcloud.com,0,non-gambling,curated benign control - media,soundcloud.com,domain family already present in training dataset
+wordpress.com,0,non-gambling,curated benign control - publishing,wordpress.com,domain family already present in training dataset

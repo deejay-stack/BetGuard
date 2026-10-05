@@ -1,0 +1,663 @@
+domain,label,verified_label,verification_status,verification_source,confirmation_strength,blocklist_match,matched_sources,source_count,manual_verified_label,manual_review_status,manual_notes,has_gambling_keyword,url_length,digit_count,special_char_count,dot_count,has_hyphen,is_ip,entropy,suspicious_tld,domain_age_days,has_domain_info,ssl_valid,dns_resolves,tranco_rank,tranco_match,tranco_match_type,benign_candidate_status,benign_candidate_reason,review_priority,original_domain_before_merge,review_verified_label,review_status_manual,review_verification_method,review_notes,label_conflict,final_verified_label,final_label_source,duplicate_label_conflict
+fbm8sm.com,1,,needs_review,,,,,0,,,,0,10,1,1,1,0,0,2.8464393446710154,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fbm8sm.com,,,,,False,,,False
+slot-secure-365.online,1,,priority_review,,,,,0,,,,1,22,3,3,1,1,0,3.788754913993503,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,slot-secure-365.online,,,,,False,,,False
+arenapluspro.com,0,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.5,0,367.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,arenapluspro.com,,,,,False,,,False
+efc88.com,1,,needs_review,,,,,0,,,,0,9,2,1,1,0,0,2.725480556997868,0,1157.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,efc88.com,,,,,False,,,False
+greendrg8.com,1,,needs_review,,,,,0,,,,0,13,1,1,1,0,0,3.238901256602631,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,greendrg8.com,,,,,False,,,False
+casino-reward-888.top,1,,priority_review,,,,,0,,,,1,21,3,3,1,1,0,3.7849418274376414,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-reward-888.top,,,,,False,,,False
+cashsweep1.com,1,,needs_review,,,,,0,,,,0,14,1,1,1,0,0,3.378783493486176,0,1057.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,cashsweep1.com,,,,,False,,,False
+hthbet619.com,1,,priority_review,,,,,0,,,,1,13,3,1,1,0,0,3.3927474104487847,0,1940.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,hthbet619.com,,,,,False,,,False
+ob9myr.com,1,,needs_review,,,,,0,,,,0,10,1,1,1,0,0,2.9219280948873623,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ob9myr.com,,,,,False,,,False
+spellandet.net,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.0391486719030705,0,2935.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,spellandet.net,,,,,False,,,False
+biowin69go.com,1,,priority_review,,,,,0,,,,1,14,2,1,1,0,0,3.3248629576173565,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,biowin69go.com,,,,,False,,,False
+juanmate.ph,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.277613436819116,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,juanmate.ph,,,,,False,,,False
+juan365.online,0,,needs_review,,,,,0,,,,0,14,3,1,1,0,0,3.4677201004745,1,404.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,juan365.online,,,,,False,,,False
+luckywin.ph,0,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.4594316186372973,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,luckywin.ph,,,,,False,,,False
+playfortunegrand.com,1,,needs_review,,,,,0,,,,0,20,0,1,1,0,0,3.9219280948873614,0,182.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,playfortunegrand.com,,,,,False,,,False
+premium.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.0271691184406184,0,11315.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,premium.com,,,,,False,,,False
+bet333.in,1,,priority_review,,,,,0,,,,1,9,3,1,1,0,0,2.6416041678685938,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bet333.in,,,,,False,,,False
+ww88zz.vip,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,2.721928094887362,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ww88zz.vip,,,,,False,,,False
+zolotojarbuz.com,1,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.375,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,zolotojarbuz.com,,,,,False,,,False
+luckybunny.ph,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.238901256602631,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,luckybunny.ph,,,,,False,,,False
+sportybetadder8jx6.weebly.com,1,,priority_review,,,,,0,,,,1,29,2,2,2,0,0,4.099360305472399,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetadder8jx6.weebly.com,,,,,False,,,False
+kawskaws11.com,1,,needs_review,,,,,0,,,,0,14,2,1,1,0,0,3.0930692077718898,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,kawskaws11.com,,,,,False,,,False
+burgerking2u.com,1,,needs_review,,,,,0,,,,0,16,1,1,1,0,0,3.625,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,burgerking2u.com,,,,,False,,,False
+nagacash9x.com,1,,needs_review,,,,,0,,,,0,14,1,1,1,0,0,3.3248629576173565,0,441.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,nagacash9x.com,,,,,False,,,False
+alivate.io,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,2.9219280948873623,0,502.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,alivate.io,,,,,False,,,False
+bybet.io,0,,priority_review,,,,,0,,,,1,8,0,1,1,0,0,2.75,0,1301.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bybet.io,,,,,False,,,False
+ww88ww.vip,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,2.321928094887362,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ww88ww.vip,,,,,False,,,False
+lucky-play.net,1,,needs_review,,,,,0,,,,0,14,0,2,1,1,0,3.521640636343318,0,743.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,lucky-play.net,,,,,False,,,False
+casino-login-777.top,1,,priority_review,,,,,0,,,,1,20,3,3,1,1,0,3.546439344671016,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-login-777.top,,,,,False,,,False
+wintayo.com,0,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.277613436819116,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,wintayo.com,,,,,False,,,False
+ftrgame.sgph123.com,1,,needs_review,,,,,0,,,,0,19,3,2,2,0,0,3.932138039759375,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ftrgame.sgph123.com,,,,,False,,,False
+kn8vn.com,1,,needs_review,,,,,0,,,,0,9,1,1,1,0,0,2.94770277922009,0,72.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,kn8vn.com,,,,,False,,,False
+slot-verify-888.online,1,,priority_review,,,,,0,,,,1,22,3,3,1,1,0,3.697845823084412,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,slot-verify-888.online,,,,,False,,,False
+gamezone.com.ph,0,,needs_review,,,,,0,,,,0,15,0,2,2,0,0,3.373557262275185,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,gamezone.com.ph,,,,,False,,,False
+catcasinosx.com,1,,priority_review,,,,,0,,,,1,15,0,1,1,0,0,3.1898980954642875,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,catcasinosx.com,,,,,False,,,False
+frankglass.com,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.521640636343318,0,411.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,frankglass.com,,,,,False,,,False
+maltakasino.com,1,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.323231428797621,0,1220.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,maltakasino.com,,,,,False,,,False
+ww88yy.vip,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,2.721928094887362,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ww88yy.vip,,,,,False,,,False
+diyarbet121.com,1,,priority_review,,,,,0,,,,1,15,3,1,1,0,0,3.773557262275186,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,diyarbet121.com,,,,,False,,,False
+kordonbet213.com,1,,priority_review,,,,,0,,,,1,16,3,1,1,0,0,3.702819531114783,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,kordonbet213.com,,,,,False,,,False
+pisogame.vip,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.2516291673878226,0,29.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,pisogame.vip,,,,,False,,,False
+slotsofdosh.com,0,,priority_review,,,,,0,,,,1,15,0,1,1,0,0,3.056564762130954,0,5462.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,slotsofdosh.com,,,,,False,,,False
+fortwinbam.com,1,,priority_review,,,,,0,,,,1,14,0,1,1,0,0,3.521640636343318,0,595.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,fortwinbam.com,,,,,False,,,False
+2wkzr.go777.ph,1,,priority_review,,,,,0,,,,1,14,4,2,2,0,0,3.3248629576173565,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,2wkzr.go777.ph,,,,,False,,,False
+plusbet21.com,1,,priority_review,,,,,0,,,,1,13,2,1,1,0,0,3.7004397181410926,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,plusbet21.com,,,,,False,,,False
+fbmgame.online,0,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.378783493486176,1,45.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fbmgame.online,,,,,False,,,False
+hollywoodcasino.com,0,,priority_review,,,,,0,,,,1,19,0,1,1,0,0,3.4263674884732267,0,10915.0,1,1,1,558465.0,hollywoodcasino.com,exact,priority_gambling_review,Contains gambling-related keyword,3,hollywoodcasino.com,,,,,False,,,False
+playxfortuna.com,1,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.75,0,143.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,playxfortuna.com,,,,,False,,,False
+captaincookcasino.co.uk,0,,priority_review,,,,,0,,,,1,23,0,2,2,0,0,3.273349455962949,0,8551.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,captaincookcasino.co.uk,,,,,False,,,False
+blogib3919.com,1,,needs_review,,,,,0,,,,0,14,4,1,1,0,0,3.378783493486176,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,blogib3919.com,,,,,False,,,False
+bossbunny.ph,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.084962500721156,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bossbunny.ph,,,,,False,,,False
+139.59.223.220,1,,needs_review,,,,,0,,,,0,14,11,3,3,0,1,2.610577243331642,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,139.59.223.220,,,,,False,,,False
+digiwin.ph,0,,priority_review,,,,,0,,,,1,10,0,1,1,0,0,2.8464393446710154,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,digiwin.ph,,,,,False,,,False
+paywayglobal.com,1,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.327819531114783,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,paywayglobal.com,,,,,False,,,False
+19msia.com,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,3.1219280948873624,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,19msia.com,,,,,False,,,False
+bw988.net,1,,needs_review,,,,,0,,,,0,9,3,1,1,0,0,2.94770277922009,0,2061.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bw988.net,,,,,False,,,False
+ilotbet-03121.weebly.com,1,,priority_review,,,,,0,,,,1,24,5,3,2,1,0,3.8868421881310113,0,7319.0,1,1,1,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,ilotbet-03121.weebly.com,,,,,False,,,False
+wpcasino.net,1,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.4182958340544896,0,2895.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,wpcasino.net,,,,,False,,,False
+betgoo200.com,1,,priority_review,,,,,0,,,,1,13,3,1,1,0,0,3.180832987205441,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betgoo200.com,,,,,False,,,False
+1xqqsite.com,1,,needs_review,,,,,0,,,,0,12,1,1,1,0,0,3.4182958340544896,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,1xqqsite.com,,,,,False,,,False
+nkryu17dc.com,1,,needs_review,,,,,0,,,,0,13,2,1,1,0,0,3.546593564294939,0,484.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,nkryu17dc.com,,,,,False,,,False
+asiabet338.website,1,,priority_review,,,,,0,,,,1,18,3,1,1,0,0,3.239097917988786,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,asiabet338.website,,,,,False,,,False
+spinnerikasino.com,0,,needs_review,,,,,0,,,,0,18,0,1,1,0,0,3.4193819456463714,0,334.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,spinnerikasino.com,,,,,False,,,False
+line35266.com,1,,needs_review,,,,,0,,,,0,13,5,1,1,0,0,3.546593564294939,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,line35266.com,,,,,False,,,False
+rp777.vip,1,,priority_review,,,,,0,,,,1,9,3,1,1,0,0,2.4193819456463714,0,357.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,rp777.vip,,,,,False,,,False
+juan365.ph,0,,needs_review,,,,,0,,,,0,10,3,1,1,0,0,3.321928094887362,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,juan365.ph,,,,,False,,,False
+ciprobet,1,,priority_review,,,,,0,,,,1,8,0,0,0,0,0,3.0,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,ciprobet,,,,,False,,,False
+crazywingo.asia,0,,priority_review,,,,,0,,,,1,15,0,1,1,0,0,3.456564762130954,0,73.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,crazywingo.asia,,,,,False,,,False
+123bingo.ph,0,,needs_review,,,,,0,,,,0,11,3,1,1,0,0,3.4594316186372973,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,123bingo.ph,,,,,False,,,False
+evolutiongaming.com,0,,needs_review,,,,,0,,,,0,19,0,1,1,0,0,3.5766176449086657,0,8067.0,1,1,1,290820.0,evolutiongaming.com,exact,weak_benign_candidate,Appears in Tranco Top 1M,4,evolutiongaming.com,,,,,False,,,False
+thesecretsocietyxx.com,1,,needs_review,,,,,0,,,,0,22,0,1,1,0,0,3.390805482076982,0,169.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,thesecretsocietyxx.com,,,,,False,,,False
+nagacash9b.homes,1,,needs_review,,,,,0,,,,0,16,1,1,1,0,0,3.452819531114783,0,440.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,nagacash9b.homes,,,,,False,,,False
+azino-777.live,1,,priority_review,,,,,0,,,,1,14,3,2,1,1,0,3.3248629576173565,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,azino-777.live,,,,,False,,,False
+luckytaya.ph,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.2516291673878226,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,luckytaya.ph,,,,,False,,,False
+pocketaces-sp.ph,0,,needs_review,,,,,0,,,,0,16,0,2,1,1,0,3.327819531114783,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,pocketaces-sp.ph,,,,,False,,,False
+laviergp.com,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.584962500721156,0,866.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,laviergp.com,,,,,False,,,False
+win-bonus-888.pro,1,,priority_review,,,,,0,,,,1,17,3,3,1,1,0,3.4548223999466057,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,win-bonus-888.pro,,,,,False,,,False
+livebid.in,1,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,2.8464393446710154,0,2471.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,livebid.in,,,,,False,,,False
+betvenedik.com,1,,priority_review,,,,,0,,,,1,14,0,1,1,0,0,3.4677201004745,0,1289.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betvenedik.com,,,,,False,,,False
+betmaks433.com,1,,priority_review,,,,,0,,,,1,14,3,1,1,0,0,3.521640636343318,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betmaks433.com,,,,,False,,,False
+jbac001.org,1,,needs_review,,,,,0,,,,0,11,3,1,1,0,0,3.277613436819116,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,jbac001.org,,,,,False,,,False
+diyarbet123.com,1,,priority_review,,,,,0,,,,1,15,3,1,1,0,0,3.906890595608519,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,diyarbet123.com,,,,,False,,,False
+ray097.com,1,,needs_review,,,,,0,,,,0,10,3,1,1,0,0,3.321928094887362,0,1803.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ray097.com,,,,,False,,,False
+wowgames.app,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.084962500721156,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,wowgames.app,,,,,False,,,False
+sportybetadder001.weebly.com,1,,priority_review,,,,,0,,,,1,28,3,2,2,0,0,3.950212064914747,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetadder001.weebly.com,,,,,False,,,False
+206casinoturka,1,,priority_review,,,,,0,,,,1,14,3,0,0,0,0,3.664497779200461,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,206casinoturka,,,,,False,,,False
+uwin992.cc,1,,priority_review,,,,,0,,,,1,10,3,1,1,0,0,2.9219280948873623,0,1151.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,uwin992.cc,,,,,False,,,False
+z8.com,1,,needs_review,,,,,0,,,,0,6,1,1,1,0,0,2.584962500721156,0,10478.0,1,1,1,852883.0,z8.com,exact,weak_benign_candidate,Appears in Tranco Top 1M,4,z8.com,,uncertain,manual research,Gambling-related evidence exists but current status unresolved,False,,,False
+epicwin2.com,1,,priority_review,,,,,0,,,,1,12,1,1,1,0,0,3.2516291673878226,0,283.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,epicwin2.com,,,,,False,,,False
+casipol,1,,needs_review,,,,,0,,,,0,7,0,0,0,0,0,2.807354922057604,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,casipol,,,,,False,,,False
+1club1way.com,1,,needs_review,,,,,0,,,,0,13,2,1,1,0,0,3.3927474104487847,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,1club1way.com,,,,,False,,,False
+sportybetballanceader.weebly.com,1,,priority_review,,,,,0,,,,1,32,0,2,2,0,0,3.8164280318460246,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetballanceader.weebly.com,,,,,False,,,False
+mgt-casino.com,1,,priority_review,,,,,0,,,,1,14,0,2,1,1,0,3.378783493486176,0,308.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,mgt-casino.com,,,,,False,,,False
+boss365au.com,1,,needs_review,,,,,0,,,,0,13,3,1,1,0,0,3.3927474104487847,0,678.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,boss365au.com,,,,,False,,,False
+berlian33.club,1,,needs_review,,,,,0,,,,0,14,2,1,1,0,0,3.378783493486176,1,1353.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,berlian33.club,,,,,False,,,False
+fortunelink.com.ph,0,,needs_review,,,,,0,,,,0,18,0,2,2,0,0,3.836591668108978,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fortunelink.com.ph,,,,,False,,,False
+god55.company,1,,needs_review,,,,,0,,,,0,13,2,1,1,0,0,3.3927474104487847,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55.company,,,,,False,,,False
+diyarbet,1,,priority_review,,,,,0,,,,1,8,0,0,0,0,0,3.0,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,diyarbet,,,,,False,,,False
+casinomga.com,1,,priority_review,,,,,0,,,,1,13,0,1,1,0,0,3.0850551027564768,0,3051.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casinomga.com,,,,,False,,,False
+istanacuan.us,1,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,2.873140679513133,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,istanacuan.us,,,,,False,,,False
+panaloplay.ph,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,2.815072410115944,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,panaloplay.ph,,,,,False,,,False
+arenapluspro.net,0,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.375,0,367.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,arenapluspro.net,,,,,False,,,False
+lv666,1,,needs_review,,,,,0,,,,0,5,3,0,0,0,0,1.3709505944546687,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,lv666,,,,,False,,,False
+77win,1,,priority_review,,,,,0,,,,1,5,2,0,0,0,0,1.9219280948873625,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,77win,,,,,False,,,False
+va-va-da.club,1,,needs_review,,,,,0,,,,0,13,0,3,1,1,0,3.026986833359288,1,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,va-va-da.club,,,,,False,,,False
+sportybetbalanceadderssappss.weebly.com,1,,priority_review,,,,,0,,,,1,39,0,2,2,0,0,3.830811040575055,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetbalanceadderssappss.weebly.com,,,,,False,,,False
+donaldwin.com,1,,priority_review,,,,,0,,,,1,13,0,1,1,0,0,3.238901256602631,0,706.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,donaldwin.com,,,,,False,,,False
+juan365.app,0,,needs_review,,,,,0,,,,0,11,3,1,1,0,0,3.095795255000934,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,juan365.app,,,,,False,,,False
+bybet.vip,0,,priority_review,,,,,0,,,,1,9,0,1,1,0,0,2.94770277922009,0,457.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bybet.vip,,,,,False,,,False
+vipking.ph,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,2.9219280948873623,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,vipking.ph,,,,,False,,,False
+poshbingo.co.uk,0,,needs_review,,,,,0,,,,0,15,0,2,2,0,0,3.456564762130954,0,7215.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,poshbingo.co.uk,,,,,False,,,False
+hunterbetting5.com,1,,priority_review,,,,,0,,,,1,18,1,1,1,0,0,3.683542362433231,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,hunterbetting5.com,,,,,False,,,False
+anibet.com,0,,priority_review,,,,,0,,,,1,10,0,1,1,0,0,3.321928094887362,0,5079.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,anibet.com,,,,,False,,,False
+vavadahades.com,1,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.106890595608519,0,55.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,vavadahades.com,,,,,False,,,False
+sportybetfixednetvip.weebly.com,1,,priority_review,,,,,0,,,,1,31,0,2,2,0,0,4.039211536948156,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetfixednetvip.weebly.com,,,,,False,,,False
+bongo.io,0,,needs_review,,,,,0,,,,0,8,0,1,1,0,0,2.4056390622295662,0,1676.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bongo.io,,,,,False,,,False
+casipol409.com,1,,needs_review,,,,,0,,,,0,14,3,1,1,0,0,3.521640636343318,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,casipol409.com,,,,,False,,,False
+rlivegame.net,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.334679141051595,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,rlivegame.net,,,,,False,,,False
+1mebetx.com,1,,priority_review,,,,,0,,,,1,11,1,1,1,0,0,3.095795255000934,0,2881.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,1mebetx.com,,,,,False,,,False
+alpha66.shop,1,,needs_review,,,,,0,,,,0,12,2,1,1,0,0,2.918295834054489,0,1435.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,alpha66.shop,,,,,False,,,False
+efesbetcasino353.com,1,,priority_review,,,,,0,,,,1,20,3,1,1,0,0,3.684183719779189,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,efesbetcasino353.com,,,,,False,,,False
+bigbet138.xyz,1,,priority_review,,,,,0,,,,1,13,3,1,1,0,0,3.546593564294939,1,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bigbet138.xyz,,,,,False,,,False
+29bet.com,1,,priority_review,,,,,0,,,,1,9,2,1,1,0,0,3.169925001442312,0,5238.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,29bet.com,,,,,False,,,False
+ina0808.com,1,,needs_review,,,,,0,,,,0,11,4,1,1,0,0,3.095795255000934,0,761.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ina0808.com,,,,,False,,,False
+bixbet.com,1,,priority_review,,,,,0,,,,1,10,0,1,1,0,0,3.1219280948873624,0,4116.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bixbet.com,,,,,False,,,False
+betvadi,1,,priority_review,,,,,0,,,,1,7,0,0,0,0,0,2.807354922057604,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betvadi,,,,,False,,,False
+casinoplatin.net,1,,priority_review,,,,,0,,,,1,16,0,1,1,0,0,3.327819531114783,0,421.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casinoplatin.net,,,,,False,,,False
+nobet177.com,1,,priority_review,,,,,0,,,,1,12,3,1,1,0,0,3.2516291673878226,0,102.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,nobet177.com,,,,,False,,,False
+betcombet,1,,priority_review,,,,,0,,,,1,9,0,0,0,0,0,2.5032583347756456,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betcombet,,,,,False,,,False
+sportotobet.com,1,,priority_review,,,,,0,,,,1,15,0,1,1,0,0,3.056564762130954,0,4156.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,sportotobet.com,,,,,False,,,False
+ugaming.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.095795255000934,0,3951.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ugaming.com,,,,,False,,,False
+777-azino.in,1,,priority_review,,,,,0,,,,1,12,3,2,1,1,0,2.8553885422075336,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,777-azino.in,,,,,False,,,False
+efc88.city,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,2.9219280948873623,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,efc88.city,,,,,False,,,False
+bet-free-777.xyz,1,,priority_review,,,,,0,,,,1,16,3,3,1,1,0,3.2806390622295662,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bet-free-777.xyz,,,,,False,,,False
+konterwd.net,1,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.084962500721156,0,61.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,konterwd.net,,,,,False,,,False
+anibet.ph,0,,priority_review,,,,,0,,,,1,9,0,1,1,0,0,3.169925001442312,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,anibet.ph,,,,,False,,,False
+caesarcrown.com,1,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.1898980954642875,0,1724.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,caesarcrown.com,,,,,False,,,False
+111casinoviva.com,1,,priority_review,,,,,0,,,,1,17,3,1,1,0,0,3.2195282822995472,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,111casinoviva.com,,,,,False,,,False
+desktaya.ph,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.277613436819116,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,desktaya.ph,,,,,False,,,False
+slot-account-888.buzz,1,,priority_review,,,,,0,,,,1,21,3,3,1,1,0,3.594465636961452,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,slot-account-888.buzz,,,,,False,,,False
+betsmith.com,0,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.2516291673878226,0,4984.0,1,1,1,657420.0,betsmith.com,exact,priority_gambling_review,Contains gambling-related keyword,3,betsmith.com,,,,,False,,,False
+netplaypoker.com,1,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.625,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,netplaypoker.com,,,,,False,,,False
+7ll6v.cc,1,,needs_review,,,,,0,,,,0,8,2,1,1,0,0,2.5,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,7ll6v.cc,,,,,False,,,False
+betboro.co.uk,0,,priority_review,,,,,0,,,,1,13,0,2,2,0,0,3.026986833359288,0,3806.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betboro.co.uk,,,,,False,,,False
+badak69.co,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,3.1219280948873624,0,812.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,badak69.co,,,,,False,,,False
+jili88asia.com,1,,needs_review,,,,,0,,,,0,14,2,1,1,0,0,3.1820058147602133,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,jili88asia.com,,,,,False,,,False
+eubet8my.com,1,,priority_review,,,,,0,,,,1,12,1,1,1,0,0,3.2516291673878226,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,eubet8my.com,,,,,False,,,False
+123go.com,0,,needs_review,,,,,0,,,,0,9,3,1,1,0,0,2.94770277922009,0,11141.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,123go.com,,,,,False,,,False
+rabbitreel.com,0,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.378783493486176,0,3201.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,rabbitreel.com,,,,,False,,,False
+deluxe-bet.com,1,,priority_review,,,,,0,,,,1,14,0,2,1,1,0,3.4677201004745,0,277.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,deluxe-bet.com,,,,,False,,,False
+bilyoncu.com,1,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.2516291673878226,0,98.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bilyoncu.com,,,,,False,,,False
+asiabet33.net,1,,priority_review,,,,,0,,,,1,13,2,1,1,0,0,3.0850551027564768,0,2913.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,asiabet33.net,,,,,False,,,False
+22funph1.com,1,,needs_review,,,,,0,,,,0,12,3,1,1,0,0,3.4182958340544896,0,1090.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,22funph1.com,,,,,False,,,False
+filslots.com,0,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.084962500721156,0,495.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,filslots.com,,,,,False,,,False
+wowsports.ph,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,2.918295834054489,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,wowsports.ph,,,,,False,,,False
+god55.today,1,,needs_review,,,,,0,,,,0,11,2,1,1,0,0,2.913977073182752,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55.today,,,,,False,,,False
+orangeplusbet.com,1,,priority_review,,,,,0,,,,1,17,0,1,1,0,0,3.85216872360328,0,750.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,orangeplusbet.com,,,,,False,,,False
+chillybets.com,0,,priority_review,,,,,0,,,,1,14,0,1,1,0,0,3.521640636343318,0,1876.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,chillybets.com,,,,,False,,,False
+pisogame.top,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.2516291673878226,1,46.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,pisogame.top,,,,,False,,,False
+wuvq4.com,1,,needs_review,,,,,0,,,,0,9,1,1,1,0,0,3.169925001442312,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,wuvq4.com,,,,,False,,,False
+nj.playstar.com,0,,needs_review,,,,,0,,,,0,15,0,2,2,0,0,3.640223928941852,0,7847.0,1,0,1,704022.0,playstar.com,parent_domain,weak_benign_candidate,Appears in Tranco Top 1M,4,nj.playstar.com,,,,,False,,,False
+flexiblesport.com,1,,needs_review,,,,,0,,,,0,17,0,1,1,0,0,3.7345216647797512,0,558.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,flexiblesport.com,,,,,False,,,False
+casinoclassic.co.uk,0,,priority_review,,,,,0,,,,1,19,0,2,2,0,0,3.155565013329719,0,8334.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casinoclassic.co.uk,,,,,False,,,False
+alibaba66a.online,1,,needs_review,,,,,0,,,,0,17,2,1,1,0,0,3.0286393118385746,1,1538.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,alibaba66a.online,,,,,False,,,False
+dapurbet.net,1,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.2516291673878226,0,166.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,dapurbet.net,,,,,False,,,False
+dunia11bola.com,1,,needs_review,,,,,0,,,,0,15,2,1,1,0,0,3.506890595608519,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,dunia11bola.com,,,,,False,,,False
+747live.net,1,,needs_review,,,,,0,,,,0,11,3,1,1,0,0,3.095795255000934,0,1666.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,747live.net,,,,,False,,,False
+a9ty.com,1,,needs_review,,,,,0,,,,0,8,1,1,1,0,0,3.0,0,946.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,a9ty.com,,,,,False,,,False
+deskace.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.095795255000934,0,2066.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,deskace.com,,,,,False,,,False
+365-bets.com,1,,priority_review,,,,,0,,,,1,12,3,2,1,1,0,3.584962500721156,0,372.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,365-bets.com,,,,,False,,,False
+casino-royal.net,1,,priority_review,,,,,0,,,,1,16,0,2,1,1,0,3.625,0,3192.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-royal.net,,,,,False,,,False
+genieriches.com,0,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.323231428797621,0,1992.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,genieriches.com,,,,,False,,,False
+nustargame.com.ph,0,,needs_review,,,,,0,,,,0,17,0,2,2,0,0,3.7345216647797512,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,nustargame.com.ph,,,,,False,,,False
+747live.asia,1,,needs_review,,,,,0,,,,0,12,3,1,1,0,0,3.084962500721156,0,1510.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,747live.asia,,,,,False,,,False
+y9.com,1,,needs_review,,,,,0,,,,0,6,1,1,1,0,0,2.584962500721156,0,10562.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,y9.com,,,,,False,,,False
+win-jackpot-777.vip,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.6818808028034025,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,win-jackpot-777.vip,,,,,False,,,False
+god55.wiki,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,2.9219280948873623,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55.wiki,,,,,False,,,False
+richbet.co.uk,0,,priority_review,,,,,0,,,,1,13,0,2,2,0,0,3.3927474104487847,0,821.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,richbet.co.uk,,,,,False,,,False
+luxurycasino.co.uk,0,,priority_review,,,,,0,,,,1,18,0,2,2,0,0,3.5724312513221195,0,4733.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,luxurycasino.co.uk,,,,,False,,,False
+kingspin.co.uk,0,,needs_review,,,,,0,,,,0,14,0,2,2,0,0,3.235926350629033,0,2117.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,kingspin.co.uk,,,,,False,,,False
+betwin.ph,0,,priority_review,,,,,0,,,,1,9,0,1,1,0,0,3.169925001442312,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betwin.ph,,,,,False,,,False
+betwin78.net,1,,priority_review,,,,,0,,,,1,12,2,1,1,0,0,3.084962500721156,0,641.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betwin78.net,,,,,False,,,False
+hawkgaming888.com,0,,needs_review,,,,,0,,,,0,17,3,1,1,0,0,3.4548223999466057,0,953.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,hawkgaming888.com,,,,,False,,,False
+bbet.ph,0,,priority_review,,,,,0,,,,1,7,0,1,1,0,0,2.521640636343318,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bbet.ph,,,,,False,,,False
+wownumero.ph,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.2516291673878226,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,wownumero.ph,,,,,False,,,False
+casino-free-365.click,1,,priority_review,,,,,0,,,,1,21,3,3,1,1,0,3.880179922675738,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-free-365.click,,,,,False,,,False
+sportybetgift.weebly.com,1,,priority_review,,,,,0,,,,1,24,0,2,2,0,0,3.8553885422075336,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetgift.weebly.com,,,,,False,,,False
+sportybetadder8jxx6.weebly.com,1,,priority_review,,,,,0,,,,1,30,2,2,2,0,0,4.106890595608519,0,7319.0,1,1,1,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetadder8jxx6.weebly.com,,,,,False,,,False
+inplay.1play.ph,0,,needs_review,,,,,0,,,,0,15,1,2,2,0,0,3.056564762130954,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,inplay.1play.ph,,,,,False,,,False
+sportbetng247.weebly.com,1,,priority_review,,,,,0,,,,1,24,3,2,2,0,0,4.053508854797678,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportbetng247.weebly.com,,,,,False,,,False
+sportbetadderapk.weebly.com,1,,priority_review,,,,,0,,,,1,27,0,2,2,0,0,3.8659986132745794,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportbetadderapk.weebly.com,,,,,False,,,False
+texasplus.ph,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.2516291673878226,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,texasplus.ph,,,,,False,,,False
+fbmcasino.ph,0,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.584962500721156,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,fbmcasino.ph,,,,,False,,,False
+bet365virtual.com,1,,priority_review,,,,,0,,,,1,17,3,1,1,0,0,3.9698157824268097,0,2071.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bet365virtual.com,,,,,False,,,False
+ommer-automaten.nl,1,,needs_review,,,,,0,,,,0,18,0,2,1,1,0,3.350209029099897,0,1006.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ommer-automaten.nl,,,,,False,,,False
+ph.747live.com,0,,needs_review,,,,,0,,,,0,14,3,2,2,0,0,3.521640636343318,0,4631.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ph.747live.com,,,,,False,,,False
+ecasino.mgame.ph,0,,priority_review,,,,,0,,,,1,16,0,2,2,0,0,3.5,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,ecasino.mgame.ph,,,,,False,,,False
+karera.live,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,2.913977073182752,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,karera.live,,,,,False,,,False
+sportybetoddlink.weebly.com,1,,priority_review,,,,,0,,,,1,27,0,2,2,0,0,3.9582291686698783,0,7319.0,1,0,1,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetoddlink.weebly.com,,,,,False,,,False
+dinamitbet,1,,priority_review,,,,,0,,,,1,10,0,0,0,0,0,2.9219280948873623,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,dinamitbet,,,,,False,,,False
+justwow.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.095795255000934,0,8557.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,justwow.com,,,,,False,,,False
+cashking8.net,1,,needs_review,,,,,0,,,,0,13,1,1,1,0,0,3.546593564294939,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,cashking8.net,,,,,False,,,False
+tournaverse.com,0,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.506890595608519,0,2025.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,tournaverse.com,,,,,False,,,False
+combowin.ph,0,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.277613436819116,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,combowin.ph,,,,,False,,,False
+1xbetloan.weebly.com,1,,priority_review,,,,,0,,,,1,20,1,2,2,0,0,3.684183719779189,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,1xbetloan.weebly.com,,,,,False,,,False
+luckybet155,1,,priority_review,,,,,0,,,,1,11,3,0,0,0,0,3.277613436819116,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,luckybet155,,,,,False,,,False
+lotpetir500.net,1,,needs_review,,,,,0,,,,0,15,3,1,1,0,0,3.323231428797621,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,lotpetir500.net,,,,,False,,,False
+phlove.org,1,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.1219280948873624,0,787.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,phlove.org,,,,,False,,,False
+747live.club,1,,needs_review,,,,,0,,,,0,12,3,1,1,0,0,3.2516291673878226,1,1510.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,747live.club,,,,,False,,,False
+kingcasino.ph,0,,priority_review,,,,,0,,,,1,13,0,1,1,0,0,3.3927474104487847,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,kingcasino.ph,,,,,False,,,False
+gt01.net,1,,needs_review,,,,,0,,,,0,8,2,1,1,0,0,2.75,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,gt01.net,,,,,False,,,False
+betg366.start.page,1,,priority_review,,,,,0,,,,1,18,3,2,2,0,0,3.350209029099897,0,0.0,0,0,0,99169.0,start.page,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,betg366.start.page,,,,,False,,,False
+casino-bonus-365.top,1,,priority_review,,,,,0,,,,1,20,3,3,1,1,0,3.784183719779189,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-bonus-365.top,,,,,False,,,False
+bet88.io,0,,priority_review,,,,,0,,,,1,8,2,1,1,0,0,2.75,0,1397.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bet88.io,,,,,False,,,False
+s5vip.ph,0,,needs_review,,,,,0,,,,0,8,1,1,1,0,0,2.75,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,s5vip.ph,,,,,False,,,False
+koboy789.me,1,,needs_review,,,,,0,,,,0,11,3,1,1,0,0,3.277613436819116,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,koboy789.me,,,,,False,,,False
+bangbet.weebly.com,1,,priority_review,,,,,0,,,,1,18,0,2,2,0,0,3.530493056757482,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,bangbet.weebly.com,,,,,False,,,False
+888amd.com,1,,needs_review,,,,,0,,,,0,10,3,1,1,0,0,2.646439344671016,0,249.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,888amd.com,,,,,False,,,False
+hawkgaming.com.ph,0,,needs_review,,,,,0,,,,0,17,0,2,2,0,0,3.4992275471326924,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,hawkgaming.com.ph,,,,,False,,,False
+betnet9,1,,priority_review,,,,,0,,,,1,7,1,0,0,0,0,2.235926350629033,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betnet9,,,,,False,,,False
+a66.today,1,,needs_review,,,,,0,,,,0,9,2,1,1,0,0,2.725480556997868,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,a66.today,,,,,False,,,False
+uni99.com,1,,needs_review,,,,,0,,,,0,9,2,1,1,0,0,2.94770277922009,0,5876.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,uni99.com,,,,,False,,,False
+super8r.com,1,,needs_review,,,,,0,,,,0,11,1,1,1,0,0,3.277613436819116,0,516.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,super8r.com,,,,,False,,,False
+ey6dmx.com,1,,needs_review,,,,,0,,,,0,10,1,1,1,0,0,3.1219280948873624,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ey6dmx.com,,,,,False,,,False
+novalink.com.ph,0,,needs_review,,,,,0,,,,0,15,0,2,2,0,0,3.506890595608519,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,novalink.com.ph,,,,,False,,,False
+747live.biz,1,,needs_review,,,,,0,,,,0,11,3,1,1,0,0,3.095795255000934,0,1510.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,747live.biz,,,,,False,,,False
+amusnet.nl,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.1219280948873624,0,1087.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,amusnet.nl,,,,,False,,,False
+efesbet259.com,1,,priority_review,,,,,0,,,,1,14,3,1,1,0,0,3.4677201004745,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,efesbet259.com,,,,,False,,,False
+casino-europa.eu,1,,priority_review,,,,,0,,,,1,16,0,2,1,1,0,3.5,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-europa.eu,,,,,False,,,False
+bybet.app,0,,priority_review,,,,,0,,,,1,9,0,1,1,0,0,2.725480556997868,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bybet.app,,,,,False,,,False
+axwin.ie,0,,priority_review,,,,,0,,,,1,8,0,1,1,0,0,2.75,0,978.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,axwin.ie,,,,,False,,,False
+lotus365.com,1,,needs_review,,,,,0,,,,0,12,3,1,1,0,0,3.4182958340544896,0,1573.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,lotus365.com,,,,,False,,,False
+kingjackpot.co.uk,0,,priority_review,,,,,0,,,,1,17,0,2,2,0,0,3.4548223999466057,0,7076.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,kingjackpot.co.uk,,,,,False,,,False
+lakigames.com,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.3927474104487847,0,749.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,lakigames.com,,,,,False,,,False
+wagerstreet.net,1,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,2.923231428797621,0,649.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,wagerstreet.net,,,,,False,,,False
+baffalo39a.com,1,,needs_review,,,,,0,,,,0,14,2,1,1,0,0,3.1820058147602133,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,baffalo39a.com,,,,,False,,,False
+lavbet321.com,1,,priority_review,,,,,0,,,,1,13,3,1,1,0,0,3.7004397181410926,0,156.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,lavbet321.com,,,,,False,,,False
+nagacash9b.beauty,1,,needs_review,,,,,0,,,,0,17,1,1,1,0,0,3.4992275471326924,0,411.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,nagacash9b.beauty,,,,,False,,,False
+devrebet71.com,1,,priority_review,,,,,0,,,,1,14,2,1,1,0,0,3.4677201004745,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,devrebet71.com,,,,,False,,,False
+ebingo.mgame.ph,0,,needs_review,,,,,0,,,,0,15,0,2,2,0,0,3.373557262275185,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ebingo.mgame.ph,,,,,False,,,False
+kaiyun sports,1,,needs_review,,,,,0,,,,0,13,0,1,0,0,0,3.546593564294939,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,kaiyun sports,,,,,False,,,False
+win-login-888.vip,1,,priority_review,,,,,0,,,,1,17,3,3,1,1,0,3.29277019393699,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,win-login-888.vip,,,,,False,,,False
+jabrixtogel.com,1,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.773557262275186,0,149.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,jabrixtogel.com,,,,,False,,,False
+jumpalagi666.com,1,,needs_review,,,,,0,,,,0,16,3,1,1,0,0,3.452819531114783,0,652.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,jumpalagi666.com,,,,,False,,,False
+djarum89.me,1,,needs_review,,,,,0,,,,0,11,2,1,1,0,0,3.277613436819116,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,djarum89.me,,,,,False,,,False
+poker-verify-777.site,1,,priority_review,,,,,0,,,,1,21,3,3,1,1,0,3.6537567082870015,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,poker-verify-777.site,,,,,False,,,False
+918sse.com,1,,needs_review,,,,,0,,,,0,10,3,1,1,0,0,3.1219280948873624,0,333.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,918sse.com,,,,,False,,,False
+777pub.org,1,,priority_review,,,,,0,,,,1,10,3,1,1,0,0,2.8464393446710154,0,1388.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,777pub.org,,,,,False,,,False
+fun-88.in,1,,needs_review,,,,,0,,,,0,9,2,2,1,1,0,2.725480556997868,0,1262.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fun-88.in,,,,,False,,,False
+pin77.ph,0,,needs_review,,,,,0,,,,0,8,2,1,1,0,0,2.5,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,pin77.ph,,,,,False,,,False
+megabahis.com,1,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.3927474104487847,0,8694.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,megabahis.com,,,,,False,,,False
+ilotbetzipeg1li2itch.weebly.com,1,,priority_review,,,,,0,,,,1,31,2,2,2,0,0,3.873235826376329,0,7319.0,1,0,1,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,ilotbetzipeg1li2itch.weebly.com,,,,,False,,,False
+casino-888.club,1,,priority_review,,,,,0,,,,1,15,3,2,1,1,0,3.456564762130954,1,1594.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-888.club,,,,,False,,,False
+betperial32.com,1,,priority_review,,,,,0,,,,1,15,2,1,1,0,0,3.773557262275186,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betperial32.com,,,,,False,,,False
+play-azart.com,1,,needs_review,,,,,0,,,,0,14,0,2,1,1,0,3.4677201004745,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,play-azart.com,,,,,False,,,False
+quickbet.co.uk,0,,priority_review,,,,,0,,,,1,14,0,2,2,0,0,3.235926350629033,0,3477.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,quickbet.co.uk,,,,,False,,,False
+bahisnov,1,,needs_review,,,,,0,,,,0,8,0,0,0,0,0,3.0,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bahisnov,,,,,False,,,False
+buffalo39,1,,needs_review,,,,,0,,,,0,9,2,0,0,0,0,2.94770277922009,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,buffalo39,,,,,False,,,False
+bilamng.ph,1,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.321928094887362,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bilamng.ph,,,,,False,,,False
+c1al9.com,1,,needs_review,,,,,0,,,,0,9,2,1,1,0,0,2.94770277922009,0,717.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,c1al9.com,,,,,False,,,False
+bet66.in,1,,priority_review,,,,,0,,,,1,8,2,1,1,0,0,2.75,0,1550.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bet66.in,,,,,False,,,False
+djarumsoccer.com,1,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.327819531114783,0,1871.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,djarumsoccer.com,,,,,False,,,False
+gj99.online,1,,needs_review,,,,,0,,,,0,11,2,1,1,0,0,3.095795255000934,1,388.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,gj99.online,,,,,False,,,False
+fun88,1,,needs_review,,,,,0,,,,0,5,2,0,0,0,0,1.9219280948873625,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fun88,,,,,False,,,False
+chamba77.com,0,,needs_review,,,,,0,,,,0,12,2,1,1,0,0,2.918295834054489,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,chamba77.com,,,,,False,,,False
+arrise.com,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.1219280948873624,0,9362.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,arrise.com,,,,,False,,,False
+wowspin.ph,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,2.9219280948873623,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,wowspin.ph,,,,,False,,,False
+php777.com,0,,priority_review,,,,,0,,,,1,10,3,1,1,0,0,2.646439344671016,0,3700.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,php777.com,,,,,False,,,False
+casino1bet.online,1,,priority_review,,,,,0,,,,1,17,1,1,1,0,0,3.4548223999466057,1,442.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casino1bet.online,,,,,False,,,False
+sunny-casino.net,1,,priority_review,,,,,0,,,,1,16,0,2,1,1,0,3.375,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,sunny-casino.net,,,,,False,,,False
+sportsworld.ph,0,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.235926350629033,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,sportsworld.ph,,,,,False,,,False
+747-2.com,1,,needs_review,,,,,0,,,,0,9,4,2,1,1,0,2.94770277922009,0,969.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,747-2.com,,,,,False,,,False
+god55partnership.com,1,,needs_review,,,,,0,,,,0,20,2,1,1,0,0,3.9219280948873614,0,411.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55partnership.com,,,,,False,,,False
+bingoworld.online,0,,needs_review,,,,,0,,,,0,17,0,1,1,0,0,3.29277019393699,1,333.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bingoworld.online,,,,,False,,,False
+jackpotstar.com,0,,priority_review,,,,,0,,,,1,15,0,1,1,0,0,3.373557262275185,0,8460.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,jackpotstar.com,,,,,False,,,False
+god55.international,1,,needs_review,,,,,0,,,,0,19,2,1,1,0,0,3.471354487013929,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55.international,,,,,False,,,False
+bafkreih37hzjc4n4elusfak5z5ktjgy5tvfy4nzk4hql3huz3betpe3nqe.ipfs.dweb.link,1,,priority_review,,,,,0,,,,1,74,12,3,3,0,0,4.619605521145916,0,3333.0,1,0,0,18263.0,dweb.link,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,bafkreih37hzjc4n4elusfak5z5ktjgy5tvfy4nzk4hql3huz3betpe3nqe.ipfs.dweb.link,,,,,False,,,False
+epicwin.vip,1,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,2.8453509366224368,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,epicwin.vip,,,,,False,,,False
+slotsmagic.co.uk,0,,priority_review,,,,,0,,,,1,16,0,2,2,0,0,3.5,0,4847.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,slotsmagic.co.uk,,,,,False,,,False
+sportybetadderwebs86.weebly.com,1,,priority_review,,,,,0,,,,1,31,2,2,2,0,0,3.91017927888364,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetadderwebs86.weebly.com,,,,,False,,,False
+palmsbet1.com,1,,priority_review,,,,,0,,,,1,13,1,1,1,0,0,3.546593564294939,0,597.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,palmsbet1.com,,,,,False,,,False
+boba303.top,1,,needs_review,,,,,0,,,,0,11,3,1,1,0,0,2.913977073182752,1,73.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,boba303.top,,,,,False,,,False
+ekolbet164.com,1,,priority_review,,,,,0,,,,1,14,3,1,1,0,0,3.521640636343318,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,ekolbet164.com,,,,,False,,,False
+hermes-bets.net,1,,priority_review,,,,,0,,,,1,15,0,2,1,1,0,3.106890595608519,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,hermes-bets.net,,,,,False,,,False
+noc.mgame.com,0,,needs_review,,,,,0,,,,0,13,0,2,2,0,0,2.873140679513133,0,9650.0,1,0,0,197018.0,mgame.com,parent_domain,weak_benign_candidate,Appears in Tranco Top 1M,4,noc.mgame.com,,uncertain,manual research,Specific subdomain remains unresolved,False,,,False
+peryacity.ph,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.2516291673878226,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,peryacity.ph,,,,,False,,,False
+win-secure-888.pro,1,,priority_review,,,,,0,,,,1,18,3,3,1,1,0,3.5724312513221195,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,win-secure-888.pro,,,,,False,,,False
+betalltimes.com,1,,priority_review,,,,,0,,,,1,15,0,1,1,0,0,3.373557262275185,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betalltimes.com,,,,,False,,,False
+freebettingreviews.com,1,,priority_review,,,,,0,,,,1,22,0,1,1,0,0,3.6589934152538057,0,2217.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,freebettingreviews.com,,,,,False,,,False
+mgame.ph,0,,needs_review,,,,,0,,,,0,8,0,1,1,0,0,2.75,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,mgame.ph,,,,,False,,,False
+fb.thegamesguys.com,1,,needs_review,,,,,0,,,,0,19,0,2,2,0,0,3.721611723969901,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fb.thegamesguys.com,,,,,False,,,False
+betsmoveguncel.com,1,,priority_review,,,,,0,,,,1,18,0,1,1,0,0,3.5724312513221195,0,1425.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betsmoveguncel.com,,,,,False,,,False
+beternuipouli.web.app,1,,priority_review,,,,,0,,,,1,21,0,2,2,0,0,3.558518613048906,0,0.0,0,0,0,2831.0,web.app,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,beternuipouli.web.app,,,,,False,,,False
+relax-gaming.com,0,,needs_review,,,,,0,,,,0,16,0,2,1,1,0,3.625,0,5421.0,1,1,1,201697.0,relax-gaming.com,exact,weak_benign_candidate,Appears in Tranco Top 1M,4,relax-gaming.com,,,,,False,,,False
+thelottery.co.uk,0,,needs_review,,,,,0,,,,0,16,0,2,2,0,0,3.327819531114783,0,9770.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,thelottery.co.uk,,,,,False,,,False
+jbag888.com,1,,needs_review,,,,,0,,,,0,11,3,1,1,0,0,3.0271691184406184,0,182.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,jbag888.com,,,,,False,,,False
+uni166.com,1,,needs_review,,,,,0,,,,0,10,3,1,1,0,0,3.1219280948873624,0,3397.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,uni166.com,,,,,False,,,False
+greatway-casino.net,1,,priority_review,,,,,0,,,,1,19,0,2,1,1,0,3.6818808028034025,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,greatway-casino.net,,,,,False,,,False
+alfabahis33.com,1,,needs_review,,,,,0,,,,0,15,2,1,1,0,0,3.456564762130954,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,alfabahis33.com,,,,,False,,,False
+jackpotcity.ph,0,,priority_review,,,,,0,,,,1,14,0,1,1,0,0,3.378783493486176,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,jackpotcity.ph,,,,,False,,,False
+betsolid.com,0,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.4182958340544896,0,1999.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betsolid.com,,,,,False,,,False
+shahrebazi.club,1,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.506890595608519,1,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,shahrebazi.club,,,,,False,,,False
+god55vn5.com,1,,needs_review,,,,,0,,,,0,12,3,1,1,0,0,3.0220552088742005,0,683.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55vn5.com,,,,,False,,,False
+katsu5.xyz,1,,needs_review,,,,,0,,,,0,10,1,1,1,0,0,3.321928094887362,1,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,katsu5.xyz,,,,,False,,,False
+win-login-365.vip,1,,priority_review,,,,,0,,,,1,17,3,3,1,1,0,3.572469458770135,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,win-login-365.vip,,,,,False,,,False
+god55m2.net,1,,needs_review,,,,,0,,,,0,11,3,1,1,0,0,3.277613436819116,0,1718.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55m2.net,,,,,False,,,False
+betrupi165.com,1,,priority_review,,,,,0,,,,1,14,3,1,1,0,0,3.807354922057604,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betrupi165.com,,,,,False,,,False
+starsportsbet.co.uk,0,,priority_review,,,,,0,,,,1,19,0,2,2,0,0,3.431623565847431,0,6003.0,1,1,1,732768.0,starsportsbet.co.uk,exact,priority_gambling_review,Contains gambling-related keyword,3,starsportsbet.co.uk,,,,,False,,,False
+lakijackpot.com,0,,priority_review,,,,,0,,,,1,15,0,1,1,0,0,3.373557262275185,0,774.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,lakijackpot.com,,,,,False,,,False
+pisogame.bet,0,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.4182958340544896,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,pisogame.bet,,,,,False,,,False
+white-casino.net,1,,priority_review,,,,,0,,,,1,16,0,2,1,1,0,3.5,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,white-casino.net,,,,,False,,,False
+win-verify-365.pro,1,,priority_review,,,,,0,,,,1,18,3,3,1,1,0,3.836591668108978,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,win-verify-365.pro,,,,,False,,,False
+buenas.vip,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.321928094887362,0,826.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,buenas.vip,,,,,False,,,False
+russiavulcanx.com,1,,needs_review,,,,,0,,,,0,17,0,1,1,0,0,3.616874605956222,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,russiavulcanx.com,,,,,False,,,False
+diyarbet120.com,1,,priority_review,,,,,0,,,,1,15,3,1,1,0,0,3.906890595608519,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,diyarbet120.com,,,,,False,,,False
+bcasino.ph,0,,priority_review,,,,,0,,,,1,10,0,1,1,0,0,3.321928094887362,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bcasino.ph,,,,,False,,,False
+bet365bby.com,1,,priority_review,,,,,0,,,,1,13,3,1,1,0,0,3.334679141051595,0,603.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bet365bby.com,,,,,False,,,False
+megawagi.net,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.084962500721156,0,195.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,megawagi.net,,,,,False,,,False
+au1m.com,1,,needs_review,,,,,0,,,,0,8,1,1,1,0,0,2.75,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,au1m.com,,,,,False,,,False
+betbingo.com,0,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.2516291673878226,0,10857.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betbingo.com,,,,,False,,,False
+phoeniciancasino.co.uk,0,,priority_review,,,,,0,,,,1,22,0,2,2,0,0,3.413088436425757,0,5114.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,phoeniciancasino.co.uk,,,,,False,,,False
+sportslive.ph,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.3927474104487847,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,sportslive.ph,,,,,False,,,False
+35.222.159.130,1,,needs_review,,,,,0,,,,0,14,11,3,3,0,1,2.6995138503199656,0,6354.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,35.222.159.130,,,,,False,,,False
+poker-login-777.win,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.5766176449086657,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,poker-login-777.win,,,,,False,,,False
+galaparadise88.com,1,,needs_review,,,,,0,,,,0,18,2,1,1,0,0,3.614369445886757,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,galaparadise88.com,,,,,False,,,False
+slotlar777.com,1,,priority_review,,,,,0,,,,1,14,3,1,1,0,0,3.1820058147602133,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,slotlar777.com,,,,,False,,,False
+megawagi.ph,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.095795255000934,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,megawagi.ph,,,,,False,,,False
+igoegaming.ph,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.180832987205441,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,igoegaming.ph,,,,,False,,,False
+enetpoker.com,1,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.180832987205441,0,5701.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,enetpoker.com,,,,,False,,,False
+shahrshahr11.com,1,,needs_review,,,,,0,,,,0,16,2,1,1,0,0,3.0,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,shahrshahr11.com,,,,,False,,,False
+bppoker.pro,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,2.6635327548042547,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bppoker.pro,,,,,False,,,False
+freshspins.com,0,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.4677201004745,0,3024.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,freshspins.com,,,,,False,,,False
+bingotime.ph,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.4182958340544896,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bingotime.ph,,,,,False,,,False
+vavadapsv.com,1,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,2.9689185639620974,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,vavadapsv.com,,,,,False,,,False
+god55.asia,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,2.9219280948873623,0,2045.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55.asia,,,,,False,,,False
+uwin957.cc,1,,priority_review,,,,,0,,,,1,10,3,1,1,0,0,3.1219280948873624,0,287.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,uwin957.cc,,,,,False,,,False
+pedalada10.com,0,,needs_review,,,,,0,,,,0,14,2,1,1,0,0,3.3248629576173565,0,1377.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,pedalada10.com,,,,,False,,,False
+bet88.vip,0,,priority_review,,,,,0,,,,1,9,2,1,1,0,0,2.94770277922009,0,160.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bet88.vip,,,,,False,,,False
+24pokies6.com,1,,needs_review,,,,,0,,,,0,13,3,1,1,0,0,3.546593564294939,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,24pokies6.com,,,,,False,,,False
+casinomalta.com.mt,0,,priority_review,,,,,0,,,,1,18,0,2,2,0,0,3.197159723424149,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casinomalta.com.mt,,,,,False,,,False
+win-secure-24.pro,1,,priority_review,,,,,0,,,,1,17,2,3,1,1,0,3.7345216647797512,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,win-secure-24.pro,,,,,False,,,False
+god55.tech,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,3.1219280948873624,0,885.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55.tech,,,,,False,,,False
+1x-casino.net,1,,priority_review,,,,,0,,,,1,13,1,2,1,1,0,3.546593564294939,0,59.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,1x-casino.net,,,,,False,,,False
+god55.nexus,1,,needs_review,,,,,0,,,,0,11,2,1,1,0,0,3.277613436819116,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55.nexus,,,,,False,,,False
+immediate-connect.co.uk,1,,needs_review,,,,,0,,,,0,23,0,3,2,1,0,3.588354347173233,0,656.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,immediate-connect.co.uk,,,,,False,,,False
+sbsnetplay.com,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.664497779200461,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,sbsnetplay.com,,,,,False,,,False
+vulcan-bet.net,1,,priority_review,,,,,0,,,,1,14,0,2,1,1,0,3.378783493486176,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,vulcan-bet.net,,,,,False,,,False
+betvadi117.com,1,,priority_review,,,,,0,,,,1,14,3,1,1,0,0,3.664497779200461,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betvadi117.com,,,,,False,,,False
+gerbet.ope-11708.pro,1,,priority_review,,,,,0,,,,1,20,5,3,2,1,0,3.584183719779189,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,gerbet.ope-11708.pro,,,,,False,,,False
+pokerstarsnj.com,0,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.625,0,4829.0,1,1,1,579831.0,pokerstarsnj.com,exact,weak_benign_candidate,Appears in Tranco Top 1M,4,pokerstarsnj.com,,,,,False,,,False
+casino-friday.at,1,,priority_review,,,,,0,,,,1,16,0,2,1,1,0,3.577819531114783,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-friday.at,,,,,False,,,False
+casinowin.bet,1,,priority_review,,,,,0,,,,1,13,0,1,1,0,0,3.3927474104487847,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casinowin.bet,,,,,False,,,False
+sportybetadder01.weebly.com,1,,priority_review,,,,,0,,,,1,27,2,2,2,0,0,3.940072687348653,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetadder01.weebly.com,,,,,False,,,False
+hbetcorrect-192.weebly.com,1,,priority_review,,,,,0,,,,1,26,3,3,2,1,0,3.825251737288651,0,7319.0,1,0,1,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,hbetcorrect-192.weebly.com,,,,,False,,,False
+mfa9.com,1,,needs_review,,,,,0,,,,0,8,1,1,1,0,0,2.75,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,mfa9.com,,,,,False,,,False
+tongitstok.com,0,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.1280852788913944,0,649.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,tongitstok.com,,,,,False,,,False
+tfcfootball.com,1,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.056564762130954,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,tfcfootball.com,,,,,False,,,False
+numerouno.ph,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.084962500721156,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,numerouno.ph,,,,,False,,,False
+betfree.io,0,,priority_review,,,,,0,,,,1,10,0,1,1,0,0,2.8464393446710154,0,1058.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betfree.io,,,,,False,,,False
+vegas-casino.online,1,,priority_review,,,,,0,,,,1,19,0,2,1,1,0,3.471354487013929,1,1703.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,vegas-casino.online,,,,,False,,,False
+winner-bet.com,1,,priority_review,,,,,0,,,,1,14,0,2,1,1,0,3.521640636343318,0,4134.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,winner-bet.com,,,,,False,,,False
+spincity.ph,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.095795255000934,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,spincity.ph,,,,,False,,,False
+casino-azino777.com,1,,priority_review,,,,,0,,,,1,19,3,2,1,1,0,3.326360407952694,0,1710.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-azino777.com,,,,,False,,,False
+iijuta.com,1,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.1219280948873624,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,iijuta.com,,,,,False,,,False
+luckymatecasino.co.uk,0,,priority_review,,,,,0,,,,1,21,0,2,2,0,0,3.6897037321995474,0,999.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,luckymatecasino.co.uk,,,,,False,,,False
+juanbingo.ph,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.4182958340544896,0,0.0,0,0,1,98124.0,juanbingo.ph,exact,medium_benign_candidate,Top 100K Tranco and no gambling keyword,2,juanbingo.ph,,,,,False,,,False
+inplay.instaplay.ph,0,,needs_review,,,,,0,,,,0,19,0,2,2,0,0,3.2210972500579573,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,inplay.instaplay.ph,,,,,False,,,False
+747live.info,1,,needs_review,,,,,0,,,,0,12,3,1,1,0,0,3.2516291673878226,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,747live.info,,,,,False,,,False
+beternuipouli.firebaseapp.com,1,,priority_review,,,,,0,,,,1,29,0,2,2,0,0,3.840402546702505,0,0.0,0,0,0,5498.0,firebaseapp.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,beternuipouli.firebaseapp.com,,,,,False,,,False
+superpanalo.ph,0,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.3248629576173565,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,superpanalo.ph,,,,,False,,,False
+thienlong99.com,1,,needs_review,,,,,0,,,,0,15,2,1,1,0,0,3.506890595608519,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,thienlong99.com,,,,,False,,,False
+ray40.com,1,,needs_review,,,,,0,,,,0,9,2,1,1,0,0,3.169925001442312,0,2630.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ray40.com,,,,,False,,,False
+bet-verify-888.live,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.431623565847431,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bet-verify-888.live,,,,,False,,,False
+ghostss.mgame.com,0,,needs_review,,,,,0,,,,0,17,0,2,2,0,0,3.175123135113461,0,9650.0,1,0,1,197018.0,mgame.com,parent_domain,weak_benign_candidate,Appears in Tranco Top 1M,4,ghostss.mgame.com,,uncertain,manual research,Insufficient direct evidence,False,,,False
+sportybetadder-012.weebly.com,1,,priority_review,,,,,0,,,,1,29,3,3,2,1,0,4.099360305472399,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetadder-012.weebly.com,,,,,False,,,False
+mga.games,1,,needs_review,,,,,0,,,,0,9,0,1,1,0,0,2.5032583347756456,0,0.0,0,1,1,870924.0,mga.games,exact,weak_benign_candidate,Appears in Tranco Top 1M,4,mga.games,,,,,False,,,False
+cyl88.online,1,,needs_review,,,,,0,,,,0,12,2,1,1,0,0,3.084962500721156,1,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,cyl88.online,,,,,False,,,False
+vulcan-pllatinum.com,1,,needs_review,,,,,0,,,,0,20,0,2,1,1,0,3.584183719779189,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,vulcan-pllatinum.com,,,,,False,,,False
+slot-hunter.at,1,,priority_review,,,,,0,,,,1,14,0,2,1,1,0,3.4677201004745,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,slot-hunter.at,,,,,False,,,False
+ekolbet,1,,priority_review,,,,,0,,,,1,7,0,0,0,0,0,2.521640636343318,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,ekolbet,,,,,False,,,False
+nagacash9b.online,1,,needs_review,,,,,0,,,,0,17,1,1,1,0,0,3.528064311584049,1,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,nagacash9b.online,,,,,False,,,False
+pisogame.ph,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.277613436819116,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,pisogame.ph,,,,,False,,,False
+s5games.ph,0,,needs_review,,,,,0,,,,0,10,1,1,1,0,0,3.1219280948873624,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,s5games.ph,,,,,False,,,False
+spiffx.com,1,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.1219280948873624,0,5382.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,spiffx.com,,,,,False,,,False
+megawagi.vip,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.084962500721156,0,194.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,megawagi.vip,,,,,False,,,False
+joypang-0907.com,1,,needs_review,,,,,0,,,,0,16,4,2,1,1,0,3.75,0,282.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,joypang-0907.com,,,,,False,,,False
+winz.ph,0,,priority_review,,,,,0,,,,1,7,0,1,1,0,0,2.807354922057604,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,winz.ph,,,,,False,,,False
+wowgames.ph,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.277613436819116,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,wowgames.ph,,,,,False,,,False
+bstar.ph,0,,needs_review,,,,,0,,,,0,8,0,1,1,0,0,3.0,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bstar.ph,,,,,False,,,False
+wowgames.vip,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.4182958340544896,0,653.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,wowgames.vip,,,,,False,,,False
+goldjapan-casino.com,1,,priority_review,,,,,0,,,,1,20,0,2,1,1,0,3.646439344671016,0,1055.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,goldjapan-casino.com,,,,,False,,,False
+booming-games.com,0,,needs_review,,,,,0,,,,0,17,0,2,1,1,0,3.4104172527605194,0,4191.0,1,0,1,162964.0,booming-games.com,exact,weak_benign_candidate,Appears in Tranco Top 1M,4,booming-games.com,,,,,False,,,False
+7stargaming.com,1,,needs_review,,,,,0,,,,0,15,1,1,1,0,0,3.506890595608519,0,400.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,7stargaming.com,,,,,False,,,False
+aiusbnalhgmigljranigqrvdtgqgbufwhjbet.blogspot.com,1,,priority_review,,,,,0,,,,1,50,0,2,2,0,0,4.338171939471839,0,0.0,0,1,1,101.0,blogspot.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,aiusbnalhgmigljranigqrvdtgqgbufwhjbet.blogspot.com,,,,,False,,,False
+luckyclub.ph,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.084962500721156,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,luckyclub.ph,,,,,False,,,False
+mobilespin.com,0,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.378783493486176,0,7761.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,mobilespin.com,,,,,False,,,False
+slot-bonus-365.buzz,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.616348566075165,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,slot-bonus-365.buzz,,,,,False,,,False
+bet-verify-365.live,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.6818808028034025,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bet-verify-365.live,,,,,False,,,False
+slot-win-888.online,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.326360407952694,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,slot-win-888.online,,,,,False,,,False
+golden.nebula-ent.com,1,,needs_review,,,,,0,,,,0,21,0,3,2,1,0,3.6537567082870015,0,9371.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,golden.nebula-ent.com,,,,,False,,,False
+aplay.mt,0,,needs_review,,,,,0,,,,0,8,0,1,1,0,0,2.75,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,aplay.mt,,,,,False,,,False
+jcasino.club,1,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.4182958340544896,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,jcasino.club,,,,,False,,,False
+luckypence.com,0,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.3248629576173565,0,2676.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,luckypence.com,,,,,False,,,False
+bwin8998.com,1,,priority_review,,,,,0,,,,1,12,4,1,1,0,0,3.2516291673878226,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bwin8998.com,,,,,False,,,False
+sprush.ph,0,,needs_review,,,,,0,,,,0,9,0,1,1,0,0,2.5032583347756456,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,sprush.ph,,,,,False,,,False
+poker-secure-24.site,1,,needs_review,,,,,0,,,,0,20,2,3,1,1,0,3.6219280948873616,1,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,poker-secure-24.site,,,,,False,,,False
+redrakegaming.com,0,,needs_review,,,,,0,,,,0,17,0,1,1,0,0,3.4992275471326924,0,3862.0,1,0,1,168742.0,redrakegaming.com,exact,weak_benign_candidate,Appears in Tranco Top 1M,4,redrakegaming.com,,,,,False,,,False
+betstars888.com,1,,priority_review,,,,,0,,,,1,15,3,1,1,0,0,3.323231428797621,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betstars888.com,,,,,False,,,False
+portybetadder1048.weebly.com,1,,priority_review,,,,,0,,,,1,28,4,2,2,0,0,4.021640636343318,0,7319.0,1,1,1,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,portybetadder1048.weebly.com,,,,,False,,,False
+wowgames.net,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.2516291673878226,0,529.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,wowgames.net,,,,,False,,,False
+joy-casino24.cc,1,,priority_review,,,,,0,,,,1,15,2,2,1,1,0,3.456564762130954,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,joy-casino24.cc,,,,,False,,,False
+fortuneworld.ph,0,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.640223928941852,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fortuneworld.ph,,,,,False,,,False
+fml1.com,1,,needs_review,,,,,0,,,,0,8,1,1,1,0,0,2.75,0,586.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fml1.com,,,,,False,,,False
+betocean.com,0,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.084962500721156,0,3972.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betocean.com,,,,,False,,,False
+poker-secure-365.win,1,,priority_review,,,,,0,,,,1,20,3,3,1,1,0,3.884183719779189,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,poker-secure-365.win,,,,,False,,,False
+blingwin.link,0,,priority_review,,,,,0,,,,1,13,0,1,1,0,0,2.815072410115944,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,blingwin.link,,,,,False,,,False
+deskwin.com,0,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.4594316186372973,0,2123.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,deskwin.com,,,,,False,,,False
+aud1m.com,1,,needs_review,,,,,0,,,,0,9,1,1,1,0,0,2.94770277922009,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,aud1m.com,,,,,False,,,False
+heloboet138,1,,needs_review,,,,,0,,,,0,11,3,0,0,0,0,3.095795255000934,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,heloboet138,,,,,False,,,False
+god55sg6.net,1,,needs_review,,,,,0,,,,0,12,3,1,1,0,0,3.2516291673878226,0,885.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55sg6.net,,,,,False,,,False
+prizewin.ph,0,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.095795255000934,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,prizewin.ph,,,,,False,,,False
+slot-free-365.online,1,,priority_review,,,,,0,,,,1,20,3,3,1,1,0,3.684183719779189,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,slot-free-365.online,,,,,False,,,False
+cherrywins.com,0,,priority_review,,,,,0,,,,1,14,0,1,1,0,0,3.521640636343318,0,3090.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,cherrywins.com,,,,,False,,,False
+fortunepub.com,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.521640636343318,0,828.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fortunepub.com,,,,,False,,,False
+onelottery.co.uk,0,,needs_review,,,,,0,,,,0,16,0,2,2,0,0,3.327819531114783,0,2413.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,onelottery.co.uk,,,,,False,,,False
+slotsaces.net,1,,priority_review,,,,,0,,,,1,13,0,1,1,0,0,3.026986833359288,0,898.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,slotsaces.net,,,,,False,,,False
+dragonaracasino.com,0,,priority_review,,,,,0,,,,1,19,0,1,1,0,0,3.260828171224456,0,6013.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,dragonaracasino.com,,,,,False,,,False
+amusnet.hr,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.321928094887362,0,1509.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,amusnet.hr,,,,,False,,,False
+blogjb3919.com,1,,needs_review,,,,,0,,,,0,14,4,1,1,0,0,3.378783493486176,0,1387.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,blogjb3919.com,,,,,False,,,False
+24pokies5.com,1,,needs_review,,,,,0,,,,0,13,3,1,1,0,0,3.546593564294939,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,24pokies5.com,,,,,False,,,False
+juanace.ph,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.1219280948873624,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,juanace.ph,,,,,False,,,False
+kaisarpteir.net,1,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.240223928941852,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,kaisarpteir.net,,,,,False,,,False
+fairbahis10.com,1,,needs_review,,,,,0,,,,0,15,2,1,1,0,0,3.640223928941852,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fairbahis10.com,,,,,False,,,False
+numerouno.com.ph,0,,needs_review,,,,,0,,,,0,16,0,2,2,0,0,3.202819531114783,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,numerouno.com.ph,,,,,False,,,False
+bygame.com,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.1219280948873624,0,9108.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bygame.com,,,,,False,,,False
+1x-bet.co,1,,priority_review,,,,,0,,,,1,9,1,2,1,1,0,3.169925001442312,0,275.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,1x-bet.co,,,,,False,,,False
+poker-free-24.win,1,,priority_review,,,,,0,,,,1,17,2,3,1,1,0,3.572469458770135,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,poker-free-24.win,,,,,False,,,False
+playsg8.com,0,,needs_review,,,,,0,,,,0,11,1,1,1,0,0,3.4594316186372973,0,274.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,playsg8.com,,,,,False,,,False
+caletagaming.com,0,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.327819531114783,0,4684.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,caletagaming.com,,,,,False,,,False
+filplay.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.277613436819116,0,1578.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,filplay.com,,,,,False,,,False
+hawkgaming.ph,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.238901256602631,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,hawkgaming.ph,,,,,False,,,False
+amusnet.it,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.1219280948873624,0,1506.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,amusnet.it,,,,,False,,,False
+bnrurabetegt.biz.site,1,,priority_review,,,,,0,,,,1,21,0,2,2,0,0,3.4273334938982645,1,1996.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bnrurabetegt.biz.site,,,,,False,,,False
+blingwin.net,0,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.0220552088742005,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,blingwin.net,,,,,False,,,False
+gamxsports.com.ph,0,,needs_review,,,,,0,,,,0,17,0,2,2,0,0,3.4992275471326924,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,gamxsports.com.ph,,,,,False,,,False
+m.betboro.co.uk,0,,priority_review,,,,,0,,,,1,15,0,3,3,0,0,3.139572261986723,0,3806.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,m.betboro.co.uk,,,,,False,,,False
+cockfightbet.cc,1,,priority_review,,,,,0,,,,1,15,0,1,1,0,0,3.240223928941852,0,1910.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,cockfightbet.cc,,,,,False,,,False
+option888.com,1,,needs_review,,,,,0,,,,0,13,3,1,1,0,0,2.9689185639620974,0,4378.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,option888.com,,,,,False,,,False
+bybet.co,0,,priority_review,,,,,0,,,,1,8,0,1,1,0,0,2.75,0,566.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bybet.co,,,,,False,,,False
+win-free-777.vip,1,,priority_review,,,,,0,,,,1,16,3,3,1,1,0,3.327819531114783,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,win-free-777.vip,,,,,False,,,False
+malta-casino.com,1,,priority_review,,,,,0,,,,1,16,0,2,1,1,0,3.327819531114783,0,1880.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,malta-casino.com,,,,,False,,,False
+luckytayasports.com,0,,needs_review,,,,,0,,,,0,19,0,1,1,0,0,3.616348566075165,0,276.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,luckytayasports.com,,,,,False,,,False
+kaguraslot777.com,1,,priority_review,,,,,0,,,,1,17,3,1,1,0,0,3.572469458770135,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,kaguraslot777.com,,,,,False,,,False
+12wincasino.net,1,,priority_review,,,,,0,,,,1,15,2,1,1,0,0,3.456564762130954,0,4092.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,12wincasino.net,,,,,False,,,False
+poker-account-777.site,1,,priority_review,,,,,0,,,,1,22,3,3,1,1,0,3.788754913993503,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,poker-account-777.site,,,,,False,,,False
+s5live.ph,0,,needs_review,,,,,0,,,,0,9,1,1,1,0,0,3.169925001442312,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,s5live.ph,,,,,False,,,False
+mix4bet.ie,0,,priority_review,,,,,0,,,,1,10,1,1,1,0,0,2.9219280948873623,0,872.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,mix4bet.ie,,,,,False,,,False
+poker-login-888.win,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.5766176449086657,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,poker-login-888.win,,,,,False,,,False
+v8.com,1,,needs_review,,,,,0,,,,0,6,1,1,1,0,0,2.584962500721156,0,10182.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,v8.com,,,,,False,,,False
+kingvip.ph,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,2.9219280948873623,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,kingvip.ph,,,,,False,,,False
+olympusplay.com,1,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.240223928941852,0,1798.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,olympusplay.com,,,,,False,,,False
+god55sg3.org,1,,needs_review,,,,,0,,,,0,12,3,1,1,0,0,2.8553885422075336,0,1368.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55sg3.org,,,,,False,,,False
+efc88.me,1,,needs_review,,,,,0,,,,0,8,2,1,1,0,0,2.5,0,1157.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,efc88.me,,,,,False,,,False
+lotus303.casino,1,,priority_review,,,,,0,,,,1,15,3,1,1,0,0,3.506890595608519,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,lotus303.casino,,,,,False,,,False
+fcb500.com,1,,needs_review,,,,,0,,,,0,10,3,1,1,0,0,2.9219280948873623,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fcb500.com,,,,,False,,,False
+loginyaris.store,1,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.5,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,loginyaris.store,,,,,False,,,False
+god55th3.com,1,,needs_review,,,,,0,,,,0,12,3,1,1,0,0,3.2516291673878226,0,885.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55th3.com,,,,,False,,,False
+casino-jackpot-365.top,1,,priority_review,,,,,0,,,,1,22,3,3,1,1,0,3.788754913993503,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-jackpot-365.top,,,,,False,,,False
+maisquebet.com,1,,priority_review,,,,,0,,,,1,14,0,1,1,0,0,3.521640636343318,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,maisquebet.com,,,,,False,,,False
+cfg4.com,1,,needs_review,,,,,0,,,,0,8,1,1,1,0,0,2.75,0,1824.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,cfg4.com,,,,,False,,,False
+panaloplay777.com,0,,priority_review,,,,,0,,,,1,17,3,1,1,0,0,3.175123135113461,0,509.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,panaloplay777.com,,,,,False,,,False
+bet-jackpot-888.xyz,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.787143960698139,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bet-jackpot-888.xyz,,,,,False,,,False
+alivate.app,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,2.8453509366224368,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,alivate.app,,,,,False,,,False
+casino-secure-777.click,1,,priority_review,,,,,0,,,,1,23,3,3,1,1,0,3.621175542919471,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-secure-777.click,,,,,False,,,False
+sportybet-winningodd.weebly.com,1,,priority_review,,,,,0,,,,1,31,0,3,2,1,0,4.042433003725894,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybet-winningodd.weebly.com,,,,,False,,,False
+bahisnow,1,,needs_review,,,,,0,,,,0,8,0,0,0,0,0,3.0,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bahisnow,,,,,False,,,False
+365winner.asia,1,,priority_review,,,,,0,,,,1,14,3,1,1,0,0,3.378783493486176,0,1058.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,365winner.asia,,,,,False,,,False
+jbgame-99.com,1,,needs_review,,,,,0,,,,0,13,2,2,1,1,0,3.3927474104487847,0,849.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,jbgame-99.com,,,,,False,,,False
+god55singapore.net,1,,needs_review,,,,,0,,,,0,18,2,1,1,0,0,3.614369445886757,0,171.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55singapore.net,,,,,False,,,False
+happybingo.games,0,,needs_review,,,,,0,,,,0,16,0,1,1,0,0,3.625,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,happybingo.games,,,,,False,,,False
+casino-arcade.com,1,,priority_review,,,,,0,,,,1,17,0,2,1,1,0,3.4104172527605194,0,254.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-arcade.com,,,,,False,,,False
+pin77.net,0,,needs_review,,,,,0,,,,0,9,2,1,1,0,0,2.725480556997868,0,364.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,pin77.net,,,,,False,,,False
+betmaster.co.uk,0,,priority_review,,,,,0,,,,1,15,0,2,2,0,0,3.506890595608519,0,1344.0,1,1,1,885161.0,betmaster.co.uk,exact,priority_gambling_review,Contains gambling-related keyword,3,betmaster.co.uk,,,,,False,,,False
+black-white-casino.com,1,,priority_review,,,,,0,,,,1,22,0,3,1,1,0,3.8796640049025934,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,black-white-casino.com,,,,,False,,,False
+123sports.ph,0,,needs_review,,,,,0,,,,0,12,3,1,1,0,0,3.2516291673878226,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,123sports.ph,,,,,False,,,False
+dogobet,1,,priority_review,,,,,0,,,,1,7,0,0,0,0,0,2.521640636343318,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,dogobet,,,,,False,,,False
+juan365.win,0,,priority_review,,,,,0,,,,1,11,3,1,1,0,0,3.277613436819116,0,404.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,juan365.win,,,,,False,,,False
+betso88.ph,1,,priority_review,,,,,0,,,,1,10,2,1,1,0,0,3.1219280948873624,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betso88.ph,,,,,False,,,False
+betsound39.com,1,,priority_review,,,,,0,,,,1,14,2,1,1,0,0,3.664497779200461,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betsound39.com,,,,,False,,,False
+bet-secure-888.live,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.471354487013929,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bet-secure-888.live,,,,,False,,,False
+wowgames.com,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.084962500721156,0,9447.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,wowgames.com,,,,,False,,,False
+filgame.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.277613436819116,0,1829.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,filgame.com,,,,,False,,,False
+1xlite-4357202.top,1,,needs_review,,,,,0,,,,0,18,8,2,1,1,0,3.94770277922009,1,55.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,1xlite-4357202.top,,,,,False,,,False
+sportybetadder-90.weebly.com,1,,priority_review,,,,,0,,,,1,28,2,3,2,1,0,4.021640636343318,0,7319.0,1,1,1,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetadder-90.weebly.com,,,,,False,,,False
+indoniche.com,1,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.0850551027564768,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,indoniche.com,,,,,False,,,False
+replay-casino.net,1,,priority_review,,,,,0,,,,1,17,0,2,1,1,0,3.7345216647797512,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,replay-casino.net,,,,,False,,,False
+megapremyo.ph,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.238901256602631,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,megapremyo.ph,,,,,False,,,False
+betxbahis.com,1,,priority_review,,,,,0,,,,1,13,0,1,1,0,0,3.546593564294939,0,282.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betxbahis.com,,,,,False,,,False
+happybingo.fun,0,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.521640636343318,0,421.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,happybingo.fun,,,,,False,,,False
+bingoal.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.277613436819116,0,9080.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bingoal.com,,,,,False,,,False
+juankada.ph,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.0271691184406184,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,juankada.ph,,,,,False,,,False
+casinoburada250.com,1,,priority_review,,,,,0,,,,1,19,3,1,1,0,0,3.787143960698139,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casinoburada250.com,,,,,False,,,False
+1x-bet.in,1,,priority_review,,,,,0,,,,1,9,1,2,1,1,0,3.169925001442312,0,1214.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,1x-bet.in,,,,,False,,,False
+betwien.com,1,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.277613436819116,0,110.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betwien.com,,,,,False,,,False
+adaxbet246.com,1,,priority_review,,,,,0,,,,1,14,3,1,1,0,0,3.664497779200461,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,adaxbet246.com,,,,,False,,,False
+betowen.com,1,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.095795255000934,0,3104.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betowen.com,,,,,False,,,False
+god55.media,1,,needs_review,,,,,0,,,,0,11,2,1,1,0,0,3.095795255000934,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55.media,,,,,False,,,False
+ebet.agency,1,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.0271691184406184,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,ebet.agency,,,,,False,,,False
+megawagi.com,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.084962500721156,0,195.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,megawagi.com,,,,,False,,,False
+comebetvn4.com,1,,priority_review,,,,,0,,,,1,14,1,1,1,0,0,3.235926350629033,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,comebetvn4.com,,,,,False,,,False
+avvabet,1,,priority_review,,,,,0,,,,1,7,0,0,0,0,0,2.235926350629033,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,avvabet,,,,,False,,,False
+greendrg88.com,1,,needs_review,,,,,0,,,,0,14,2,1,1,0,0,3.235926350629033,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,greendrg88.com,,,,,False,,,False
+casinoviva279.com,1,,priority_review,,,,,0,,,,1,17,3,1,1,0,0,3.4992275471326924,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casinoviva279.com,,,,,False,,,False
+casino-account-888.click,1,,priority_review,,,,,0,,,,1,24,3,3,1,1,0,3.486440501696144,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-account-888.click,,,,,False,,,False
+bizzo.world,1,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.095795255000934,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bizzo.world,,,,,False,,,False
+vulkanind.site,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.521640636343318,1,171.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,vulkanind.site,,,,,False,,,False
+cricketbetbd.com,1,,priority_review,,,,,0,,,,1,16,0,1,1,0,0,3.327819531114783,0,361.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,cricketbetbd.com,,,,,False,,,False
+apintoto.com,1,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.0220552088742005,0,340.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,apintoto.com,,,,,False,,,False
+jk88,1,,needs_review,,,,,0,,,,0,4,2,0,0,0,0,1.5,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,jk88,,,,,False,,,False
+j8958.com,1,,needs_review,,,,,0,,,,0,9,4,1,1,0,0,2.94770277922009,0,36.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,j8958.com,,,,,False,,,False
+ww88web.vip,1,,needs_review,,,,,0,,,,0,11,2,1,1,0,0,2.8453509366224368,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ww88web.vip,,,,,False,,,False
+god55.cash,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,3.1219280948873624,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55.cash,,,,,False,,,False
+8558win.com,1,,priority_review,,,,,0,,,,1,11,4,1,1,0,0,3.095795255000934,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,8558win.com,,,,,False,,,False
+win7979.com,1,,priority_review,,,,,0,,,,1,11,4,1,1,0,0,3.095795255000934,0,842.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,win7979.com,,,,,False,,,False
+greatbet.co.uk,0,,priority_review,,,,,0,,,,1,14,0,2,2,0,0,3.378783493486176,0,3474.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,greatbet.co.uk,,,,,False,,,False
+ilotbet-0012.weebly.com,1,,priority_review,,,,,0,,,,1,23,4,3,2,1,0,3.795088586397732,0,7319.0,1,1,1,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,ilotbet-0012.weebly.com,,,,,False,,,False
+desklucky.com,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.3927474104487847,0,533.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,desklucky.com,,,,,False,,,False
+rayvietnam.net,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.235926350629033,0,1463.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,rayvietnam.net,,,,,False,,,False
+1k8bet,1,,priority_review,,,,,0,,,,1,6,2,0,0,0,0,2.584962500721156,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,1k8bet,,,,,False,,,False
+egibet103.com,1,,priority_review,,,,,0,,,,1,13,3,1,1,0,0,3.546593564294939,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,egibet103.com,,,,,False,,,False
+msspins.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,2.8453509366224368,0,970.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,msspins.com,,,,,False,,,False
+juanpanalo.ph,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.026986833359288,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,juanpanalo.ph,,,,,False,,,False
+kingspin.uk,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,2.913977073182752,0,653.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,kingspin.uk,,,,,False,,,False
+blingwin.co,0,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.095795255000934,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,blingwin.co,,,,,False,,,False
+casino.fanatics.com,0,,priority_review,,,,,0,,,,1,19,0,2,2,0,0,3.2210972500579573,0,10063.0,1,1,1,10910.0,fanatics.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,casino.fanatics.com,,,,,False,,,False
+bppoker.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.095795255000934,0,5295.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bppoker.com,,,,,False,,,False
+huhubet665.com,1,,priority_review,,,,,0,,,,1,14,3,1,1,0,0,3.378783493486176,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,huhubet665.com,,,,,False,,,False
+bilyoncu127.com,1,,needs_review,,,,,0,,,,0,15,3,1,1,0,0,3.640223928941852,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bilyoncu127.com,,,,,False,,,False
+king.com.ph,0,,needs_review,,,,,0,,,,0,11,0,2,2,0,0,3.277613436819116,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,king.com.ph,,,,,False,,,False
+most-bet.top,1,,priority_review,,,,,0,,,,1,12,0,2,1,1,0,3.0220552088742005,1,94.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,most-bet.top,,,,,False,,,False
+juanzone.ph,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.277613436819116,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,juanzone.ph,,,,,False,,,False
+koalaspins.com,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.378783493486176,0,974.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,koalaspins.com,,,,,False,,,False
+sportybetcompanyonlinelink.weebly.com,1,,priority_review,,,,,0,,,,1,37,0,2,2,0,0,3.925405392539033,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetcompanyonlinelink.weebly.com,,,,,False,,,False
+bzeebet.com,0,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,2.8453509366224368,0,1416.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bzeebet.com,,,,,False,,,False
+eurobahis.com,1,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.546593564294939,0,1538.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,eurobahis.com,,,,,False,,,False
+luckystarph.com,0,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.773557262275186,0,276.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,luckystarph.com,,,,,False,,,False
+arcticbet.com,0,,priority_review,,,,,0,,,,1,13,0,1,1,0,0,3.180832987205441,0,1027.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,arcticbet.com,,,,,False,,,False
+atm228.com,1,,needs_review,,,,,0,,,,0,10,3,1,1,0,0,2.9219280948873623,0,1782.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,atm228.com,,,,,False,,,False
+casipol957.com,1,,needs_review,,,,,0,,,,0,14,3,1,1,0,0,3.521640636343318,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,casipol957.com,,,,,False,,,False
+specialty.mgame.ph,0,,needs_review,,,,,0,,,,0,18,0,2,2,0,0,3.614369445886757,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,specialty.mgame.ph,,,,,False,,,False
+betnef369.com,1,,priority_review,,,,,0,,,,1,13,3,1,1,0,0,3.546593564294939,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betnef369.com,,,,,False,,,False
+sportybet-nigeria-bookings.weebly.com,1,,priority_review,,,,,0,,,,1,37,0,4,2,1,0,4.087567554701195,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybet-nigeria-bookings.weebly.com,,,,,False,,,False
+bet88.stream,0,,priority_review,,,,,0,,,,1,12,2,1,1,0,0,3.084962500721156,0,1053.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bet88.stream,,,,,False,,,False
+filgame.ph,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.321928094887362,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,filgame.ph,,,,,False,,,False
+alpha66,1,,needs_review,,,,,0,,,,0,7,2,0,0,0,0,2.235926350629033,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,alpha66,,,,,False,,,False
+wheeloffortunecasino.com,0,,priority_review,,,,,0,,,,1,24,0,1,1,0,0,3.8035088547976783,0,3176.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,wheeloffortunecasino.com,,,,,False,,,False
+efc88.club,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,2.9219280948873623,1,1157.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,efc88.club,,,,,False,,,False
+blgcoin88.com,1,,needs_review,,,,,0,,,,0,13,2,1,1,0,0,3.238901256602631,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,blgcoin88.com,,,,,False,,,False
+joker777.net,1,,priority_review,,,,,0,,,,1,12,3,1,1,0,0,3.0220552088742005,0,2557.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,joker777.net,,,,,False,,,False
+crown01.org,1,,needs_review,,,,,0,,,,0,11,2,1,1,0,0,3.095795255000934,0,1009.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,crown01.org,,,,,False,,,False
+doctorjudi.com,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.1820058147602133,0,1512.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,doctorjudi.com,,,,,False,,,False
+hipercasino889.com,1,,priority_review,,,,,0,,,,1,18,3,1,1,0,0,3.725480556997868,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,hipercasino889.com,,,,,False,,,False
+kaiyun.io,1,,needs_review,,,,,0,,,,0,9,0,1,1,0,0,2.94770277922009,0,1329.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,kaiyun.io,,,,,False,,,False
+ak-vn.com,1,,needs_review,,,,,0,,,,0,9,0,2,1,1,0,3.169925001442312,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,ak-vn.com,,,,,False,,,False
+spinjam.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.277613436819116,0,8362.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,spinjam.com,,,,,False,,,False
+footballbet.weebly.com,1,,priority_review,,,,,0,,,,1,22,0,2,2,0,0,3.413088436425757,0,7319.0,1,1,1,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,footballbet.weebly.com,,,,,False,,,False
+betonego.com,1,,priority_review,,,,,0,,,,1,12,0,1,1,0,0,3.0220552088742005,0,937.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betonego.com,,,,,False,,,False
+jackpotvulcan.com,1,,priority_review,,,,,0,,,,1,17,0,1,1,0,0,3.572469458770135,0,1256.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,jackpotvulcan.com,,,,,False,,,False
+bet-login-777.xyz,1,,priority_review,,,,,0,,,,1,17,3,3,1,1,0,3.690116517593665,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bet-login-777.xyz,,,,,False,,,False
+buffalo39a.com,1,,needs_review,,,,,0,,,,0,14,2,1,1,0,0,3.378783493486176,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,buffalo39a.com,,,,,False,,,False
+playojo.co.uk,0,,needs_review,,,,,0,,,,0,13,0,2,2,0,0,3.180832987205441,0,3696.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,playojo.co.uk,,,,,False,,,False
+raisebet24.com,1,,priority_review,,,,,0,,,,1,14,2,1,1,0,0,3.664497779200461,0,1724.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,raisebet24.com,,,,,False,,,False
+ilotbetzipeg1li1itch.weebly.com,1,,priority_review,,,,,0,,,,1,31,2,2,2,0,0,3.808719697344071,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,ilotbetzipeg1li1itch.weebly.com,,,,,False,,,False
+betmod90.com,1,,priority_review,,,,,0,,,,1,12,2,1,1,0,0,3.2516291673878226,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,betmod90.com,,,,,False,,,False
+j8962.com,1,,needs_review,,,,,0,,,,0,9,4,1,1,0,0,3.169925001442312,0,36.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,j8962.com,,,,,False,,,False
+fbmplay.ph,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,3.1219280948873624,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fbmplay.ph,,,,,False,,,False
+afgames.com,1,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.095795255000934,0,4874.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,afgames.com,,,,,False,,,False
+joy-casino.in,1,,priority_review,,,,,0,,,,1,13,0,2,1,1,0,3.238901256602631,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,joy-casino.in,,,,,False,,,False
+slotvocalnocasheu.vip,1,,priority_review,,,,,0,,,,1,21,0,1,1,0,0,3.6897037321995474,0,109.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,slotvocalnocasheu.vip,,,,,False,,,False
+adaxbet,1,,priority_review,,,,,0,,,,1,7,0,0,0,0,0,2.521640636343318,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,adaxbet,,,,,False,,,False
+casinoeye.com,0,,priority_review,,,,,0,,,,1,13,0,1,1,0,0,3.238901256602631,0,8086.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casinoeye.com,,,,,False,,,False
+bet365vnn.com,1,,priority_review,,,,,0,,,,1,13,3,1,1,0,0,3.546593564294939,0,496.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bet365vnn.com,,,,,False,,,False
+slotsroyale.co.uk,0,,priority_review,,,,,0,,,,1,17,0,2,2,0,0,3.4548223999466057,0,2365.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,slotsroyale.co.uk,,,,,False,,,False
+bigwin668.com,1,,priority_review,,,,,0,,,,1,13,3,1,1,0,0,3.3927474104487847,0,2061.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bigwin668.com,,,,,False,,,False
+spinomenal.io,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.238901256602631,0,2247.0,1,0,1,549059.0,spinomenal.io,exact,weak_benign_candidate,Appears in Tranco Top 1M,4,spinomenal.io,,,,,False,,,False
+light-pay.com,1,,needs_review,,,,,0,,,,0,13,0,2,1,1,0,3.7004397181410926,0,1136.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,light-pay.com,,,,,False,,,False
+sportsbet.mgame.ph,0,,priority_review,,,,,0,,,,1,18,0,2,2,0,0,3.5032583347756456,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,sportsbet.mgame.ph,,,,,False,,,False
+casino-free-777.click,1,,priority_review,,,,,0,,,,1,21,3,3,1,1,0,3.6537567082870015,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,casino-free-777.click,,,,,False,,,False
+bigwin99.net,1,,priority_review,,,,,0,,,,1,12,2,1,1,0,0,3.084962500721156,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bigwin99.net,,,,,False,,,False
+megascratch.com,0,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.323231428797621,0,8612.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,megascratch.com,,,,,False,,,False
+888.co.uk,0,,needs_review,,,,,0,,,,0,9,3,2,2,0,0,2.4193819456463714,0,10433.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,888.co.uk,,,,,False,,,False
+spinara.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.277613436819116,0,1105.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,spinara.com,,,,,False,,,False
+viplucky.com,0,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.4182958340544896,0,2924.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,viplucky.com,,,,,False,,,False
+pin77.asia,0,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,2.721928094887362,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,pin77.asia,,,,,False,,,False
+bahistream.org,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.521640636343318,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,bahistream.org,,,,,False,,,False
+grandfinityplay,1,,needs_review,,,,,0,,,,0,15,0,0,0,0,0,3.373557262275185,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,grandfinityplay,,,,,False,,,False
+win1212.com,1,,priority_review,,,,,0,,,,1,11,4,1,1,0,0,3.095795255000934,0,13.0,1,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,win1212.com,,,,,False,,,False
+epicgame.ph,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.095795255000934,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,epicgame.ph,,,,,False,,,False
+bwin98.com,1,,priority_review,,,,,0,,,,1,10,2,1,1,0,0,3.321928094887362,0,3227.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bwin98.com,,,,,False,,,False
+1x-play.com,1,,needs_review,,,,,0,,,,0,11,1,2,1,1,0,3.4594316186372973,0,247.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,1x-play.com,,,,,False,,,False
+halfagoal.com,1,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.026986833359288,0,4163.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,halfagoal.com,,,,,False,,,False
+fb88cool.com,1,,needs_review,,,,,0,,,,0,12,2,1,1,0,0,2.8553885422075336,0,2004.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fb88cool.com,,,,,False,,,False
+jackpotcombo.com,0,,priority_review,,,,,0,,,,1,16,0,1,1,0,0,3.077819531114783,0,528.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,jackpotcombo.com,,,,,False,,,False
+royalvalleycasino.com,0,,priority_review,,,,,0,,,,1,21,0,1,1,0,0,3.52257158913636,0,2070.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,royalvalleycasino.com,,,,,False,,,False
+blingwin.me,0,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.095795255000934,0,491.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,blingwin.me,,,,,False,,,False
+902bahisnow.com,1,,needs_review,,,,,0,,,,0,15,3,1,1,0,0,3.773557262275186,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,902bahisnow.com,,,,,False,,,False
+bwin6996.com,1,,priority_review,,,,,0,,,,1,12,4,1,1,0,0,3.2516291673878226,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bwin6996.com,,,,,False,,,False
+amusnet.es,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,2.9219280948873623,0,0.0,0,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,amusnet.es,,,,,False,,,False
+slot-bonus-777.buzz,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.3660913291191923,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,slot-bonus-777.buzz,,,,,False,,,False
+pickmeupbingo.com,0,,needs_review,,,,,0,,,,0,17,0,1,1,0,0,3.4992275471326924,0,7492.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,pickmeupbingo.com,,,,,False,,,False
+lakilucky.com,0,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,3.238901256602631,0,774.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,lakilucky.com,,,,,False,,,False
+hipspin.com,0,,needs_review,,,,,0,,,,0,11,0,1,1,0,0,3.095795255000934,0,3046.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,hipspin.com,,,,,False,,,False
+cfg600.com,1,,needs_review,,,,,0,,,,0,10,3,1,1,0,0,2.9219280948873623,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,cfg600.com,,,,,False,,,False
+jackpotcitycasino-uk.uk,1,,priority_review,,,,,0,,,,1,23,0,2,1,1,0,3.675310868912364,0,156.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,jackpotcitycasino-uk.uk,,,,,False,,,False
+fezzogaming.com,1,,needs_review,,,,,0,,,,0,15,0,1,1,0,0,3.373557262275185,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,fezzogaming.com,,,,,False,,,False
+red.mgame.com,0,,needs_review,,,,,0,,,,0,13,0,2,2,0,0,3.026986833359288,0,9650.0,1,0,1,197018.0,mgame.com,parent_domain,weak_benign_candidate,Appears in Tranco Top 1M,4,red.mgame.com,,uncertain,manual research,Specific subdomain remains unresolved,False,,,False
+casivera.pro,1,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.2516291673878226,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,casivera.pro,,,,,False,,,False
+bet-account-777.xyz,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.6818808028034025,1,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bet-account-777.xyz,,,,,False,,,False
+spgames.ph,0,,needs_review,,,,,0,,,,0,10,0,1,1,0,0,2.9219280948873623,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,spgames.ph,,,,,False,,,False
+aw33bd.com,1,,needs_review,,,,,0,,,,0,10,2,1,1,0,0,3.1219280948873624,0,1191.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,aw33bd.com,,,,,False,,,False
+idnplaypoker,1,,needs_review,,,,,0,,,,0,12,0,0,0,0,0,3.4182958340544896,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,idnplaypoker,,,,,False,,,False
+pinkribbonbingo.com,0,,needs_review,,,,,0,,,,0,19,0,1,1,0,0,3.246898565619697,0,5815.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,pinkribbonbingo.com,,,,,False,,,False
+cashwin,1,,priority_review,,,,,0,,,,1,7,0,0,0,0,0,2.807354922057604,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,cashwin,,,,,False,,,False
+casinoburada204.com,1,,priority_review,,,,,0,,,,1,19,3,1,1,0,0,3.787143960698139,0,516.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,casinoburada204.com,,,,,False,,,False
+casivera66.com,1,,needs_review,,,,,0,,,,0,14,2,1,1,0,0,3.378783493486176,0,0.0,0,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,casivera66.com,,,,,False,,,False
+birinicibet2.com,1,,priority_review,,,,,0,,,,1,16,1,1,1,0,0,3.25,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,birinicibet2.com,,,,,False,,,False
+sportybetbalanceadderx.weebly.com,1,,priority_review,,,,,0,,,,1,33,0,2,2,0,0,3.9195633472747033,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetbalanceadderx.weebly.com,,,,,False,,,False
+explosionbet.com,1,,priority_review,,,,,0,,,,1,16,0,1,1,0,0,3.577819531114783,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,explosionbet.com,,,,,False,,,False
+betsson.co.uk,0,,priority_review,,,,,0,,,,1,13,0,2,2,0,0,3.238901256602631,0,6454.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betsson.co.uk,,,,,False,,,False
+youplayfortuna.com,1,,needs_review,,,,,0,,,,0,18,0,1,1,0,0,3.5724312513221195,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,youplayfortuna.com,,,,,False,,,False
+24grandcasino.com,1,,priority_review,,,,,0,,,,1,17,2,1,1,0,0,3.616874605956222,0,4589.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,24grandcasino.com,,,,,False,,,False
+harbibahis.com,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.235926350629033,0,2887.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,harbibahis.com,,,,,False,,,False
+essbahis.com,1,,needs_review,,,,,0,,,,0,12,0,1,1,0,0,3.188721875540867,0,1344.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,essbahis.com,,,,,False,,,False
+sportybetadder581spo.weebly.com,1,,priority_review,,,,,0,,,,1,31,3,2,2,0,0,4.026619294188054,0,7319.0,1,1,1,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetadder581spo.weebly.com,,,,,False,,,False
+jadedsportsbet.com,0,,priority_review,,,,,0,,,,1,18,0,1,1,0,0,3.614369445886757,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,jadedsportsbet.com,,,,,False,,,False
+vavadacnv.com,1,,needs_review,,,,,0,,,,0,13,0,1,1,0,0,2.815072410115944,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,vavadacnv.com,,,,,False,,,False
+747.casino,1,,priority_review,,,,,0,,,,1,10,3,1,1,0,0,3.1219280948873624,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,747.casino,,,,,False,,,False
+slot-login-777.buzz,1,,priority_review,,,,,0,,,,1,19,3,3,1,1,0,3.5766176449086657,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,slot-login-777.buzz,,,,,False,,,False
+bestbetss2u.com,1,,priority_review,,,,,0,,,,1,15,1,1,1,0,0,3.1898980954642875,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bestbetss2u.com,,,,,False,,,False
+sportybet-nig-bookingcode.weebly.com,1,,priority_review,,,,,0,,,,1,36,0,4,2,1,0,4.048688113203416,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybet-nig-bookingcode.weebly.com,,,,,False,,,False
+bet33.in,1,,priority_review,,,,,0,,,,1,8,2,1,1,0,0,2.75,0,1507.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bet33.in,,,,,False,,,False
+god55m6.org,1,,needs_review,,,,,0,,,,0,11,3,1,1,0,0,2.913977073182752,0,1457.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,god55m6.org,,,,,False,,,False
+amgaminggroup.com,0,,needs_review,,,,,0,,,,0,17,0,1,1,0,0,3.29277019393699,0,1553.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,amgaminggroup.com,,,,,False,,,False
+betacular.live,1,,priority_review,,,,,0,,,,1,14,0,1,1,0,0,3.378783493486176,0,0.0,0,1,1,92163.0,betacular.live,exact,priority_gambling_review,Contains gambling-related keyword,3,betacular.live,,,,,False,,,False
+1-xbet.in,1,,priority_review,,,,,0,,,,1,9,1,2,1,1,0,3.169925001442312,0,1870.0,1,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,1-xbet.in,,,,,False,,,False
+nordicautomaten.com,0,,needs_review,,,,,0,,,,0,19,0,1,1,0,0,3.471354487013929,0,4661.0,1,1,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,nordicautomaten.com,,,,,False,,,False
+rekabet.eu,1,,priority_review,,,,,0,,,,1,10,0,1,1,0,0,2.8464393446710154,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,rekabet.eu,,,,,False,,,False
+vulkan-365.cc,1,,needs_review,,,,,0,,,,0,13,3,2,1,1,0,3.546593564294939,0,287.0,1,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,vulkan-365.cc,,,,,False,,,False
+sportybetreedembonus04.weebly.com,1,,priority_review,,,,,0,,,,1,33,2,2,2,0,0,3.9225895736416696,0,7319.0,1,0,0,344.0,weebly.com,parent_domain,priority_gambling_review,Contains gambling-related keyword,3,sportybetreedembonus04.weebly.com,,,,,False,,,False
+ibet1x2.com,1,,priority_review,,,,,0,,,,1,11,2,1,1,0,0,3.4594316186372973,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,ibet1x2.com,,,,,False,,,False
+lucksports.biz,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.664497779200461,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,lucksports.biz,,,,,False,,,False
+bet368.in,1,,priority_review,,,,,0,,,,1,9,3,1,1,0,0,3.169925001442312,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bet368.in,,,,,False,,,False
+bosswd777,1,,priority_review,,,,,0,,,,1,9,3,0,0,0,0,2.4193819456463714,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bosswd777,,,,,False,,,False
+poker-bonus-888.site,1,,needs_review,,,,,0,,,,0,20,3,3,1,1,0,3.684183719779189,1,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,poker-bonus-888.site,,,,,False,,,False
+bet-bonus-365.live,1,,priority_review,,,,,0,,,,1,18,3,3,1,1,0,3.836591668108978,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,bet-bonus-365.live,,,,,False,,,False
+betmarlo539.com,1,,priority_review,,,,,0,,,,1,15,3,1,1,0,0,3.640223928941852,0,0.0,0,0,1,,,,priority_gambling_review,Contains gambling-related keyword,3,betmarlo539.com,,,,,False,,,False
+vulcanplay.one,1,,needs_review,,,,,0,,,,0,14,0,1,1,0,0,3.378783493486176,0,604.0,1,0,1,,,,needs_manual_review,No gambling-list match and no Tranco match,5,vulcanplay.one,,,,,False,,,False
+dafabet,1,,priority_review,,,,,0,,,,1,7,0,0,0,0,0,2.521640636343318,0,0.0,0,0,0,,,,priority_gambling_review,Contains gambling-related keyword,3,dafabet,,,,,False,,,False
+kodabet.com,0,,priority_review,,,,,0,,,,1,11,0,1,1,0,0,3.277613436819116,0,415.0,1,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,kodabet.com,,,,,False,,,False
+footballtycoon.org,1,,needs_review,,,,,0,,,,0,18,0,1,1,0,0,3.3027227528624894,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,footballtycoon.org,,,,,False,,,False
+bybet.ph,0,,priority_review,,,,,0,,,,1,8,0,1,1,0,0,2.75,0,0.0,0,1,1,,,,priority_gambling_review,Contains gambling-related keyword,3,bybet.ph,,,,,False,,,False
+shbazi30.com,1,,needs_review,,,,,0,,,,0,12,2,1,1,0,0,3.584962500721156,0,0.0,0,0,0,,,,needs_manual_review,No gambling-list match and no Tranco match,5,shbazi30.com,,,,,False,,,False

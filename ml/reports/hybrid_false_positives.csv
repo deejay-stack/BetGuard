@@ -1,0 +1,16 @@
+domain,label,source,category,domain_family,gambling_probability,predicted_label,correct,error_type
+750g.com,0,UT1_non_gambling_category,cooking,750g.com,0.9555521298848114,1,False,false_positive
+mcb1980.com,0,UT1_non_gambling_category,bank,mcb1980.com,0.9464359892546457,1,False,false_positive
+godcures.online,0,UT1_non_gambling_category,jobsearch,godcures.online,0.8974246903765087,1,False,false_positive
+juegopc10.com,0,UT1_non_gambling_category,games,juegopc10.com,0.8151200619115003,1,False,false_positive
+3chardons.com,0,UT1_non_gambling_category,child,3chardons.com,0.7475007814732092,1,False,false_positive
+d5bridge.com,0,UT1_non_gambling_category,games,d5bridge.com,0.6793922999549232,1,False,false_positive
+fubar.com,0,UT1_non_gambling_category,social_networks,fubar.com,0.6662008008244618,1,False,false_positive
+topshift.com,0,UT1_non_gambling_category,games,topshift.com,0.6587475210345557,1,False,false_positive
+usc.rivals.com,0,UT1_non_gambling_category,sports,rivals.com,0.6323816033947596,1,False,false_positive
+ab-cds.com,0,UT1_non_gambling_category,shopping,ab-cds.com,0.629975637133948,1,False,false_positive
+euchrelinks.com,0,UT1_non_gambling_category,games,euchrelinks.com,0.6014671188518494,1,False,false_positive
+deviantart.com,0,UT1_non_gambling_category,social_networks,deviantart.com,0.5788299913038343,1,False,false_positive
+dosgamer.com,0,UT1_non_gambling_category,games,dosgamer.com,0.5556604074151819,1,False,false_positive
+aldiatx.com,0,UT1_non_gambling_category,press,aldiatx.com,0.5488906909476414,1,False,false_positive
+tricentury.com,0,UT1_non_gambling_category,bank,tricentury.com,0.5464152296018304,1,False,false_positive

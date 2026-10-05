@@ -1,0 +1,150 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "classification": {
+      "enum": [
+        "gambling",
+        "non_gambling",
+        "unknown"
+      ],
+      "title": "Classification",
+      "type": "string"
+    },
+    "collected_at": {
+      "format": "date-time",
+      "title": "Collected At",
+      "type": "string"
+    },
+    "evidence": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Evidence",
+      "type": "string"
+    },
+    "hostname": {
+      "maxLength": 2048,
+      "minLength": 1,
+      "title": "Hostname",
+      "type": "string"
+    },
+    "label_provenance": {
+      "maxLength": 500,
+      "minLength": 1,
+      "title": "Label Provenance",
+      "type": "string"
+    },
+    "license": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "License",
+      "type": "string"
+    },
+    "license_uri": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "License Uri",
+      "type": "string"
+    },
+    "policy_version": {
+      "title": "Policy Version",
+      "type": "string"
+    },
+    "record_id": {
+      "maxLength": 120,
+      "minLength": 1,
+      "title": "Record Id",
+      "type": "string"
+    },
+    "related_group_evidence": {
+      "anyOf": [
+        {
+          "maxLength": 2000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Related Group Evidence"
+    },
+    "related_group_id": {
+      "anyOf": [
+        {
+          "maxLength": 200,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Related Group Id"
+    },
+    "review_status": {
+      "enum": [
+        "pending",
+        "reviewed"
+      ],
+      "title": "Review Status",
+      "type": "string"
+    },
+    "reviewed_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reviewed At"
+    },
+    "reviewed_by": {
+      "anyOf": [
+        {
+          "maxLength": 200,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reviewed By"
+    },
+    "source_uri": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "Source Uri",
+      "type": "string"
+    },
+    "synthetic": {
+      "default": false,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "usage_allowed": {
+      "title": "Usage Allowed",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "hostname",
+    "classification",
+    "label_provenance",
+    "review_status",
+    "record_id",
+    "source_uri",
+    "collected_at",
+    "license",
+    "license_uri",
+    "usage_allowed",
+    "evidence",
+    "policy_version"
+  ],
+  "title": "Observation",
+  "type": "object"
+}
