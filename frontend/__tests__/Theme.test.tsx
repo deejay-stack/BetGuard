@@ -104,6 +104,21 @@ test('failed writes are visible and a later selection can retry', async () => {
   expect(current.error).toBeNull();
   expect(saved).toBe('light');
 });
+
+test('System restores automatic appearance and persists across remount', async () => {
+  saved = 'dark';
+  await mount();
+  await act(() => current.setMode('system'));
+  expect(saved).toBe('system');
+  expect(current.preference).toBe('system');
+  expect(Appearance.setColorScheme).toHaveBeenCalledWith('auto');
+  expect(current.mode).toBe('light');
+  await act(() => renderer.unmount());
+  (useColorScheme as jest.Mock).mockReturnValue('dark');
+  await mount();
+  expect(current.mode).toBe('dark');
+  expect(current.preference).toBe('system');
+});
 test('serializes pending writes and respects reduced motion', async () => {
   let resolve!: () => void;
   (Native!.setThemePreference as jest.Mock).mockImplementationOnce(

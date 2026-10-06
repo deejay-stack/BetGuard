@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { AlertCircle, type LucideIcon } from 'lucide-react-native';
+import { AlertCircle, X, type LucideIcon } from 'lucide-react-native';
 import { useTheme } from '../state/ThemeContext';
 import type { ThemeColors } from '../theme';
 import { useBetGuard } from '../state/BetGuardContext';
@@ -26,7 +26,15 @@ export function Page({
 }) {
   const { colors, styles } = useTheme();
   const local = makeLocal(colors);
-  const { error, feedback, dismissError, available } = useBetGuard();
+  const {
+    error,
+    feedback,
+    dismissError,
+    dismissFeedback,
+    available,
+    refresh,
+    busy,
+  } = useBetGuard();
   return (
     <SafeAreaView edges={['top', 'left', 'right']} style={styles.page}>
       <ScrollView
@@ -36,10 +44,10 @@ export function Page({
       >
         <View style={[styles.spread, styles.wrap]}>
           <View style={styles.row} accessible accessibilityLabel="BetGuard">
-            <BrandLogo size={40} />
+            <BrandLogo size={32} />
             <Text style={local.wordmark}>BetGuard</Text>
           </View>
-          <Badge text="DEVELOPMENT BUILD" />
+          {__DEV__ && <Badge text="USB DEVELOPMENT" />}
         </View>
         <View style={local.titleGroup}>
           <Text accessibilityRole="header" style={styles.title}>
@@ -53,14 +61,36 @@ export function Page({
         {error && (
           <View>
             <Notice text={error} tone="error" />
+            {available && (
+              <Button
+                title="Retry status"
+                secondary
+                disabled={busy}
+                onPress={() => {
+                  void refresh();
+                }}
+              />
+            )}
             <Button title="Dismiss error" secondary onPress={dismissError} />
           </View>
         )}
         {feedback && (
-          <View style={styles.card}>
-            <Text accessibilityLiveRegion="polite" style={styles.body}>
-              {feedback}
+          <View style={[styles.card, styles.row]}>
+            <Text
+              accessibilityLiveRegion="polite"
+              numberOfLines={2}
+              style={[styles.body, styles.flex]}
+            >
+              {feedback.split('. ')[0]}
             </Text>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Dismiss rule feedback"
+              onPress={dismissFeedback}
+              style={local.dismiss}
+            >
+              <X size={20} color={colors.textMuted} />
+            </Pressable>
           </View>
         )}
         {children}
@@ -81,6 +111,7 @@ export function Button({
   secondary,
   icon: Icon,
   accessibilityLabel,
+  selected,
 }: {
   title: string;
   onPress: () => void;
@@ -89,6 +120,7 @@ export function Button({
   secondary?: boolean;
   icon?: LucideIcon;
   accessibilityLabel?: string;
+  selected?: boolean;
 }) {
   const { colors, reducedMotion } = useTheme();
   const local = makeLocal(colors);
@@ -121,7 +153,7 @@ export function Button({
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={accessibilityLabel ?? title}
-        accessibilityState={{ disabled: blocked, busy: !!busy }}
+        accessibilityState={{ disabled: blocked, busy: !!busy, selected }}
         disabled={blocked}
         onPress={onPress}
         onPressIn={() => press(0.98)}
@@ -143,7 +175,7 @@ export function Button({
     </Animated.View>
   );
 }
-type Tone = 'primary' | 'success' | 'warning' | 'error';
+type Tone = 'primary' | 'success' | 'warning' | 'error' | 'inactive';
 export function Badge({
   text,
   tone = 'primary',
@@ -208,6 +240,12 @@ export function Loading() {
 }
 const makeLocal = (colors: ThemeColors) =>
   StyleSheet.create({
+    dismiss: {
+      minWidth: 48,
+      minHeight: 48,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
     wordmark: {
       fontSize: 20,
       fontWeight: '700',
@@ -216,11 +254,8 @@ const makeLocal = (colors: ThemeColors) =>
     },
     titleGroup: {
       gap: 8,
-      marginTop: 14,
+      marginTop: 4,
       marginBottom: 4,
-      paddingLeft: 14,
-      borderLeftWidth: 3,
-      borderLeftColor: colors.primary,
     },
     button: {
       minHeight: 52,

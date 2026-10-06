@@ -12,6 +12,7 @@ export type HistoryItem = {
   createdAt: number;
 };
 export type Snapshot = {
+  detectionEnabled?: boolean;
   state:
     | 'off'
     | 'starting'
@@ -36,8 +37,8 @@ export const stateLabels: Record<Snapshot['state'], string> = {
   off: 'Protection is off',
   starting: 'Starting protection',
   stopping: 'Stopping protection',
-  active: 'DNS filter is running',
-  degraded: 'Connection needs attention',
-  failed: 'Protection could not start',
+  active: 'DNS protection on',
+  degraded: 'Attention required',
+  failed: 'Protection error',
   interrupted: 'Protection was interrupted',
 };

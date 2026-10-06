@@ -8,6 +8,7 @@ import android.os.*
 import android.system.OsConstants
 import android.system.Os
 import android.system.StructPollfd
+import android.util.Log
 import com.betguard.BuildConfig
 import com.betguard.MainActivity
 import com.betguard.R
@@ -35,6 +36,7 @@ class BetGuardVpnService : VpnService() {
     private val networks = ConcurrentHashMap.newKeySet<Network>()
     @Volatile private var running = false
     private var watchingNetwork = false
+    private var released = false
     private val workers = ThreadPoolExecutor(4, 4, 0L, TimeUnit.MILLISECONDS, ArrayBlockingQueue(64))
     private val connectivity by lazy { getSystemService(ConnectivityManager::class.java) }
     private val networkCallback = object : ConnectivityManager.NetworkCallback() {
@@ -55,6 +57,7 @@ class BetGuardVpnService : VpnService() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (intent?.action == ACTION_STOP) {
             repo.setState("stopping", "Stopping DNS filtering. Waiting for the interface to close.")
+            releaseTunnel()
             stopSelf(); return START_NOT_STICKY
         }
         if (running) return START_NOT_STICKY
@@ -78,9 +81,11 @@ class BetGuardVpnService : VpnService() {
             watchingNetwork = true
             repo.setState("active", "DNS filter is running (${if (repo.detectionBaseUrl.isEmpty()) "manual rules" else "online detection"}). Only new requests through the supported DNS path are covered.")
             reader = Thread({ readPackets() }, "BetGuard-DNS").apply { isDaemon = true; start() }
-        } catch (_: Exception) {
+        } catch (error: Exception) {
+            Log.e("BetGuardVPN", "Start failed: ${error.javaClass.simpleName}")
             running = false
             repo.setState("failed", "Protection could not start. Check VPN permission and try again.")
+            releaseTunnel()
             stopSelf()
         }
         // A killed/rebooted app must be reopened and explicitly enabled; never show stale ACTIVE.
@@ -109,7 +114,12 @@ class BetGuardVpnService : VpnService() {
                 }
             }
             if (running) fail("The DNS interface closed. Re-enable protection.")
-        } catch (_: Exception) { if (running) fail("The DNS interface was interrupted. Re-enable protection.") }
+        } catch (error: Exception) {
+            if (running) {
+                Log.e("BetGuardVPN", "Reader failed: ${error.javaClass.simpleName}")
+                fail("The DNS interface was interrupted. Re-enable protection.")
+            }
+        }
     }
 
     private fun handle(packet: DnsPacket) {
@@ -207,31 +217,43 @@ class BetGuardVpnService : VpnService() {
             synchronized(outputLock) { running = false }
             repo.setState("failed", message)
         }
-        main.post { stopSelf() }
+        main.post { releaseTunnel(); stopSelf() }
     }
 
     override fun onRevoke() {
         synchronized(outputLock) { running = false }
         repo.setState("interrupted", "Android revoked VPN access. Protection is off.")
+        releaseTunnel()
         stopSelf()
         super.onRevoke()
     }
 
     override fun onDestroy() {
+        releaseTunnel()
+        super.onDestroy()
+    }
+
+    /** Close the TUN before stopSelf: an Android VPN binding can outlive startService. */
+    private fun releaseTunnel() {
+        if (released) return
+        released = true
         synchronized(outputLock) { running = false }
         if (watchingNetwork) try { connectivity.unregisterNetworkCallback(networkCallback) } catch (_: IllegalArgumentException) { }
+        watchingNetwork = false
+        try { tunnel?.close() } catch (error: Exception) {
+            Log.e("BetGuardVPN", "Interface close failed: ${error.javaClass.simpleName}")
+            repo.setState("failed", "Could not close the DNS interface. Check Android VPN settings.")
+        }
+        tunnel = null
         sockets.forEach { it.close() }
         detection.close()
         workers.shutdownNow()
-        try { tunnel?.close() } catch (_: Exception) { }
         reader?.interrupt()
-        tunnel = null
         input = null
         synchronized(outputLock) { output = null }
         if (repo.state !in listOf("failed", "interrupted"))
             repo.setState("off", "Protection is off. Your saved rules stay on this phone.")
         stopForeground(STOP_FOREGROUND_REMOVE)
-        super.onDestroy()
     }
 
     private fun openAppIntent(): PendingIntent = PendingIntent.getActivity(this, 0,

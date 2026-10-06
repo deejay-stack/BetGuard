@@ -19,6 +19,7 @@ class BetGuardModule(private val context: ReactApplicationContext) : NativeBetGu
 
     init { context.addActivityEventListener(this); repo.listeners.add(listener) }
     override fun getName() = NAME
+    override fun getBridgeVersion(): Double = 2.0
     override fun getThemePreference(): String = AppearancePreferences.read(context)
     override fun setThemePreference(mode: String, promise: Promise) =
         run(promise) { AppearancePreferences.save(context, mode); null }
@@ -69,11 +70,16 @@ class BetGuardModule(private val context: ReactApplicationContext) : NativeBetGu
                     promise.reject("E_PENDING", "Finish the VPN permission request first.")
                     return@runOnUiThread
                 }
-                if (context.stopService(Intent(context, BetGuardVpnService::class.java)))
-                    repo.setState("stopping", "Stopping DNS filtering. Waiting for the interface to close.")
-                else repo.setState("off", "Protection is off. Your saved rules stay on this phone.")
+                // Android binds an established VPN. stopService alone cannot
+                // destroy that bound instance or close its network interface.
+                repo.setState("stopping", "Stopping DNS filtering. Waiting for the interface to close.")
+                context.startService(Intent(context, BetGuardVpnService::class.java)
+                    .setAction(BetGuardVpnService.ACTION_STOP))
                 promise.resolve(null)
-            } catch (e: Exception) { promise.reject("E_STOP", "Could not stop protection. Check Android VPN settings.", e) }
+            } catch (e: Exception) {
+                repo.setState("failed", "Could not stop protection. Check Android VPN settings.")
+                promise.reject("E_STOP", "Could not stop protection. Check Android VPN settings.", e)
+            }
         }
     }
 

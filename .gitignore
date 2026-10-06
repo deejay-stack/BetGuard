@@ -105,3 +105,6 @@ dist/
 *.onnx
 *.safetensors
 *.key
+
+# Local device verification captures and installed APK backups
+/verification/

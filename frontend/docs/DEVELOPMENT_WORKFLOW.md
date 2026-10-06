@@ -1,5 +1,7 @@
 # BetGuard development and stable milestones
 
+For the current guided UI and repeatable versioned APK commands, see [APP_GUIDE.md](APP_GUIDE.md). `npm.cmd run apk:save` builds a bundled Dev APK; `npm.cmd run apk:install` also updates the connected Dev installation and saves a copy in Download. Every saved improvement requires a rebuild/install; this project has no automatic OTA service.
+
 Run mobile commands from `betguard/frontend`; Python commands from `betguard/backend`. The checked-in project is bare React Native with custom native Android code and EAS configuration. Do not run Expo prebuild or replace native directories.
 
 ## Two Android installations
@@ -7,10 +9,13 @@ Run mobile commands from `betguard/frontend`; Python commands from `betguard/bac
 | Build profile | Android task | Installed name / ID | JavaScript |
 | --- | --- | --- | --- |
 | development | `:app:assembleDevelopmentDebug` | BetGuard Dev / `com.betguard.dev` | Metro; existing React Native debug client |
+| local saved Dev preview | `:app:assembleDevelopmentRelease` | BetGuard Dev / `com.betguard.dev` | Bundled APK; runs without Metro |
 | preview | `:app:assembleProductionRelease` | BetGuard / `com.betguard` | Bundled in an installable APK |
 | production | `:app:bundleProductionRelease` | BetGuard / `com.betguard` | Bundled in a store-oriented AAB |
 
 The existing stable ID, Kotlin namespace and React component name remain intact. Only the development flavor has the `.dev` application ID and launcher-name override. Preview and production intentionally update the same stable application; they are not a third separate installation. Each application ID has separate Room data, settings and permissions. Existing stable data is not copied to Dev.
+
+The October 2026 local saved preview uses developmentRelease because the older installed stable app has a different signing certificate from the local keystore. Both Dev variants update the same Dev installation and preserve its rules. A release variant always uses remoteBaseUrl, even when its Android flavor is development; with an empty remoteBaseUrl it offers offline manual protection. See [verified repair results](ANDROID_REPAIR_REPORT.md). The older stable installation was left intact; its one saved exact Facebook block rule was separately recreated in Dev for offline verification.
 
 The development profile selects a Gradle debug task directly. It does not enable EAS's `developmentClient` flag: that flag expects installed/configured `expo-dev-client`, which this bare project does not contain. Metro, Fast Refresh and the native React Native developer menu remain the active coding workflow. Adding Expo's launcher would be a separate native dependency migration, not a prerequisite for these two installations. See [EAS profile reference](https://docs.expo.dev/eas/json/) and [existing React Native variants](https://docs.expo.dev/build-reference/variants/).
 

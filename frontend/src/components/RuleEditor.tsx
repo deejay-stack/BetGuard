@@ -3,20 +3,22 @@ import React, { useState } from 'react';
 import { Switch, Text, TextInput, View } from 'react-native';
 import { useBetGuard } from '../state/BetGuardContext';
 import { useTheme } from '../state/ThemeContext';
-import { Button, Card } from './ui';
-export function RuleEditor() {
+import { Button } from './ui';
+export function RuleEditor({ onSaved }: { onSaved?: () => void }) {
   const { colors, styles, mode } = useTheme();
   const [input, setInput] = useState('');
   const [subdomains, setSubdomains] = useState(false);
+  const [focused, setFocused] = useState(false);
   const { save, busy, available } = useBetGuard();
   async function submit(action: 'block' | 'allow') {
     const host = await save(input, action, subdomains);
     if (host) {
       setInput('');
+      onSaved?.();
     }
   }
   return (
-    <Card>
+    <View style={styles.stack}>
       <Text style={styles.heading}>Add a site rule</Text>
       <Text style={styles.body}>
         Paste a link or enter a hostname. Rules apply to the hostname, including
@@ -37,7 +39,9 @@ export function RuleEditor() {
         keyboardType="url"
         maxLength={2048}
         editable={!busy}
-        style={styles.input}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        style={[styles.input, focused && { borderColor: colors.primary }]}
       />
       <View style={styles.spread}>
         <View style={styles.flex}>
@@ -79,6 +83,6 @@ export function RuleEditor() {
         Saved rules are checked on new covered DNS requests. Existing
         connections and cached pages can remain accessible.
       </Text>
-    </Card>
+    </View>
   );
 }

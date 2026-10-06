@@ -99,7 +99,9 @@ class RuleRepository private constructor(context: Context) {
         val history = JSONArray()
         dao.history().forEach { event -> history.put(JSONObject().put("id", event.id).put("kind", event.kind)
             .put("domain", event.domain).put("detail", event.detail).put("createdAt", event.createdAt)) }
-        return JSONObject().put("state", state).put("detail", detail).put("rules", rules).put("history", history).toString()
+        return JSONObject().put("state", state).put("detail", detail)
+            .put("detectionEnabled", detectionBaseUrl.isNotEmpty())
+            .put("rules", rules).put("history", history).toString()
     }
 
     private fun changed() { listeners.forEach { it() } }

@@ -1,74 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import { useBetGuard } from '../state/BetGuardContext';
-import { Badge, Card, Empty, Loading, Page } from '../components/ui';
+import { Button, Empty, Loading, Page } from '../components/ui';
+import { ActivityRow, activityKind } from '../components/ActivityRow';
 import { useTheme } from '../state/ThemeContext';
-const labels: Record<string, string> = {
-  dns_blocked: 'BLOCKED BY RULE',
-  dns_detection_blocked: 'BLOCKED BY DETECTION',
-  dns_warning: 'DETECTION WARNING — ALLOWED',
-  dns_forwarded: 'UPSTREAM DNS RESPONSE',
-  dns_error: 'RESOLUTION ERROR',
-  rule_saved: 'RULE SAVED',
-  rule_changed: 'RULE UPDATED',
-  rule_removed: 'OVERRIDE REMOVED',
-  link_check: 'LINK CHECK',
-  service: 'PROTECTION',
-  network: 'NETWORK',
-};
+
+const filters = ['All', 'Blocked', 'Warnings', 'Allowed', 'Other'] as const;
 export function HistoryScreen() {
   const { styles } = useTheme();
   const { snapshot, available } = useBetGuard();
+  const [filter, setFilter] = useState<(typeof filters)[number]>('All');
+  const events =
+    snapshot?.history.filter(
+      item => filter === 'All' || activityKind(item.kind) === filter,
+    ) ?? [];
+  const groups = events.reduce<Record<string, typeof events>>((all, item) => {
+    const date = new Date(item.createdAt);
+    const today = new Date();
+    const yesterday = new Date();
+    yesterday.setDate(today.getDate() - 1);
+    const label =
+      date.toDateString() === today.toDateString()
+        ? 'Today'
+        : date.toDateString() === yesterday.toDateString()
+        ? 'Yesterday'
+        : date.toLocaleDateString();
+    (all[label] ??= []).push(item);
+    return all;
+  }, {});
   return (
-    <Page
-      title="What happened."
-      subtitle="The last 200 events, stored only on this phone."
-    >
-      <Text style={styles.body}>
-        A saved rule is a setting change. “Blocked by rule” appears only after a
-        blocking DNS response is written. An upstream response does not prove
-        that a website loaded or is safe.
+    <Page title="Activity" subtitle="See what protection actually handled.">
+      <View style={styles.wrap}>
+        {filters.map(option => (
+          <Button
+            key={option}
+            title={option}
+            secondary={filter !== option}
+            selected={filter === option}
+            onPress={() => setFilter(option)}
+          />
+        ))}
+      </View>
+      <Text style={styles.small}>
+        Blocked records a DNS response from the filter. Warning requests remain
+        allowed. Allowed is a DNS outcome, not a safety label or proof that a
+        page loaded.
       </Text>
       {!snapshot && available && <Loading />}
-      {snapshot?.history.length === 0 && (
-        <Card>
-          <Empty
-            title="A fresh start"
-            body="Saved rules, link checks, and DNS request outcomes will appear here as they happen."
-          />
-        </Card>
+      {snapshot && !events.length && (
+        <Empty
+          title={
+            filter === 'All'
+              ? 'A fresh start'
+              : `No ${filter.toLowerCase()} events`
+          }
+          body="Saved rules, link checks, and DNS request outcomes will appear here as they happen."
+        />
       )}
-      {snapshot?.history.map(item => (
-        <Card key={item.id}>
-          <View style={styles.spread}>
-            <Badge
-              text={labels[item.kind] ?? item.kind}
-              tone={
-                item.kind === 'dns_blocked' || item.kind === 'dns_detection_blocked'
-                  ? 'error'
-                  : item.kind === 'dns_error' || item.kind === 'dns_warning'
-                  ? 'warning'
-                  : 'primary'
-              }
-            />
-            <Text style={styles.small}>
-              {new Date(item.createdAt).toLocaleTimeString([], {
-                hour: '2-digit',
-                minute: '2-digit',
-              })}
+      <View>
+        {Object.entries(groups).map(([label, items]) => (
+          <View key={label} style={styles.stack}>
+            <Text accessibilityRole="header" style={styles.eyebrow}>
+              {label.toUpperCase()}
             </Text>
+            {items.map(item => (
+              <ActivityRow key={item.id} item={item} />
+            ))}
           </View>
-          {!!item.domain && (
-            <Text selectable style={styles.heading}>
-              {item.domain}
-            </Text>
-          )}
-          <Text style={styles.body}>{item.detail}</Text>
-          <Text style={styles.small}>
-            {new Date(item.createdAt).toLocaleDateString()}
-          </Text>
-        </Card>
-      ))}
+        ))}
+      </View>
     </Page>
   );
 }

@@ -1,17 +1,27 @@
 ﻿import React from 'react';
-import { AccessibilityInfo, Platform, Text, TextInput } from 'react-native';
+import {
+  AccessibilityInfo,
+  Alert,
+  Linking,
+  Platform,
+  Modal,
+  Text,
+  TextInput,
+} from 'react-native';
 import Renderer, { act } from 'react-test-renderer';
 import Native from '../specs/NativeBetGuard';
 import { BetGuardProvider, useBetGuard } from '../src/state/BetGuardContext';
 import { ThemeProvider } from '../src/state/ThemeContext';
 import { HomeScreen } from '../src/screens/HomeScreen';
 import { CheckScreen } from '../src/screens/CheckScreen';
+import { SitesScreen } from '../src/screens/SitesScreen';
 import { Button } from '../src/components/ui';
 import type { Snapshot, LinkResult } from '../src/state/types';
 import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import type { Tabs } from '../App';
 import { checkCatalog, CatalogError } from '../src/api/catalog';
 import { checkDomain } from '../src/api/domain';
+import * as apiConfiguration from '../src/api/config';
 
 jest.mock('../src/api/domain', () => ({ checkDomain: jest.fn() }));
 
@@ -23,6 +33,7 @@ jest.mock('../src/api/catalog', () => ({
 jest.mock('../specs/NativeBetGuard', () => ({
   __esModule: true,
   default: {
+    getBridgeVersion: jest.fn(),
     getSnapshot: jest.fn(),
     onSnapshot: jest.fn(),
     startProtection: jest.fn(),
@@ -33,6 +44,8 @@ jest.mock('../specs/NativeBetGuard', () => ({
     checkLink: jest.fn(),
     resolveLink: jest.fn(),
     getThemePreference: jest.fn(),
+    setThemePreference: jest.fn(),
+    clearHistory: jest.fn(),
   },
 }));
 let current: ReturnType<typeof useBetGuard>;
@@ -56,6 +69,7 @@ async function mount(
   home = false,
   check = false,
   navigation?: React.ComponentProps<typeof CheckScreen>['navigation'],
+  protection = false,
 ) {
   const props = {
     navigation: { navigate: jest.fn() },
@@ -68,12 +82,14 @@ async function mount(
           <Probe />
           {home && <HomeScreen {...props} />}
           {check && <CheckScreen navigation={navigation} />}
+          {protection && <SitesScreen />}
         </BetGuardProvider>
       </ThemeProvider>,
     );
   });
 }
 beforeEach(() => {
+  (Native!.getBridgeVersion as jest.Mock).mockReturnValue(2);
   (checkDomain as jest.Mock).mockRejectedValue(new CatalogError('unavailable'));
   (checkCatalog as jest.Mock).mockRejectedValue(
     new CatalogError('unavailable'),
@@ -112,7 +128,7 @@ test.each(['failed', 'interrupted', 'off', 'stopping', 'starting'] as const)(
     snapshot = { ...snapshot, state, detail: `Native ${state}` };
     await mount(true);
     const tree = JSON.stringify(renderer.toJSON());
-    expect(tree).toContain(`Native ${state}`);
+    if (state !== 'off') expect(tree).toContain(`Native ${state}`);
     expect(tree).not.toContain('DNS FILTER RUNNING');
     expect(tree).not.toContain('DNS filter is running');
   },
@@ -209,17 +225,134 @@ test('a denied native VPN request remains off and shows its error', async () => 
 
 test('manual mode is explicit and online mode uses the existing API address', async () => {
   await mount();
-  await act(async () => { await current.start(); });
+  await act(async () => {
+    await current.start();
+  });
   expect(Native!.configureDetection).toHaveBeenLastCalledWith('');
-  await act(async () => { await current.start(true); });
-  expect(Native!.configureDetection).toHaveBeenLastCalledWith('http://127.0.0.1:8000');
+  await act(async () => {
+    await current.start(true);
+  });
+  expect(Native!.configureDetection).toHaveBeenLastCalledWith(
+    'http://127.0.0.1:8000',
+  );
+});
+
+test('stale Android bridge disables actions before calling incompatible methods', async () => {
+  const log = jest.spyOn(console, 'error').mockImplementation(() => {});
+  (Native!.getBridgeVersion as jest.Mock).mockReturnValue(1);
+  await mount(true);
+  expect(current.available).toBe(false);
+  expect(current.error).toContain('match BetGuard');
+  await act(async () => {
+    await current.start(true);
+    await current.check('stake.com');
+  });
+  expect(Native!.configureDetection).not.toHaveBeenCalled();
+  expect(Native!.checkLink).not.toHaveBeenCalled();
+  expect(log).toHaveBeenCalled();
+});
+
+test('invalid native events cannot display protection as on or crash the screen', async () => {
+  jest.spyOn(console, 'error').mockImplementation(() => {});
+  await mount(true);
+  await act(() =>
+    emit(
+      JSON.stringify({
+        state: 'active',
+        detail: 'bad',
+        rules: null,
+        history: [],
+      }),
+    ),
+  );
+  expect(current.snapshot).toBeNull();
+  expect(current.error).toContain('protection update');
+  expect(JSON.stringify(renderer.toJSON())).not.toContain('DNS protection on');
+});
+
+test('technical native failures are logged and translated for users', async () => {
+  const log = jest.spyOn(console, 'error').mockImplementation(() => {});
+  (Native!.configureDetection as jest.Mock).mockRejectedValueOnce(
+    new TypeError('undefined is not a function'),
+  );
+  await mount(true);
+  await act(async () => {
+    await current.start(true);
+  });
+  expect(current.error).toContain('complete that action');
+  expect(current.error).not.toContain('undefined');
+  expect(current.snapshot?.state).toBe('off');
+  expect(log).toHaveBeenCalled();
+});
+
+test('warning Continue once opens the checked hostname and never persists a rule', async () => {
+  const open = jest.spyOn(Linking, 'openURL').mockResolvedValue(undefined);
+  (checkDomain as jest.Mock).mockResolvedValue({
+    domain: 'example.com',
+    enforcement_action: 'ALLOW',
+    intervention: 'WARN',
+    risk_status: 'suspicious',
+    decision_source: 'ml_warning',
+    ml_score: 0.58,
+  });
+  await checkExample();
+  await press('Continue once');
+  expect(open).toHaveBeenCalledWith('https://example.com');
+  expect(Native!.saveRule).not.toHaveBeenCalled();
+  expect(Native!.removeRule).not.toHaveBeenCalled();
+});
+
+test('warning Always allow uses the existing rule storage and preserves scope', async () => {
+  (checkDomain as jest.Mock).mockResolvedValue({
+    domain: 'example.com',
+    enforcement_action: 'ALLOW',
+    intervention: 'WARN',
+    risk_status: 'suspicious',
+    decision_source: 'ml_warning',
+    ml_score: 0.58,
+  });
+  snapshot.rules = [
+    {
+      domain: 'example.com',
+      action: 'block',
+      includeSubdomains: true,
+      updatedAt: 1,
+    },
+  ];
+  await checkExample();
+  await press('Always allow');
+  expect(Native!.saveRule).toHaveBeenCalledWith('example.com', 'allow', true);
+});
+
+test('working ML decision stays visible when the independent catalog is offline', async () => {
+  (checkDomain as jest.Mock).mockResolvedValue({
+    domain: 'example.com',
+    enforcement_action: 'BLOCK',
+    intervention: 'BLOCK',
+    risk_status: 'verified_gambling',
+    decision_source: 'verified_gambling_blocklist',
+    ml_score: null,
+  });
+  await checkExample();
+  const tree = JSON.stringify(renderer.toJSON());
+  expect(tree).toContain('DETECTION: BLOCK');
+  expect(tree).not.toContain(
+    'Online classification is temporarily unavailable',
+  );
+  expect(tree).not.toContain('verified_gambling_blocklist');
+  expect(Native!.saveRule).not.toHaveBeenCalled();
 });
 
 test('ML warning uses the existing Notice and does not save a block rule', async () => {
   (checkDomain as jest.Mock).mockResolvedValue({
-    domain: 'example.com', enforcement_action: 'ALLOW', intervention: 'WARN',
-    risk_status: 'suspicious', decision_source: 'ml_warning', ml_score: 0.58,
-    matched_domain: null, cache_hit: false,
+    domain: 'example.com',
+    enforcement_action: 'ALLOW',
+    intervention: 'WARN',
+    risk_status: 'suspicious',
+    decision_source: 'ml_warning',
+    ml_score: 0.58,
+    matched_domain: null,
+    cache_hit: false,
   });
   await checkExample();
   const tree = JSON.stringify(renderer.toJSON());
@@ -240,7 +373,7 @@ test('checked links refresh after native rule changes without recording another 
   await act(async () => {
     checkButton.props.onPress();
   });
-  expect(JSON.stringify(renderer.toJSON())).toContain('EFFECTIVE RULE: ALLOW');
+  expect(JSON.stringify(renderer.toJSON())).toContain('NO SAVED RULE');
   (Native!.resolveLink as jest.Mock).mockResolvedValue(
     JSON.stringify({
       ...result,
@@ -299,6 +432,7 @@ const reviewed = {
 
 test('offline catalog preserves local Block and Allow controls and retries without a second local history event', async () => {
   await checkExample();
+  await press('Show technical details');
   expect(JSON.stringify(renderer.toJSON())).toContain(
     'Online classification is temporarily unavailable',
   );
@@ -360,6 +494,7 @@ test('cancel and retry suppress a superseded response', async () => {
   });
   await press('Retry website check');
   await act(async () => finish(reviewed));
+  await press('Show technical details');
   const tree = JSON.stringify(renderer.toJSON());
   expect(tree).toContain('CLASSIFICATION UNKNOWN');
   expect(tree).toContain('has not been reviewed');
@@ -385,17 +520,19 @@ test('model classification displays source and version without changing manual r
     model_version: 'software-test-v1',
   });
   await checkExample();
+  await press('Show technical details');
   const tree = JSON.stringify(renderer.toJSON());
-  expect(tree).toContain('Source: model');
+  expect(tree).toContain('Catalog source: ');
   expect(tree).toContain('software-test-v1');
-  expect(tree).toContain('Classified as non-gambling.');
-  expect(tree).toContain('EFFECTIVE RULE: ALLOW');
+  expect(tree).toContain('NON-GAMBLING');
+  expect(tree).toContain('NO SAVED RULE');
   expect(tree).not.toContain('confidence');
   expect(Native!.saveRule).not.toHaveBeenCalled();
   expect(Native!.removeRule).not.toHaveBeenCalled();
 });
 
 test('removing a checked override reveals the parent rule without creating an Allow', async () => {
+  const alert = jest.spyOn(Alert, 'alert').mockImplementation(() => {});
   snapshot.rules = [
     {
       domain: 'example.com',
@@ -409,10 +546,18 @@ test('removing a checked override reveals the parent rule without creating an Al
     JSON.stringify({
       ...result,
       action: 'block',
+      matchedDomain: 'parent.test',
       reason: 'Parent rule: block parent domain.',
     }),
   );
   await press('Remove override');
+  expect(Native!.removeRule).not.toHaveBeenCalled();
+  const confirmation = alert.mock.calls[0][2];
+  await act(async () => {
+    confirmation
+      ?.find(button => button.text === 'Remove override')
+      ?.onPress?.();
+  });
   expect(Native!.removeRule).toHaveBeenCalledWith('example.com');
   expect(Native!.saveRule).not.toHaveBeenCalled();
   expect(JSON.stringify(renderer.toJSON())).toContain('EFFECTIVE RULE: BLOCK');
@@ -500,6 +645,7 @@ test('lookup B wins even when lookup A completes afterwards', async () => {
   });
   await press('Check link');
   await act(() => finishA(reviewed));
+  await press('Show technical details');
   const tree = JSON.stringify(renderer.toJSON());
   expect(tree).toContain('second.test');
   expect(tree).toContain('NON-GAMBLING');
@@ -549,21 +695,20 @@ test('absent model is a completed unknown result with no error/retry or policy c
       'No validated model is configured. Classification remains unknown.',
   });
   await checkExample();
+  await press('Show technical details');
   const tree = JSON.stringify(renderer.toJSON());
   expect(tree).toContain('CLASSIFICATION UNKNOWN');
   expect(tree).toContain('No validated model is configured.');
-  expect(tree).not.toContain('Retry website check');
+  expect(tree).toContain('Retry website check'); // Independent detection is unavailable in this fixture.
   expect(Native!.saveRule).not.toHaveBeenCalled();
 });
 
 test('development readiness is explicit and does not add history', async () => {
   const originalFetch = globalThis.fetch;
-  globalThis.fetch = jest
-    .fn()
-    .mockResolvedValue({
-      ok: true,
-      json: async () => ({ status: 'ready', model: 'absent' }),
-    });
+  globalThis.fetch = jest.fn().mockResolvedValue({
+    ok: true,
+    json: async () => ({ status: 'ready', model: 'absent' }),
+  });
   try {
     await mount(false, true);
     expect(fetch).not.toHaveBeenCalled();
@@ -593,4 +738,154 @@ test('production Check Link does not render the development status control', asy
   } finally {
     Object.assign(globalThis, { __DEV__: previous });
   }
+});
+
+test('visible Home mode choices start local rules or the configured smart service', async () => {
+  (Native!.startProtection as jest.Mock).mockResolvedValue(undefined);
+  (Native!.configureDetection as jest.Mock).mockResolvedValue(undefined);
+  await mount(true);
+  await press('Enable protection');
+  expect(Native!.startProtection).not.toHaveBeenCalled();
+  await press('Continue to Android permission');
+  expect(Native!.configureDetection).toHaveBeenLastCalledWith('');
+  const smart = renderer.root
+    .findAll(node => node.props.accessibilityRole === 'radio')
+    .find(node => node.props.accessibilityLabel === 'Smart protection')!;
+  await act(() => smart.props.onPress());
+  await press('Enable protection');
+  expect(Native!.configureDetection).toHaveBeenLastCalledWith(
+    'http://127.0.0.1:8000',
+  );
+  expect(Native!.startProtection).toHaveBeenCalledTimes(2);
+});
+
+test('saved APK without a configured service disables smart mode and checks local rules without HTTP', async () => {
+  jest.replaceProperty(apiConfiguration, 'API_BASE_URL', '');
+  await mount(true);
+  const smart = renderer.root
+    .findAll(node => node.props.accessibilityRole === 'radio')
+    .find(node => node.props.accessibilityLabel === 'Smart protection')!;
+  expect(smart.props.disabled).toBe(true);
+  await act(() => renderer.unmount());
+  await checkExample();
+  expect(checkDomain).not.toHaveBeenCalled();
+  expect(checkCatalog).not.toHaveBeenCalled();
+  expect(JSON.stringify(renderer.toJSON())).toContain('LOCAL RULE CHECK');
+  expect(JSON.stringify(renderer.toJSON())).not.toContain(
+    'Retry website check',
+  );
+});
+
+test('website search, filters and expandable rule actions preserve stored scope', async () => {
+  snapshot.rules = [
+    {
+      domain: 'example.com',
+      action: 'block',
+      includeSubdomains: true,
+      updatedAt: 1,
+    },
+    {
+      domain: 'wikipedia.org',
+      action: 'allow',
+      includeSubdomains: false,
+      updatedAt: 1,
+    },
+  ];
+  await mount(false, false, undefined, true);
+  await press('Allowed');
+  expect(JSON.stringify(renderer.toJSON())).not.toContain('example.com');
+  expect(JSON.stringify(renderer.toJSON())).toContain('wikipedia.org');
+  await press('All');
+  await act(() =>
+    renderer.root.findByType(TextInput).props.onChangeText('EXAMPLE'),
+  );
+  expect(JSON.stringify(renderer.toJSON())).not.toContain('wikipedia.org');
+  const row = renderer.root
+    .findAll(
+      node => node.props.accessibilityLabel === 'Manage rule for example.com',
+    )
+    .find(
+      node => node.props.accessibilityLabel === 'Manage rule for example.com',
+    )!;
+  await act(() => row.props.onPress());
+  await press('Allow site');
+  expect(Native!.saveRule).toHaveBeenCalledWith('example.com', 'allow', true);
+  const alert = jest.spyOn(Alert, 'alert').mockImplementation(() => {});
+  await press('Remove rule');
+  expect(Native!.removeRule).not.toHaveBeenCalled();
+  await act(async () => {
+    alert.mock.calls[0][2]
+      ?.find(button => button.text === 'Remove override')
+      ?.onPress?.();
+  });
+  expect(Native!.removeRule).toHaveBeenCalledWith('example.com');
+});
+
+test('add website sheet closes on successful save and supports Android back dismissal', async () => {
+  await mount(false, false, undefined, true);
+  await press('Add website');
+  const input = renderer.root
+    .findAllByType(TextInput)
+    .find(
+      node => node.props.accessibilityLabel === 'Website link or hostname',
+    )!;
+  await act(() => input.props.onChangeText('https://example.com/path'));
+  await press('Block site');
+  expect(Native!.saveRule).toHaveBeenCalledWith(
+    'https://example.com/path',
+    'block',
+    false,
+  );
+  expect(renderer.root.findAllByType(TextInput)).toHaveLength(1);
+  await press('Add website');
+  await act(() => renderer.root.findByType(Modal).props.onRequestClose());
+  expect(renderer.root.findAllByType(TextInput)).toHaveLength(1);
+});
+
+test.each([
+  'active',
+  'degraded',
+  'off',
+  'starting',
+  'failed',
+  'interrupted',
+] as const)(
+  'premium shield claims Protected only for native active, including %s',
+  async state => {
+    snapshot.state = state;
+    await mount(true);
+    const labels = renderer.root
+      .findAllByType(Text)
+      .map(node => node.props.children);
+    expect(labels.includes('Protected')).toBe(state === 'active');
+  },
+);
+
+test('Check another link clears warning details without changing rules', async () => {
+  (checkDomain as jest.Mock).mockResolvedValue({
+    domain: 'example.com',
+    enforcement_action: 'ALLOW',
+    intervention: 'WARN',
+    decision_source: 'ml_warning',
+    ml_score: 0.58,
+  });
+  await checkExample();
+  await press('Show technical details');
+  await press('Check another link');
+  expect(JSON.stringify(renderer.toJSON())).not.toContain('Review recommended');
+  expect(renderer.root.findByType(TextInput).props.value).toBe('');
+  expect(Native!.saveRule).not.toHaveBeenCalled();
+});
+
+test('quick guide explains server-free rules and separate checks and closes again', async () => {
+  await mount(true);
+  await press('How BetGuard works');
+  const tree = JSON.stringify(renderer.toJSON());
+  expect(tree).toContain('Checking is separate from protecting');
+  expect(tree).toContain('not in this APK');
+  expect(tree).toContain('browsing websites still needs internet');
+  await press('Close quick guide');
+  expect(JSON.stringify(renderer.toJSON())).not.toContain(
+    'Checking is separate from protecting',
+  );
 });

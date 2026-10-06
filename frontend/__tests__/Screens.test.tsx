@@ -1,5 +1,10 @@
 ﻿import React from 'react';
-import { AccessibilityInfo, TextInput, useColorScheme } from 'react-native';
+import {
+  AccessibilityInfo,
+  Text,
+  TextInput,
+  useColorScheme,
+} from 'react-native';
 import Renderer, { act } from 'react-test-renderer';
 import { ThemeProvider } from '../src/state/ThemeContext';
 import { BetGuardProvider } from '../src/state/BetGuardContext';
@@ -35,11 +40,11 @@ test.each(['light', 'dark'] as const)(
       );
     });
     const tree = JSON.stringify(renderer.toJSON());
-    expect(tree).toContain(
-      `Switch to ${mode === 'dark' ? 'light' : 'dark'} mode`,
-    );
-    expect(tree).toContain('Reviewed catalog labels');
-    expect(tree).toContain('DEVELOPMENT BUILD');
+    expect(tree).toContain('Use system appearance');
+    expect(tree).toContain('Use light appearance');
+    expect(tree).toContain('Use dark appearance');
+    expect(tree).toContain('Your choice comes first');
+    expect(tree).toContain('USB DEVELOPMENT');
     expect(tree).not.toContain('PROTOTYPE');
     expect(tree).toContain('Native protection is unavailable');
     expect(
@@ -51,10 +56,20 @@ test.each(['light', 'dark'] as const)(
     }
     const toggle = renderer.root
       .findAllByType(Button)
-      .find(button => button.props.title.startsWith('Switch to'))!;
+      .find(
+        button => button.props.title === (mode === 'dark' ? 'Light' : 'Dark'),
+      )!;
     await act(() => toggle.props.onPress());
-    expect(JSON.stringify(renderer.toJSON())).toContain(
-      `Switch to ${mode} mode`,
+    const text = renderer.root
+      .findAllByType(Text)
+      .map(node =>
+        React.Children.toArray(node.props.children)
+          .filter(child => typeof child === 'string')
+          .join(''),
+      )
+      .join('\n');
+    expect(text).toContain(
+      `Current theme: ${mode === 'dark' ? 'Light' : 'Dark'}`,
     );
     expect(JSON.stringify(renderer.toJSON())).toContain('could not be saved');
     await act(() => renderer.unmount());

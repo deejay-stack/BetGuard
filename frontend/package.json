@@ -9,7 +9,9 @@
     "start": "react-native start",
     "test": "jest",
     "typecheck": "tsc --noEmit",
-    "android:preview": "react-native run-android --mode productionRelease --appId com.betguard --no-packager"
+    "android:preview": "react-native run-android --mode productionRelease --appId com.betguard --no-packager",
+    "apk:save": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-apk.ps1",
+    "apk:install": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-apk.ps1 -Install"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "7.18.18",

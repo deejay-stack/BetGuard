@@ -1,25 +1,37 @@
 import {
   Ban,
   Check,
-  Globe2,
   Search,
-  ShieldCheck,
   RotateCcw,
+  ShieldCheck,
+  ShieldAlert,
+  ShieldX,
 } from 'lucide-react-native';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Text, TextInput, View } from 'react-native';
+import {
+  ActivityIndicator,
+  Alert,
+  BackHandler,
+  Linking,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
 import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import type { Tabs } from '../../App';
 import { useBetGuard } from '../state/BetGuardContext';
 import { BackendStatus } from '../components/BackendStatus';
 import type { LinkResult } from '../state/types';
 import { Badge, Button, Card, Notice, Page } from '../components/ui';
+import { logFailure } from '../state/nativeContract';
 import { useTheme } from '../state/ThemeContext';
 import { CatalogError, checkCatalog, type CatalogResult } from '../api/catalog';
 import { checkDomain, type DomainDecision } from '../api/domain';
+import { API_BASE_URL } from '../api/config';
 
 type RemoteState =
   | { status: 'idle' | 'loading' | 'cancelled' }
+  | { status: 'local' }
   | { status: 'done'; result: CatalogResult }
   | { status: 'error'; message: string };
 
@@ -72,6 +84,12 @@ export function CheckScreen({
   }, [inspectedDomain, rulesKey, resolve]);
 
   async function lookup(domain: string, revision: number) {
+    if (!API_BASE_URL) {
+      setRemote({ status: 'local' });
+      setDetection(null);
+      setDetectionError(false);
+      return;
+    }
     const controller = new AbortController();
     pending.current = controller;
     setRemote({ status: 'loading' });
@@ -170,21 +188,70 @@ export function CheckScreen({
       if (revision === generation.current) setResult(next ?? null);
     }
   }
+  const [details, setDetails] = useState(false);
+  const [openError, setOpenError] = useState<string | null>(null);
+  const localBlock =
+    result?.matchedDomain !== null && result?.action === 'block';
+  const localAllow =
+    result?.matchedDomain !== null && result?.action === 'allow';
+  const warning =
+    detection?.intervention === 'WARN' && !localBlock && !localAllow;
+  const recommendedBlock =
+    !localAllow && (localBlock || detection?.enforcement_action === 'BLOCK');
+  const ResultIcon = recommendedBlock
+    ? ShieldX
+    : warning
+    ? ShieldAlert
+    : ShieldCheck;
+  const resultColor = recommendedBlock
+    ? colors.blocked
+    : warning
+    ? colors.review
+    : colors.allowed;
+  const enforced =
+    snapshot?.state === 'active' && (localBlock || !!snapshot.detectionEnabled);
+  async function continueOnce() {
+    if (!result || localBlock) return;
+    setOpenError(null);
+    try {
+      await Linking.openURL(`https://${result.domain}`);
+    } catch (error) {
+      logFailure('open website', error);
+      setOpenError(
+        'This website could not be opened. Try again in your browser.',
+      );
+    }
+  }
+  function resetCheck() {
+    invalidate();
+    setResult(null);
+    setInput('');
+    setRemote({ status: 'idle' });
+    setDetection(null);
+    setDetectionError(false);
+    setDetails(false);
+    setOpenError(null);
+  }
+  function goBack() {
+    resetCheck();
+    navigation?.navigate('Home');
+  }
+  useEffect(() => {
+    if (!navigation) return;
+    const subscription = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => {
+        if (!navigation.isFocused()) return false;
+        invalidate();
+        navigation.navigate('Home');
+        return true;
+      },
+    );
+    return () => subscription.remove();
+  }, [navigation, invalidate]);
   return (
-    <Page
-      title="Pause. Check. Choose."
-      subtitle="Look up a website, then decide what works for you."
-    >
+    <Page title="Check a website" subtitle="Check first. Make your own choice.">
       <Card>
-        <View style={styles.row}>
-          <View style={styles.iconTile}>
-            <Globe2 size={24} color={colors.primary} accessible={false} />
-          </View>
-          <View style={styles.flex}>
-            <Text style={styles.heading}>Check a link</Text>
-            <Text style={styles.small}>A little context before you visit.</Text>
-          </View>
-        </View>
         <TextInput
           accessibilityLabel="Link to check"
           style={[styles.input, focused && { borderColor: colors.primary }]}
@@ -196,6 +263,8 @@ export function CheckScreen({
             setRemote({ status: 'idle' });
             setDetection(null);
             setDetectionError(false);
+            setOpenError(null);
+            setDetails(false);
           }}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
@@ -223,108 +292,131 @@ export function CheckScreen({
           }}
         />
         <Text style={styles.small}>
-          Only the hostname is sent for classification. Page paths, passwords,
-          and query tokens are not sent or stored.
+          Checking does not turn protection on. Only the website hostname is
+          checked; page paths and private query details are not sent.
         </Text>
       </Card>
-      {__DEV__ && <BackendStatus />}
       {!result && (
-        <Card>
-          <Badge text="YOU STAY IN CONTROL" />
-          <Text style={styles.heading}>Context, then a choice.</Text>
+        <View style={styles.stack}>
+          <Text style={styles.heading}>Your choice comes first</Text>
           <Text style={styles.body}>
-            Reviewed catalog labels take priority. For other eligible hostnames,
-            a validated model can help when available. Insufficient information
-            stays unknown.
+            Your saved rule is checked on this phone. Smart advice needs the
+            online service. A warning keeps access allowed. To block a website,
+            save a Block rule and enable protection on Home.
           </Text>
-          <View style={styles.divider} />
-          <View style={styles.row}>
-            <ShieldCheck size={20} color={colors.accent} accessible={false} />
-            <Text style={[styles.small, styles.flex]}>
-              Your manual rules stay on this phone and work without the catalog
-              connection.
-            </Text>
-          </View>
-        </Card>
+        </View>
       )}
       {result && (
         <>
           <Card>
-            <Text style={styles.eyebrow}>WEBSITE CLASSIFICATION</Text>
-            <Text selectable style={styles.heading}>
+            {(detection || result.matchedDomain) && (
+              <View style={styles.resultIcon}>
+                <ResultIcon size={64} color={resultColor} strokeWidth={1.5} />
+              </View>
+            )}
+            <Text selectable style={styles.title}>
               {result.domain}
             </Text>
-            <View accessibilityLiveRegion="polite">
+            <View accessibilityLiveRegion="polite" style={styles.stack}>
               {remote.status === 'loading' && (
                 <View style={styles.row}>
                   <ActivityIndicator color={colors.primary} />
-                  <Text style={styles.body}>Checking the website…</Text>
+                  <Text style={styles.body}>Checking the website...</Text>
                 </View>
               )}
-              {remote.status === 'error' && <Notice text={remote.message} />}
               {remote.status === 'cancelled' && (
                 <Text style={styles.body}>
                   Website check cancelled. No new classification was returned.
                 </Text>
               )}
-              {catalog && (
-                <View style={styles.stack}>
+              {remote.status === 'local' && (
+                <>
+                  <Badge text="LOCAL RULE CHECK" />
+                  <Text style={styles.body}>
+                    {result.matchedDomain
+                      ? 'Your saved choice is shown below.'
+                      : 'No saved rule for this website. On-device protection allows it unless you add a Block rule.'}
+                  </Text>
+                  <Text style={styles.small}>
+                    Smart advice is not set up in this APK. This local check
+                    does not assess whether a website is safe.
+                  </Text>
+                </>
+              )}
+              {(detection || result.matchedDomain) && (
+                <>
                   <Badge
                     text={
-                      catalog.classification === 'gambling'
-                        ? 'GAMBLING'
-                        : catalog.classification === 'non_gambling'
-                        ? 'NON-GAMBLING'
-                        : 'CLASSIFICATION UNKNOWN'
+                      localAllow
+                        ? 'ALLOWED BY YOUR RULE'
+                        : localBlock
+                        ? 'BLOCK RULE'
+                        : `DETECTION: ${
+                            detection?.intervention === 'NONE'
+                              ? 'ALLOW'
+                              : detection?.intervention
+                          }`
                     }
                     tone={
-                      catalog.classification === 'gambling'
+                      recommendedBlock
                         ? 'error'
-                        : catalog.classification === 'non_gambling'
-                        ? 'primary'
-                        : 'warning'
+                        : warning
+                        ? 'warning'
+                        : 'success'
                     }
                   />
-                  <Text style={styles.small}>
-                    {catalog.source === 'reviewed_catalog'
-                      ? 'Source: reviewed catalog'
-                      : catalog.source === 'model'
-                      ? `Source: model · ${catalog.model_version}`
-                      : 'Source: no classification available'}
+                  <Text style={styles.heading}>
+                    {recommendedBlock
+                      ? localBlock
+                        ? enforced
+                          ? 'This site is blocked'
+                          : 'Block rule saved'
+                        : enforced
+                        ? 'This site is blocked'
+                        : 'Blocking recommended'
+                      : warning
+                      ? 'Review recommended'
+                      : localAllow
+                      ? 'Your allow rule takes priority'
+                      : 'Low gambling risk'}
                   </Text>
-                  <Text style={styles.body}>
-                    {catalog.classification === 'non_gambling'
-                      ? 'Classified as non-gambling. '
-                      : ''}
-                    {catalog.explanation}
-                  </Text>
-                  {catalog.reviewed_at && (
-                    <Text style={styles.small}>
-                      Reviewed{' '}
-                      {new Date(catalog.reviewed_at).toLocaleDateString()} ·
-                      Provenance: {catalog.label_provenance}
-                    </Text>
-                  )}
-                </View>
-              )}
-              {detection && (
-                <View style={styles.stack}>
-                  <Badge text={`DETECTION: ${detection.intervention === 'NONE' ? 'ALLOW' : detection.intervention}`}
-                    tone={detection.enforcement_action === 'BLOCK' ? 'error' : detection.intervention === 'WARN' ? 'warning' : 'primary'} />
-                  {detection.intervention === 'WARN' ? (
-                    <Notice text="BetGuard detected characteristics associated with gambling websites. This is uncertain; network access remains allowed." />
+                  {warning ? (
+                    <Notice text="BetGuard detected characteristics associated with gambling websites. This is uncertain; network access remains allowed. This does not identify the website as gambling." />
                   ) : (
                     <Text style={styles.body}>
-                      {detection.enforcement_action === 'BLOCK'
-                        ? 'BetGuard recommends blocking this domain. Online detection applies this decision while protection runs, unless a local rule overrides it.'
-                        : 'No detection intervention is needed.'}
+                      {recommendedBlock
+                        ? localBlock
+                          ? 'Your saved rule blocks supported DNS requests while protection is on.'
+                          : detection?.decision_source ===
+                            'verified_gambling_blocklist'
+                          ? 'This hostname matches the verified gambling blocklist. BetGuard is helping you stay in control.'
+                          : 'Automated detection found a high gambling-risk score. Smart protection blocks supported DNS requests unless your rule allows the site.'
+                        : 'This result does not guarantee that a website is safe.'}
                     </Text>
                   )}
-                  <Text style={styles.small}>Source: {detection.decision_source}. Local rules take priority.</Text>
-                </View>
+                  {detection?.decision_source ===
+                    'verified_gambling_blocklist' &&
+                    !localAllow &&
+                    !localBlock && (
+                      <Text style={styles.small}>
+                        Source: Verified gambling blocklist
+                      </Text>
+                    )}
+                  {recommendedBlock && (
+                    <Text style={styles.small}>
+                      This check is a policy result. Actual blocked requests
+                      appear in Activity.{' '}
+                      {snapshot?.state !== 'active'
+                        ? 'Protection is not currently confirmed on.'
+                        : !snapshot?.detectionEnabled && !localBlock
+                        ? 'Enable online detection on Home to apply this decision.'
+                        : ''}
+                    </Text>
+                  )}
+                </>
               )}
               {detectionError && remote.status !== 'cancelled' && (
-                <Notice text="Domain detection is unavailable. No detection decision was returned; local manual rules still work." />
+                <Notice text="Smart advice could not connect. Your saved rule is still shown below; no online safety decision was returned." />
               )}
             </View>
             {remote.status === 'loading' && (
@@ -339,7 +431,7 @@ export function CheckScreen({
                 }}
               />
             )}
-            {(remote.status === 'error' || remote.status === 'cancelled') && (
+            {(remote.status === 'cancelled' || detectionError) && (
               <Button
                 title="Retry website check"
                 icon={RotateCcw}
@@ -349,20 +441,47 @@ export function CheckScreen({
                 }}
               />
             )}
+            {warning && (
+              <View style={styles.row}>
+                <View style={styles.flex}>
+                  <Button title="Go back" secondary onPress={goBack} />
+                </View>
+                <View style={styles.flex}>
+                  <Button
+                    title="Continue once"
+                    onPress={() => {
+                      void continueOnce();
+                    }}
+                  />
+                </View>
+              </View>
+            )}
+            {warning && (
+              <Text style={styles.small}>
+                Continue once opens this hostname in your browser and saves no
+                rule.
+              </Text>
+            )}
+            {openError && <Notice text={openError} />}
+            {recommendedBlock && (
+              <Button title="Back to safety" onPress={goBack} />
+            )}
+            <Button title="Check another link" secondary onPress={resetCheck} />
           </Card>
-          <Card>
+          <View style={styles.stack}>
             <Text style={styles.eyebrow}>YOUR LOCAL RULE</Text>
             <Badge
-              text={`EFFECTIVE RULE: ${result.action.toUpperCase()}`}
-              tone={result.action === 'block' ? 'error' : 'primary'}
+              text={
+                result.matchedDomain
+                  ? `EFFECTIVE RULE: ${result.action.toUpperCase()}`
+                  : 'NO SAVED RULE'
+              }
+              tone={localBlock ? 'error' : 'primary'}
             />
             <Text style={styles.body}>
-              {result.reason.replace(' Classification remains unknown.', '')}
-            </Text>
-            <Text style={styles.small}>
-              Classification results do not change your rules. New overrides
-              match this exact hostname. Existing subdomain scope is preserved;
-              change scope in Sites.
+              {result.matchedDomain
+                ? result.reason
+                : 'No matching rule is saved. Online detection applies when enabled; manual mode allows unmatched hostnames.'}
             </Text>
             <View style={styles.row}>
               <View style={styles.flex}>
@@ -377,7 +496,7 @@ export function CheckScreen({
               </View>
               <View style={styles.flex}>
                 <Button
-                  title="Allow site"
+                  title={warning ? 'Always allow' : 'Allow site'}
                   icon={Check}
                   secondary
                   disabled={busy}
@@ -393,17 +512,84 @@ export function CheckScreen({
                 secondary
                 disabled={busy}
                 onPress={() => {
-                  void removeOverride();
+                  Alert.alert(
+                    'Remove this override?',
+                    'Other matching rules or Smart protection can still apply.',
+                    [
+                      { text: 'Cancel', style: 'cancel' },
+                      {
+                        text: 'Remove override',
+                        style: 'destructive',
+                        onPress: () => {
+                          void removeOverride();
+                        },
+                      },
+                    ],
+                  );
                 }}
               />
             )}
             <Text style={styles.small}>
-              Rules filter supported requests while protection is running.
-              Checked {new Date(result.checkedAt).toLocaleString()}.
+              New rules match this exact hostname. Existing subdomain scope is
+              preserved; manage scope in Rules.
             </Text>
-          </Card>
+          </View>
+          <Button
+            title={
+              details ? 'Hide technical details' : 'Show technical details'
+            }
+            secondary
+            onPress={() => setDetails(!details)}
+          />
+          {details && (
+            <Card>
+              <Text style={styles.heading}>Decision details</Text>
+              {detection && (
+                <Text selectable style={styles.small}>
+                  Detection source: {detection.decision_source}
+                  {'\n'}ML score: {detection.ml_score ?? 'Not used'}
+                  {'\n'}Intervention: {detection.intervention}
+                </Text>
+              )}
+              <Text style={styles.small}>
+                Reviewed catalog labels are separate from the network detection
+                policy.
+              </Text>
+              {remote.status === 'error' && <Notice text={remote.message} />}
+              {catalog && (
+                <View style={styles.stack}>
+                  <Badge
+                    text={
+                      catalog.classification === 'gambling'
+                        ? 'GAMBLING'
+                        : catalog.classification === 'non_gambling'
+                        ? 'NON-GAMBLING'
+                        : 'CLASSIFICATION UNKNOWN'
+                    }
+                  />
+                  <Text style={styles.body}>{catalog.explanation}</Text>
+                  <Text style={styles.small}>
+                    Catalog source: {catalog.source}
+                    {catalog.model_version
+                      ? ` · Model ${catalog.model_version}`
+                      : ''}
+                    {catalog.reviewed_at
+                      ? ` · Reviewed ${new Date(
+                          catalog.reviewed_at,
+                        ).toLocaleDateString()}`
+                      : ''}
+                  </Text>
+                </View>
+              )}
+              <Text style={styles.small}>
+                Checked {new Date(result.checkedAt).toLocaleString()}. Saving a
+                rule is separate from observing a blocked DNS request.
+              </Text>
+            </Card>
+          )}
         </>
       )}
+      {__DEV__ && <BackendStatus />}
     </Page>
   );
 }

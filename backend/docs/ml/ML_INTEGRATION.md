@@ -1,5 +1,7 @@
 # BetGuard domain detection integration
 
+The integration record below describes the original implementation. Subsequent Android bridge, UI, build and physical-device verification is documented in [Android repair report](../../../frontend/docs/ANDROID_REPAIR_REPORT.md); that report supersedes the earlier device/build limitations. The trained model, datasets and runtime policy are unchanged.
+
 ## Architecture discovered
 
 The repository root is `betguard/`, with `backend/`, `frontend/`, and `ml/`.

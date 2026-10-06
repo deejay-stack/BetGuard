@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import {
   DarkTheme,
@@ -7,13 +7,7 @@ import {
   NavigationContainer,
 } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {
-  House,
-  Link,
-  ListFilter,
-  History,
-  Settings,
-} from 'lucide-react-native';
+import { House, ListFilter, History, Settings } from 'lucide-react-native';
 import { BetGuardProvider } from './src/state/BetGuardContext';
 import { HomeScreen } from './src/screens/HomeScreen';
 import { CheckScreen } from './src/screens/CheckScreen';
@@ -21,6 +15,7 @@ import { SitesScreen } from './src/screens/SitesScreen';
 import { HistoryScreen } from './src/screens/HistoryScreen';
 import { SettingsScreen } from './src/screens/SettingsScreen';
 import { ThemeProvider, useTheme } from './src/state/ThemeContext';
+import { ErrorBoundary } from './src/components/ErrorBoundary';
 
 export type Tabs = {
   Home: undefined;
@@ -32,7 +27,7 @@ export type Tabs = {
 const Tab = createBottomTabNavigator<Tabs>();
 const icons = {
   Home: House,
-  Check: Link,
+  Check: House,
   Sites: ListFilter,
   History,
   Settings,
@@ -60,6 +55,7 @@ function ThemedApp() {
       <BetGuardProvider>
         <NavigationContainer theme={theme}>
           <Tab.Navigator
+            backBehavior="history"
             screenOptions={({ route }) => ({
               headerShown: false,
               animation: reducedMotion ? 'none' : 'fade',
@@ -71,8 +67,10 @@ function ThemedApp() {
               tabBarHideOnKeyboard: true,
               tabBarActiveTintColor: colors.primary,
               tabBarInactiveTintColor: colors.textMuted,
-              tabBarActiveBackgroundColor: colors.primarySoft,
-              tabBarItemStyle: { borderRadius: 16, marginHorizontal: 3 },
+              tabBarItemStyle: {
+                borderRadius: 16,
+                marginHorizontal: 3,
+              },
               tabBarStyle: {
                 backgroundColor: colors.surface,
                 borderTopColor: colors.border,
@@ -83,20 +81,45 @@ function ThemedApp() {
                 fontWeight: '600',
                 paddingBottom: 3,
               },
-              tabBarIcon: ({ color, size }) => {
+              tabBarIcon: ({ color, size, focused }) => {
                 const Icon = icons[route.name];
-                return <Icon color={color} size={size} strokeWidth={1.8} />;
+                return (
+                  <View
+                    style={[
+                      navigationStyles.icon,
+                      {
+                        backgroundColor: focused
+                          ? colors.primarySoft
+                          : colors.surface,
+                      },
+                    ]}
+                  >
+                    <Icon color={color} size={size} strokeWidth={1.8} />
+                  </View>
+                );
               },
             })}
           >
             <Tab.Screen name="Home" component={HomeScreen} />
             <Tab.Screen
+              name="History"
+              component={HistoryScreen}
+              options={{ title: 'Activity' }}
+            />
+            <Tab.Screen
               name="Check"
               component={CheckScreen}
-              options={{ title: 'Check link' }}
+              options={{
+                title: 'Check link',
+                tabBarButton: () => null,
+                tabBarItemStyle: { display: 'none' },
+              }}
             />
-            <Tab.Screen name="Sites" component={SitesScreen} />
-            <Tab.Screen name="History" component={HistoryScreen} />
+            <Tab.Screen
+              name="Sites"
+              component={SitesScreen}
+              options={{ title: 'Protection' }}
+            />
             <Tab.Screen name="Settings" component={SettingsScreen} />
           </Tab.Navigator>
         </NavigationContainer>
@@ -107,8 +130,19 @@ function ThemedApp() {
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <ThemedApp />
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <ThemedApp />
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
+const navigationStyles = StyleSheet.create({
+  icon: {
+    width: 52,
+    height: 34,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

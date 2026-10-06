@@ -9,7 +9,7 @@ object AppearancePreferences {
         context.getSharedPreferences(FILE, Context.MODE_PRIVATE).getString("theme", "system") ?: "system"
 
     fun save(context: Context, mode: String) {
-        require(mode == "light" || mode == "dark") { "Choose light or dark appearance." }
+        require(mode in listOf("system", "light", "dark")) { "Choose system, light or dark appearance." }
         check(context.getSharedPreferences(FILE, Context.MODE_PRIVATE).edit().putString("theme", mode).commit()) {
             "Could not save appearance."
         }

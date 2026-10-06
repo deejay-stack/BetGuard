@@ -18,9 +18,9 @@ test('renders all tabs without claiming protection when the native module is una
   const rendered = JSON.stringify(renderer!.toJSON());
   for (const label of [
     'Home',
-    'Check link',
-    'Sites',
-    'History',
+    'Check a link',
+    'Protection',
+    'Activity',
     'Settings',
     'Android build required',
   ]) {

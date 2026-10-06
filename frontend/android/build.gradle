@@ -1,10 +1,10 @@
 buildscript {
     ext {
-        buildToolsVersion = "37.0.0"
+        buildToolsVersion = "36.1.0"
         minSdkVersion = 24
-        compileSdkVersion = 37
+        compileSdkVersion = 36
         targetSdkVersion = 36
-        ndkVersion = "27.1.12297006"
+        ndkVersion = "27.3.13750724"
         kotlinVersion = "2.2.0"
     }
     repositories {
@@ -16,6 +16,23 @@ buildscript {
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
         classpath("com.google.devtools.ksp:symbol-processing-gradle-plugin:2.2.0-2.0.2")
+    }
+}
+
+// CMake shortens Windows paths containing spaces. The clang++ 8.3 filename
+// loses its ++ suffix, so retain C++ driver mode for the app AND native libraries.
+if (System.getProperty("os.name").startsWith("Windows")) {
+    subprojects { p ->
+        ["com.android.application", "com.android.library"].each { plugin ->
+            p.plugins.withId(plugin) {
+                p.extensions.getByName("androidComponents").finalizeDsl { android ->
+                    android.defaultConfig.externalNativeBuild.cmake.arguments.add("-DCMAKE_CXX_FLAGS=--driver-mode=g++")
+                    android.defaultConfig.externalNativeBuild.cmake.arguments.add("-DCMAKE_OBJECT_PATH_MAX=250")
+                    // Keep Ninja object paths below Windows' legacy path limit.
+                    android.externalNativeBuild.cmake.buildStagingDirectory = rootProject.file("../../build/n/${p.name}")
+                }
+            }
+        }
     }
 }
 

@@ -2,6 +2,7 @@ import type { TurboModule, CodegenTypes } from 'react-native';
 import { TurboModuleRegistry } from 'react-native';
 
 export interface Spec extends TurboModule {
+  getBridgeVersion(): number;
   getThemePreference(): string;
   setThemePreference(mode: string): Promise<void>;
   getSnapshot(): Promise<string>;

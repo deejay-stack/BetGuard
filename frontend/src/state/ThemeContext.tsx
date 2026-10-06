@@ -9,34 +9,41 @@ import React, {
 import { AccessibilityInfo, Appearance, useColorScheme } from 'react-native';
 import Native from '../../specs/NativeBetGuard';
 import { createStyles, darkColors, lightColors } from '../theme';
+import { logFailure } from './nativeContract';
 
 export type ThemeMode = 'light' | 'dark';
+export type ThemePreference = ThemeMode | 'system';
 function readPreference(): {
-  preference: ThemeMode | null;
+  preference: ThemePreference;
   error: string | null;
 } {
   try {
-    const saved = Native?.getThemePreference();
+    const saved =
+      typeof Native?.getThemePreference === 'function'
+        ? Native.getThemePreference()
+        : 'system';
     return {
-      preference: saved === 'light' || saved === 'dark' ? saved : null,
+      preference: saved === 'light' || saved === 'dark' ? saved : 'system',
       error: null,
     };
-  } catch {
+  } catch (error) {
+    logFailure('read appearance', error);
     return {
-      preference: null,
+      preference: 'system',
       error:
-        'Could not read appearance. Install the updated Android build and try again.',
+        'Your appearance preference couldn’t be read. Device appearance is being used.',
     };
   }
 }
 type ThemeValue = {
   mode: ThemeMode;
+  preference: ThemePreference;
   colors: typeof lightColors;
   styles: ReturnType<typeof createStyles>;
   reducedMotion: boolean;
   saving: boolean;
   error: string | null;
-  setMode: (mode: ThemeMode) => Promise<void>;
+  setMode: (mode: ThemePreference) => Promise<void>;
 };
 const Context = createContext<ThemeValue | null>(null);
 
@@ -44,7 +51,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [initial] = useState(readPreference);
   const [preference, setPreference] = useState(initial.preference);
   const system = useColorScheme();
-  const mode = preference ?? (system === 'dark' ? 'dark' : 'light');
+  const mode =
+    preference === 'system'
+      ? system === 'dark'
+        ? 'dark'
+        : 'light'
+      : preference;
   const [error, setError] = useState(initial.error);
   const [saving, setSaving] = useState(false);
   const pending = useRef(false);
@@ -73,11 +85,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
   useEffect(() => {
-    Appearance.setColorScheme(preference ?? 'auto');
+    Appearance.setColorScheme(preference === 'system' ? 'auto' : preference);
   }, [preference]);
   const colors = mode === 'dark' ? darkColors : lightColors;
   const styles = useMemo(() => createStyles(colors), [colors]);
-  async function setMode(next: ThemeMode) {
+  async function setMode(next: ThemePreference) {
     if (pending.current) {
       return;
     }
@@ -85,15 +97,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setSaving(true);
     setError(null);
     setPreference(next);
-    Appearance.setColorScheme(next);
+    Appearance.setColorScheme(next === 'system' ? 'auto' : next);
     try {
       if (!Native) {
         throw new Error('Appearance persistence requires the Android build.');
       }
       await Native.setThemePreference(next);
-    } catch {
+    } catch (failure) {
+      logFailure('save appearance', failure);
       setError(
-        'Theme changed for this session, but could not be saved. Try again with the updated Android build.',
+        'Theme changed for this session, but could not be saved. Please try again.',
       );
     } finally {
       pending.current = false;
@@ -102,7 +115,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }
   return (
     <Context.Provider
-      value={{ mode, colors, styles, reducedMotion, saving, error, setMode }}
+      value={{
+        mode,
+        preference,
+        colors,
+        styles,
+        reducedMotion,
+        saving,
+        error,
+        setMode,
+      }}
     >
       {children}
     </Context.Provider>

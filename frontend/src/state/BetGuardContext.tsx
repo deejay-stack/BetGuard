@@ -10,6 +10,14 @@ import { AppState, PermissionsAndroid, Platform } from 'react-native';
 import Native from '../../specs/NativeBetGuard';
 import type { LinkResult, Snapshot } from './types';
 import { API_BASE_URL } from '../api/config';
+import { haptic } from './haptics';
+import {
+  actionError,
+  bridgeIssue,
+  logFailure,
+  readLink,
+  readSnapshot,
+} from './nativeContract';
 
 type ContextValue = {
   snapshot: Snapshot | null;
@@ -19,6 +27,7 @@ type ContextValue = {
   feedback: string | null;
   refresh: () => Promise<void>;
   dismissError: () => void;
+  dismissFeedback: () => void;
   start: (onlineDetection?: boolean) => Promise<unknown>;
   stop: () => Promise<unknown>;
   save: (
@@ -33,14 +42,37 @@ type ContextValue = {
 };
 const Context = createContext<ContextValue | null>(null);
 export function BetGuardProvider({ children }: { children: React.ReactNode }) {
-  const available = Platform.OS === 'android' && Native !== null;
+  const [compatibilityError] = useState(bridgeIssue);
+  const available = compatibilityError === null;
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(compatibilityError);
   const [busy, setBusy] = useState(false);
   const [feedback, setFeedback] = useState<string | null>(null);
   const actionPending = useRef(false);
   const eventRevision = useRef(0);
   const refreshRequest = useRef(0);
+  const lastEvent = useRef<number | null>(null);
+  const lastPulse = useRef(0);
+  useEffect(() => {
+    const latest = snapshot?.history[0]?.id;
+    if (latest === undefined) return;
+    if (
+      lastEvent.current !== null &&
+      latest > lastEvent.current &&
+      AppState.currentState === 'active'
+    ) {
+      const blocked = snapshot?.history.some(
+        event =>
+          event.id > lastEvent.current! &&
+          ['dns_blocked', 'dns_detection_blocked'].includes(event.kind),
+      );
+      if (blocked && Date.now() - lastPulse.current > 5000) {
+        haptic('blocked');
+        lastPulse.current = Date.now();
+      }
+    }
+    lastEvent.current = latest;
+  }, [snapshot]);
   const refresh = useCallback(async () => {
     if (!available || !Native) {
       return;
@@ -48,7 +80,7 @@ export function BetGuardProvider({ children }: { children: React.ReactNode }) {
     const revision = eventRevision.current;
     const request = ++refreshRequest.current;
     try {
-      const next = JSON.parse(await Native.getSnapshot()) as Snapshot;
+      const next = readSnapshot(await Native.getSnapshot());
       if (
         revision === eventRevision.current &&
         request === refreshRequest.current
@@ -61,23 +93,32 @@ export function BetGuardProvider({ children }: { children: React.ReactNode }) {
       )
         return;
       setSnapshot(null);
+      logFailure('snapshot', e);
       setError(
-        e instanceof Error ? e.message : 'Could not read protection status.',
+        'BetGuard couldn’t read protection status. Try reopening the app.',
       );
     }
   }, [available]);
   useEffect(() => {
-    const subscription = available
-      ? Native?.onSnapshot(value => {
-          eventRevision.current++;
-          try {
-            setSnapshot(JSON.parse(value) as Snapshot);
-          } catch {
-            setSnapshot(null);
-            setError('Could not read a protection update. Reopen the app.');
-          }
-        })
-      : undefined;
+    let subscription: { remove: () => void } | undefined;
+    try {
+      subscription = available
+        ? Native?.onSnapshot(value => {
+            eventRevision.current++;
+            try {
+              setSnapshot(readSnapshot(value));
+            } catch (e) {
+              logFailure('snapshot event', e);
+              setSnapshot(null);
+              setError('Could not read a protection update. Reopen the app.');
+            }
+          })
+        : undefined;
+    } catch (e) {
+      logFailure('subscribe snapshot', e);
+      setSnapshot(null);
+      setError('Protection updates couldn’t connect. Please reopen BetGuard.');
+    }
     void refresh();
     const lifecycle = AppState.addEventListener('change', state => {
       if (state === 'active') {
@@ -102,9 +143,9 @@ export function BetGuardProvider({ children }: { children: React.ReactNode }) {
     try {
       return await work();
     } catch (e) {
-      setError(
-        e instanceof Error ? e.message : 'The action could not be completed.',
-      );
+      logFailure('action', e);
+      setError(actionError(e));
+      haptic('error');
       return;
     } finally {
       await refresh();
@@ -116,10 +157,11 @@ export function BetGuardProvider({ children }: { children: React.ReactNode }) {
     async (input: string) => {
       if (!available || !Native) return;
       try {
-        return JSON.parse(await Native.resolveLink(input)) as LinkResult;
-      } catch {
+        return readLink(await Native.resolveLink(input));
+      } catch (e) {
+        logFailure('resolve rule', e);
         setError(
-          'Could not read the current rule. Install the updated Android build and try again.',
+          'BetGuard couldn’t read this website’s protection rule. Please try again.',
         );
       }
     },
@@ -129,7 +171,11 @@ export function BetGuardProvider({ children }: { children: React.ReactNode }) {
     const effective = await resolve(host);
     setFeedback(
       `${host}: ${action}. ${
-        effective?.reason ?? 'Current effective rule could not be read.'
+        effective
+          ? effective.matchedDomain
+            ? effective.reason
+            : 'No matching local rule. Online detection applies when enabled; manual mode allows unmatched hostnames.'
+          : 'Current effective rule could not be read.'
       } Saving a rule is separate from observing a blocked DNS request.`,
     );
   }
@@ -141,10 +187,13 @@ export function BetGuardProvider({ children }: { children: React.ReactNode }) {
     feedback,
     refresh,
     dismissError: () => setError(null),
+    dismissFeedback: () => setFeedback(null),
     start: (onlineDetection = false) =>
       perform(async () => {
         if (onlineDetection && !API_BASE_URL) {
-          throw new Error('Configure the BetGuard API address before enabling online detection.');
+          throw new Error(
+            'Configure the BetGuard API address before enabling online detection.',
+          );
         }
         if (Platform.OS === 'android' && Number(Platform.Version) >= 33) {
           await PermissionsAndroid.request(
@@ -162,6 +211,7 @@ export function BetGuardProvider({ children }: { children: React.ReactNode }) {
           host,
           `${action === 'block' ? 'Block' : 'Allow'} rule saved`,
         );
+        haptic('success');
         return host;
       }),
     remove: domain =>
@@ -172,9 +222,7 @@ export function BetGuardProvider({ children }: { children: React.ReactNode }) {
       }),
     resolve,
     check: input =>
-      perform(
-        async () => JSON.parse(await Native!.checkLink(input)) as LinkResult,
-      ),
+      perform(async () => readLink(await Native!.checkLink(input))),
     clearHistory: () => perform(() => Native!.clearHistory()),
   };
   return <Context.Provider value={value}>{children}</Context.Provider>;
