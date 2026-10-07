@@ -2,6 +2,8 @@ package com.betguard.filter
 
 import android.content.Context
 import androidx.room.*
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 
 @Entity(tableName = "domain_rules")
 data class RuleEntity(
@@ -18,6 +20,8 @@ data class HistoryEntity(
     val domain: String,
     val detail: String,
     val createdAt: Long,
+    val clientIp: String? = null,
+    val decisionSource: String? = null,
 )
 
 @Dao
@@ -31,12 +35,18 @@ interface BetGuardDao {
     @Query("DELETE FROM history") fun clearHistory()
 }
 
-@Database(entities = [RuleEntity::class, HistoryEntity::class], version = 1, exportSchema = true)
+@Database(entities = [RuleEntity::class, HistoryEntity::class], version = 2, exportSchema = true)
 abstract class BetGuardDatabase : RoomDatabase() {
     abstract fun dao(): BetGuardDao
     companion object {
+        val MIGRATION_1_2 = object : Migration(1, 2) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE history ADD COLUMN clientIp TEXT")
+                db.execSQL("ALTER TABLE history ADD COLUMN decisionSource TEXT")
+            }
+        }
         fun create(context: Context) = Room.databaseBuilder(
             context.applicationContext, BetGuardDatabase::class.java, "betguard.db"
-        ).build()
+        ).addMigrations(MIGRATION_1_2).build()
     }
 }

@@ -34,6 +34,7 @@ def client(runtime):
 
 @pytest.mark.parametrize("hostname,action,intervention,source", [
     ("stake.com", "BLOCK", "BLOCK", "verified_gambling_blocklist"),
+    ("casino.fanatics.com", "BLOCK", "BLOCK", "ml_high_risk"),
     ("wikipedia.org", "ALLOW", "NONE", "ml_low_risk"),
     ("microsoft.com", "ALLOW", "WARN", "ml_warning"),
 ])

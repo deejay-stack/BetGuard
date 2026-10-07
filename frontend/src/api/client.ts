@@ -1,4 +1,5 @@
 import { API_BASE_URL } from './config';
+import type { AppMetadata } from './applications';
 export const REQUEST_TIMEOUT_MS = 8000;
 
 export class ApiError extends Error {
@@ -15,9 +16,19 @@ export class ApiError extends Error {
 }
 
 export async function requestJson(
-  path: '/v1/check' | '/health/ready' | '/v1/domain/check' | '/v1/domain/check-batch',
+  path:
+    | '/v1/check'
+    | '/health/ready'
+    | '/v1/domain/check'
+    | '/v1/domain/check-batch'
+    | '/v1/apps/check'
+    | '/health/apps',
   signal: AbortSignal,
-  body?: { hostname: string } | { domain: string } | { domains: string[] },
+  body?:
+    | { hostname: string }
+    | { domain: string }
+    | { domains: string[] }
+    | AppMetadata,
 ): Promise<unknown> {
   if (signal.aborted) throw new ApiError('cancelled');
   const base = API_BASE_URL.replace(/\/+$/, '');

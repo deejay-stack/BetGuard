@@ -170,6 +170,12 @@ export function SettingsScreen({
           ordinary DNS, which your network and resolver can observe. Online
           detection errors return a DNS error; manual rules work offline.
         </Text>
+        <Text style={styles.small}>
+          App review reads visible app names and requested permission names only
+          after you agree. Only the selected app information is sent for an
+          explicit online review. The inventory stays in that screen and is
+          cleared when you leave.
+        </Text>
         <Button
           title="Clear local history"
           icon={Trash2}
@@ -205,7 +211,9 @@ export function SettingsScreen({
             {__DEV__ ? 'USB development' : 'Saved APK'}
           </Text>
           <Text style={styles.small}>
-            Your rules on the phone. Optional smart checks on the server.
+            Student protection for BISU Clarin. Your rules on the phone;
+            optional smart checks on the server. Network filtering does not
+            prevent apps from opening.
           </Text>
         </View>
       </View>

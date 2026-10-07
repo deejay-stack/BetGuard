@@ -1,0 +1,155 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "app_name": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "App Name",
+      "type": "string"
+    },
+    "classification": {
+      "pattern": "^(gambling|non_gambling|unknown)$",
+      "title": "Classification",
+      "type": "string"
+    },
+    "collected_at": {
+      "format": "date-time",
+      "title": "Collected At",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "maxLength": 6000,
+      "title": "Description",
+      "type": "string"
+    },
+    "family_evidence": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Family Evidence",
+      "type": "string"
+    },
+    "family_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Family Id",
+      "type": "string"
+    },
+    "keywords": {
+      "items": {
+        "maxLength": 160,
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 40,
+      "title": "Keywords",
+      "type": "array"
+    },
+    "label_evidence": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Label Evidence",
+      "type": "string"
+    },
+    "license": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "License",
+      "type": "string"
+    },
+    "license_uri": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "License Uri",
+      "type": "string"
+    },
+    "package_name": {
+      "default": "",
+      "maxLength": 255,
+      "pattern": "^(?:[A-Za-z0-9_]+(?:\\.[A-Za-z0-9_]+)+)?$",
+      "title": "Package Name",
+      "type": "string"
+    },
+    "permissions": {
+      "items": {
+        "maxLength": 160,
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 150,
+      "title": "Permissions",
+      "type": "array"
+    },
+    "record_id": {
+      "maxLength": 120,
+      "minLength": 1,
+      "title": "Record Id",
+      "type": "string"
+    },
+    "review_status": {
+      "pattern": "^(reviewed|pending)$",
+      "title": "Review Status",
+      "type": "string"
+    },
+    "reviewed_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reviewed At"
+    },
+    "reviewed_by": {
+      "default": "",
+      "maxLength": 200,
+      "title": "Reviewed By",
+      "type": "string"
+    },
+    "reviews": {
+      "items": {
+        "maxLength": 1000,
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 10,
+      "title": "Reviews",
+      "type": "array"
+    },
+    "source_uri": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "Source Uri",
+      "type": "string"
+    },
+    "synthetic": {
+      "default": false,
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "usage_allowed": {
+      "title": "Usage Allowed",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "app_name",
+    "record_id",
+    "classification",
+    "family_id",
+    "family_evidence",
+    "source_uri",
+    "license",
+    "license_uri",
+    "usage_allowed",
+    "review_status",
+    "label_evidence",
+    "collected_at"
+  ],
+  "title": "AppObservation",
+  "type": "object"
+}

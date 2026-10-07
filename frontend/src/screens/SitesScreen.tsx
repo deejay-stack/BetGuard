@@ -33,6 +33,32 @@ export function SitesScreen({
     ) ?? [];
   return (
     <Page title="Protection" subtitle="Your website choices always come first.">
+      <Card>
+        <Text style={styles.heading}>Device and Network Protection</Text>
+        <Text style={styles.body}>
+          Home protects this phone. Network Protection lets this phone filter
+          supported web requests from devices using its manual proxy.
+        </Text>
+        <Button
+          title="Network Protection"
+          secondary
+          disabled={!navigation}
+          onPress={() => navigation?.navigate('Network')}
+        />
+      </Card>
+      <Card>
+        <Text style={styles.heading}>Apps and websites</Text>
+        <Text style={styles.body}>
+          Protect supported website connections from browsers and apps. Review
+          an app's public information or add a known gambling hostname.
+        </Text>
+        <Button
+          title="Review an app"
+          secondary
+          disabled={!navigation}
+          onPress={() => navigation?.navigate('Apps')}
+        />
+      </Card>
       <View style={styles.spread}>
         <View style={styles.flex}>
           <Text style={styles.heading}>Website rules</Text>

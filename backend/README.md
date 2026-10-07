@@ -1,5 +1,7 @@
 # BetGuard backend
 
+App-information review is separate from the existing trained domain detector: `/v1/apps/check` and `/health/apps` use an optional reviewed metadata model and report unknown when absent. See [capstone research](docs/research/APP_METADATA_RESEARCH.md) and [alignment](../docs/CAPSTONE_ALIGNMENT.md). Startup does not train either model.
+
 FastAPI + SQLAlchemy + Alembic with Supabase-hosted PostgreSQL. Mobile rules/history remain in Room, and manual protection is independent of this service. No Supabase API key is needed for the database connection.
 
 | Path | Purpose |

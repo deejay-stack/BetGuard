@@ -301,8 +301,9 @@ export function CheckScreen({
           <Text style={styles.heading}>Your choice comes first</Text>
           <Text style={styles.body}>
             Your saved rule is checked on this phone. Smart advice needs the
-            online service. A warning keeps access allowed. To block a website,
-            save a Block rule and enable protection on Home.
+            online service. Smart protection automatically applies Block
+            decisions while it is enabled on Home. A warning keeps access
+            allowed. Save a Block rule to also block the site in On-device mode.
           </Text>
         </View>
       )}

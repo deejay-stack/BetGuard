@@ -54,15 +54,21 @@ export function HomeScreen({ navigation }: BottomTabScreenProps<Tabs, 'Home'>) {
     .filter(event => event.kind.startsWith('dns_'))
     .slice(0, 3);
   const latestBlock = history.find(
-    event => activityKind(event.kind) === 'Blocked',
+    event =>
+      event.kind.startsWith('dns_') && activityKind(event.kind) === 'Blocked',
   )?.id;
   const today = new Date().setHours(0, 0, 0, 0);
   const blocked = history.filter(
-    event => event.createdAt >= today && activityKind(event.kind) === 'Blocked',
+    event =>
+      event.kind.startsWith('dns_') &&
+      event.createdAt >= today &&
+      activityKind(event.kind) === 'Blocked',
   ).length;
   const warnings = history.filter(
     event =>
-      event.createdAt >= today && activityKind(event.kind) === 'Warnings',
+      event.kind.startsWith('dns_') &&
+      event.createdAt >= today &&
+      activityKind(event.kind) === 'Warnings',
   ).length;
   const needsAttention =
     snapshot?.state === 'degraded' || snapshot?.state === 'interrupted';
@@ -141,6 +147,21 @@ export function HomeScreen({ navigation }: BottomTabScreenProps<Tabs, 'Home'>) {
               ? snapshot.detail
               : 'Choose how to protect your browsing, then enable the filter.'}
           </Text>
+          {enabled && (
+            <Text style={[styles.small, local.centerText]}>
+              Blocks new DNS requests. Pages already loaded or cached in your
+              browser may still appear. Restart the browser and reload the page
+              after adding a block, then check Activity for a new blocked
+              request.
+            </Text>
+          )}
+          {enabled && selectedOnline && (
+            <Text style={[styles.small, local.centerText]}>
+              Smart protection automatically blocks blocklisted and high-risk
+              domains. Review warnings stay allowed. Your saved Allow rules take
+              priority.
+            </Text>
+          )}
         </View>
         {!enabled && !transition && (
           <>
@@ -290,7 +311,7 @@ export function HomeScreen({ navigation }: BottomTabScreenProps<Tabs, 'Home'>) {
             !API_BASE_URL
               ? 'On-device rules remain available.'
               : selectedOnline && enabled
-              ? 'Verified blocklist + automated advice.'
+              ? 'Automatic blocks + AI reviews.'
               : 'Select Smart mode to use online checks.'
           }
           onPress={() => setDnsDetails(true)}

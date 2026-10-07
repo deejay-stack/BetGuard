@@ -1,5 +1,7 @@
 # Hostname ML development and explicit-check integration
 
+This is the historical optional catalog-model development workflow. **Your finalized trained baseline domain model is now integrated** through `betguard_runtime`, FastAPI and Android Smart DNS; see [ML_INTEGRATION](ML_INTEGRATION.md). The [capstone alignment](../../../docs/CAPSTONE_ALIGNMENT.md) distinguishes that live hostname model from the separate [app metadata research workflow](../research/APP_METADATA_RESEARCH.md). Statements below about the earlier model not being integrated describe that earlier milestone, not current Smart protection.
+
 This milestone adds a runnable development workflow and optional model serving to the existing `POST /v1/check`. It does not add a trained classifier, automatic DNS uploads, automatic blocking, another backend, or a Supabase SDK. [The audit](ML_DATA_AUDIT.md) found no suitable dataset. Software tests do not establish real-data performance, Supabase connectivity or phone acceptance; those require separate verification.
 
 ## Runtime and offline tools

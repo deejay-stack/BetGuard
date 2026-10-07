@@ -85,6 +85,13 @@ class RuleRepository private constructor(context: Context) {
         changed()
     }
 
+    @Synchronized fun recordNetwork(kind: String, domain: String, clientIp: String, source: String, message: String) {
+        dao.insert(HistoryEntity(kind = kind, domain = domain, clientIp = clientIp,
+            decisionSource = source, detail = message, createdAt = System.currentTimeMillis()))
+        dao.prune()
+        changed()
+    }
+
     private fun insert(kind: String, domain: String, message: String) {
         dao.insert(HistoryEntity(kind = kind, domain = domain, detail = message, createdAt = System.currentTimeMillis()))
         dao.prune()
@@ -98,7 +105,9 @@ class RuleRepository private constructor(context: Context) {
             .put("action", rule.action).put("includeSubdomains", rule.includeSubdomains).put("updatedAt", rule.updatedAt)) }
         val history = JSONArray()
         dao.history().forEach { event -> history.put(JSONObject().put("id", event.id).put("kind", event.kind)
-            .put("domain", event.domain).put("detail", event.detail).put("createdAt", event.createdAt)) }
+            .put("domain", event.domain).put("detail", event.detail).put("createdAt", event.createdAt)
+            .put("clientIp", event.clientIp ?: JSONObject.NULL).put("decisionSource", event.decisionSource ?: JSONObject.NULL)
+            .put("protection", if (event.kind.startsWith("network_")) "network" else "device")) }
         return JSONObject().put("state", state).put("detail", detail)
             .put("detectionEnabled", detectionBaseUrl.isNotEmpty())
             .put("rules", rules).put("history", history).toString()

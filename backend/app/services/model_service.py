@@ -74,6 +74,9 @@ class ModelService:
             return cls("unsuitable")
 
     def predict(self, hostname):
+        return self._infer(_predict, hostname)
+
+    def _infer(self, operation, value):
         if self.status == "failed":
             raise InferenceUnavailable("Model worker failed; restart the backend.")
         if self.status != "available":
@@ -81,7 +84,7 @@ class ModelService:
         if not self.slot.acquire(blocking=False):
             raise InferenceUnavailable("Model inference is busy.")
         try:
-            future = self.executor.submit(_predict, hostname)
+            future = self.executor.submit(operation, value)
         except Exception:
             self.slot.release()
             self.status = "failed"

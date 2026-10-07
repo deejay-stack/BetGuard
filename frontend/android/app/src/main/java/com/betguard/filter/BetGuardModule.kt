@@ -5,11 +5,21 @@ import android.content.Intent
 import android.net.VpnService
 import com.facebook.react.bridge.*
 import java.util.concurrent.atomic.AtomicBoolean
+import com.betguard.filter.network.GatewayState
+import com.betguard.filter.network.BetGuardNetworkService
+import com.betguard.filter.network.LanInterfaces
 
 class BetGuardModule(private val context: ReactApplicationContext) : NativeBetGuardSpec(context), ActivityEventListener {
     private val repo = RuleRepository.get(context)
     private var permissionPromise: Promise? = null
     private val snapshotQueued = AtomicBoolean(false)
+    private val networkQueued = AtomicBoolean(false)
+    private val networkListener: () -> Unit = {
+        if (networkQueued.compareAndSet(false, true)) repo.io.execute {
+            networkQueued.set(false)
+            if (context.hasActiveReactInstance() && mEventEmitterCallback != null) emitOnNetworkSnapshot(GatewayState.snapshot())
+        }
+    }
     private val listener: () -> Unit = {
         if (snapshotQueued.compareAndSet(false, true)) repo.io.execute {
             snapshotQueued.set(false)
@@ -17,13 +27,43 @@ class BetGuardModule(private val context: ReactApplicationContext) : NativeBetGu
         }
     }
 
-    init { context.addActivityEventListener(this); repo.listeners.add(listener) }
+    init { LanInterfaces.initialize(context); context.addActivityEventListener(this); repo.listeners.add(listener); GatewayState.listeners.add(networkListener) }
     override fun getName() = NAME
     override fun getBridgeVersion(): Double = 2.0
     override fun getThemePreference(): String = AppearancePreferences.read(context)
     override fun setThemePreference(mode: String, promise: Promise) =
         run(promise) { AppearancePreferences.save(context, mode); null }
     override fun getSnapshot(promise: Promise) = run(promise) { repo.snapshot() }
+    override fun getVisibleApplications(promise: Promise) = run(promise) { ApplicationInventory.read(context) }
+    override fun getNetworkSnapshot(promise: Promise) = run(promise) { GatewayState.snapshot() }
+    override fun startNetworkProtection(address: String, port: Double, baseUrl: String, promise: Promise) {
+        repo.io.execute {
+            try {
+                require(port.isFinite() && port==port.toInt().toDouble()) { "Use a proxy port from 1024 to 65535." }
+                GatewayState.prepare(address,port.toInt(),baseUrl)
+                UiThreadUtil.runOnUiThread {
+                    try {
+                        val intent=Intent(context,BetGuardNetworkService::class.java)
+                        if(android.os.Build.VERSION.SDK_INT>=26) context.startForegroundService(intent) else context.startService(intent)
+                        promise.resolve(null)
+                    } catch (error: Exception) {
+                        GatewayState.setState("failed","Network Protection couldn't start. Open BetGuard and try again.")
+                        promise.reject("E_NETWORK_START","Network Protection couldn't start. Open BetGuard and try again.")
+                    }
+                }
+            } catch (error: Exception) { promise.reject("E_NETWORK_SETUP",error.message,error) }
+        }
+    }
+    override fun stopNetworkProtection(promise: Promise) {
+        UiThreadUtil.runOnUiThread {
+            try {
+                if (GatewayState.state in listOf("off","failed","interrupted")) { promise.resolve(null); return@runOnUiThread }
+                GatewayState.setState("stopping","Closing the network gateway…")
+                context.startService(Intent(context,BetGuardNetworkService::class.java).setAction(BetGuardNetworkService.ACTION_STOP))
+                promise.resolve(null)
+            } catch (_: Exception) { promise.reject("E_NETWORK_STOP","Could not stop the gateway. Reopen BetGuard and try again.") }
+        }
+    }
     override fun configureDetection(baseUrl: String, promise: Promise) =
         run(promise) { repo.configureDetection(baseUrl); null }
     override fun saveRule(input: String, action: String, includeSubdomains: Boolean, promise: Promise) =
@@ -94,6 +134,7 @@ class BetGuardModule(private val context: ReactApplicationContext) : NativeBetGu
     override fun onNewIntent(intent: Intent) = Unit
     override fun invalidate() {
         repo.listeners.remove(listener)
+        GatewayState.listeners.remove(networkListener)
         context.removeActivityEventListener(this)
         permissionPromise?.reject("E_CLOSED", "The app closed during the permission request.")
         permissionPromise = null

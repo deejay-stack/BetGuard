@@ -1,5 +1,7 @@
 # BetGuard
 
+The [capstone alignment audit](docs/CAPSTONE_ALIGNMENT.md) maps the supplied thesis to student network protection, app review, the existing trained domain model and remaining research evidence.
+
 | Folder | Contents |
 | --- | --- |
 | [frontend](frontend/README.md) | React Native screens, Android/iOS, native filtering, mobile tests and build configuration |

@@ -1,8 +1,10 @@
 # BetGuard: using the app and updating it
 
+For the separate phone-hosted gateway, client setup and exact development commands, see [Network Protection](NETWORK_PROTECTION.md).
+
 BetGuard runs a DNS filter on your Android phone. You decide which websites to block or allow. Optional smart protection asks your FastAPI server to check unmatched hostnames against the verified gambling blocklist and trained model. Checking a link, saving a rule and enabling protection are three separate actions.
 
-The current premium interface and verification details are documented in [the redesign report](PREMIUM_REDESIGN_REPORT.md). The saved app is BetGuard Dev 1.2.0/build 8; future builds use the shared app.version.json and update commands below.
+The premium interface is documented in [the redesign report](PREMIUM_REDESIGN_REPORT.md); the capstone app-review update is documented in [the alignment report](../../docs/CAPSTONE_ALIGNMENT.md). The current build/version comes from the shared app.version.json; future builds use the update commands below.
 
 ## Start here
 
@@ -29,7 +31,9 @@ The Home and Settings **How BetGuard works** control opens the same short guide.
 
 “Offline” means the rule engine does not need BetGuard's server. It does not download websites or provide internet access. Allowed DNS queries still need an upstream resolver. A blocked request can be answered locally without the backend.
 
-The saved APK currently has no deployed service address configured. It works with on-device rules and explicitly disables Smart protection. This is separate from whether the phone has Wi-Fi or mobile data.
+The saved APK currently has no deployed service address configured. It works with on-device rules and local app selection; Smart protection and online app review require a reachable configured service. This is separate from whether the phone has Wi-Fi or mobile data.
+
+Smart mode automatically blocks the server's verified-list and high-risk ML `BLOCK` results for new supported DNS requests. You do not need to save those domains one by one. `WARN` results stay allowed unless you save a local Block rule. Follow the [Smart protection test guide](SMART_PROTECTION_TEST.md) for exact terminal commands, the running-server check script, and phone tests that distinguish ML blocking from manual rules or blocklist matches.
 
 ## What each tab does
 
@@ -47,6 +51,10 @@ Home's shield says **Protected** only when the native service reports `active`. 
 **Block** means a supported DNS request is refused while protection is on. **Review/WARN** is uncertain advice; access stays allowed. **Allow** is permission to continue, not a guarantee of website safety. Continue once opens the checked hostname without saving a rule. Always allow and Block site save persistent choices. A check can run while protection is off; it does not turn protection on.
 
 ## Actual architecture
+
+**Review an app** opens from Protection. It asks before reading visible launchable app names/package IDs/requested permission names. Select an app and add its public description, keywords and optional public reviews; Android does not supply store descriptions/reviews. Agree separately before sending only that selected metadata to `/v1/apps/check`. Editing revokes consent and clears the prior result; cancel or leaving discards the session data. A missing metadata model reports **NOT EVALUATED**. Your existing trained hostname model stays in Smart protection; it is not used to classify app descriptions.
+
+App reviews do not enable protection or create rules. If you know an app's gambling hostname, use **Add an app website rule**, save your choice and enable protection on Home. Filtering applies to supported DNS connections, not app launches or all app traffic. See [capstone alignment](../../docs/CAPSTONE_ALIGNMENT.md) for complete traceability and remaining research evidence.
 
 ```mermaid
 flowchart TD
@@ -105,6 +113,17 @@ The most specific matching local rule wins, including exact/subdomain scope. Loc
 For example, an exact rule for `example.com` does not match `www.example.com`. Turn on Include subdomains when saving the parent domain to cover both. A rule applies to every page on its matching hostname, rather than just the URL path you pasted.
 
 DNS filtering covers new IPv4 UDP DNS through BetGuard's virtual resolver. Encrypted/private DNS, external resolvers, TCP DNS, cached addresses, direct IP access and existing connections can bypass it. A browser warning page is not injected into arbitrary HTTPS traffic. The review flow lives in Check link; actual blocking outcomes appear in Activity.
+
+To test a saved Block rule, enable protection, fully restart your browser and reload the website. Restoring an old tab can display previously loaded content without making a new request. For a controlled Chrome test over USB, use a different URL each time:
+
+```powershell
+$adbPath = Join-Path $env:LOCALAPPDATA 'Android\Sdk\platform-tools\adb.exe'
+$testId = [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
+& $adbPath shell am force-stop com.android.chrome
+& $adbPath shell am start -a android.intent.action.VIEW -d "https://example.com/?betguard_test=$testId" -p com.android.chrome
+```
+
+Confirm both a browser DNS error and a **new** `example.com` Blocked event in Activity. A restored page does not prove a new connection succeeded, and a browser error alone can also mean a connection/resolver failure. This filter cannot erase previously downloaded content or interrupt every existing connection.
 
 ## Test online from your PC
 

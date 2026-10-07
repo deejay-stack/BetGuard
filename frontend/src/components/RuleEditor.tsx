@@ -81,7 +81,9 @@ export function RuleEditor({ onSaved }: { onSaved?: () => void }) {
       </View>
       <Text style={styles.small}>
         Saved rules are checked on new covered DNS requests. Existing
-        connections and cached pages can remain accessible.
+        connections and cached pages can remain accessible. Enable protection,
+        restart your browser and reload the page to test a block. Confirm a new
+        blocked request in Activity.
       </Text>
     </View>
   );

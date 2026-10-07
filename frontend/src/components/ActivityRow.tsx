@@ -13,11 +13,13 @@ import {
 export function activityKind(
   kind: string,
 ): 'Blocked' | 'Warnings' | 'Allowed' | 'Other' {
-  return ['dns_blocked', 'dns_detection_blocked'].includes(kind)
+  return ['dns_blocked', 'dns_detection_blocked', 'network_blocked'].includes(
+    kind,
+  )
     ? 'Blocked'
-    : kind === 'dns_warning'
+    : ['dns_warning', 'network_warning'].includes(kind)
     ? 'Warnings'
-    : kind === 'dns_forwarded'
+    : ['dns_forwarded', 'network_allowed'].includes(kind)
     ? 'Allowed'
     : 'Other';
 }
@@ -35,10 +37,12 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
   const { colors, styles } = useTheme();
   const [expanded, setExpanded] = useState(false);
   const category = activityKind(item.kind);
+  const network = item.kind.startsWith('network_');
   const Icon =
     category === 'Blocked'
       ? Ban
-      : category === 'Warnings' || item.kind === 'dns_error'
+      : category === 'Warnings' ||
+        ['dns_error', 'network_error'].includes(item.kind)
       ? TriangleAlert
       : category === 'Allowed'
       ? CheckCircle2
@@ -46,7 +50,8 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
   const color =
     category === 'Blocked'
       ? colors.blocked
-      : category === 'Warnings' || item.kind === 'dns_error'
+      : category === 'Warnings' ||
+        ['dns_error', 'network_error'].includes(item.kind)
       ? colors.review
       : category === 'Allowed'
       ? colors.allowed
@@ -56,15 +61,23 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
       ? 'WARNING · ALLOWED'
       : category !== 'Other'
       ? category.toUpperCase()
-      : item.kind === 'dns_error'
-      ? 'RESOLUTION ERROR'
+      : ['dns_error', 'network_error'].includes(item.kind)
+      ? network
+        ? 'PROXY ERROR'
+        : 'RESOLUTION ERROR'
       : item.kind.startsWith('rule_')
       ? 'RULE CHANGE'
       : item.kind === 'link_check'
       ? 'LINK CHECK'
       : 'PROTECTION';
   const reason =
-    item.kind === 'dns_detection_blocked'
+    item.kind === 'network_blocked'
+      ? item.decisionSource === 'user_blocklist'
+        ? 'Your block rule'
+        : item.decisionSource === 'verified_gambling_blocklist'
+        ? 'Known gambling domain'
+        : 'High risk detection'
+      : item.kind === 'dns_detection_blocked'
       ? item.detail.includes('verified_gambling')
         ? 'Known gambling domain'
         : 'High risk detection'
@@ -73,8 +86,10 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
       : category === 'Warnings'
       ? 'Review suggested; access stays allowed'
       : category === 'Allowed'
-      ? 'DNS response returned'
-      : item.kind === 'dns_error'
+      ? network
+        ? 'Proxy connection permitted'
+        : 'DNS response returned'
+      : ['dns_error', 'network_error'].includes(item.kind)
       ? 'Request could not be resolved'
       : item.kind.startsWith('rule_')
       ? 'Saved rules updated on this phone'
@@ -84,7 +99,7 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
       <View style={styles.spread}>
         <Icon size={20} color={color} accessible={false} />
         <Text selectable style={[styles.heading, styles.flex]}>
-          {item.domain || 'DNS protection'}
+          {item.domain || (network ? 'Network Protection' : 'DNS protection')}
         </Text>
         <Text style={styles.small}>{relativeTime(item.createdAt)}</Text>
       </View>
@@ -94,7 +109,8 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
           tone={
             category === 'Blocked'
               ? 'error'
-              : category === 'Warnings' || item.kind === 'dns_error'
+              : category === 'Warnings' ||
+                ['dns_error', 'network_error'].includes(item.kind)
               ? 'warning'
               : category === 'Allowed'
               ? 'success'
@@ -102,7 +118,14 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
           }
         />
         <Text style={styles.small}>{reason}</Text>
+        <Badge text={network ? 'NETWORK' : 'DEVICE'} />
       </View>
+      {network && (
+        <Text selectable style={styles.small}>
+          Client: {item.clientIp ?? 'Unavailable'} · Source:{' '}
+          {item.decisionSource ?? 'Unavailable'}
+        </Text>
+      )}
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={`${expanded ? 'Hide' : 'Show'} details for event ${

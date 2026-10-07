@@ -16,10 +16,18 @@ export function HoldButton({
   onComplete,
   disabled,
   cancelKey,
+  title = 'Hold to pause protection',
+  confirmationTitle = 'Pause protection?',
+  confirmationMessage = 'Websites will no longer be filtered. Your saved rules will stay on this phone.',
+  confirmationAction = 'Pause protection',
 }: {
   onComplete: () => void;
   disabled?: boolean;
   cancelKey?: number;
+  title?: string;
+  confirmationTitle?: string;
+  confirmationMessage?: string;
+  confirmationAction?: string;
 }) {
   const { colors, styles } = useTheme();
   const [progress, setProgress] = useState(0);
@@ -77,30 +85,24 @@ export function HoldButton({
   }
   function confirm() {
     if (disabled || completed.current) return;
-    Alert.alert(
-      'Pause protection?',
-      'Websites will no longer be filtered. Your saved rules will stay on this phone.',
-      [
-        { text: 'Keep protecting', style: 'cancel' },
-        { text: 'Pause protection', onPress: onComplete },
-      ],
-    );
+    Alert.alert(confirmationTitle, confirmationMessage, [
+      { text: 'Keep protecting', style: 'cancel' },
+      { text: confirmationAction, onPress: onComplete },
+    ]);
   }
   return (
     <View style={styles.stack}>
       <Pressable
         accessibilityRole="button"
-        accessibilityLabel="Hold to pause protection"
-        accessibilityHint="Hold for two and a half seconds, or tap to confirm pausing."
+        accessibilityLabel={title}
+        accessibilityHint="Hold for two and a half seconds, or tap to confirm."
         accessibilityState={{ disabled: !!disabled }}
         disabled={disabled}
         onPressIn={screenReader ? undefined : begin}
         onPressOut={cancel}
         onTouchCancel={cancel}
         onPress={screenReader ? confirm : undefined}
-        accessibilityActions={[
-          { name: 'activate', label: 'Confirm pausing protection' },
-        ]}
+        accessibilityActions={[{ name: 'activate', label: confirmationTitle }]}
         onAccessibilityAction={event => {
           if (event.nativeEvent.actionName === 'activate') confirm();
         }}
@@ -126,7 +128,7 @@ export function HoldButton({
         <Text style={[styles.body, { color: colors.text }]}>
           {progress > 0
             ? `Keep holding · ${Math.round(progress * 100)}%`
-            : 'Hold to pause protection'}
+            : title}
         </Text>
       </Pressable>
       <Text style={[styles.small, local.caption]}>

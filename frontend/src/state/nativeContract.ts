@@ -93,7 +93,15 @@ export function readSnapshot(raw: string): Snapshot {
         typeof item.kind === 'string' &&
         typeof item.domain === 'string' &&
         typeof item.detail === 'string' &&
-        Number.isFinite(item.createdAt),
+        Number.isFinite(item.createdAt) &&
+        (item.clientIp === undefined ||
+          item.clientIp === null ||
+          typeof item.clientIp === 'string') &&
+        (item.decisionSource === undefined ||
+          item.decisionSource === null ||
+          typeof item.decisionSource === 'string') &&
+        (item.protection === undefined ||
+          ['device', 'network'].includes(item.protection)),
     )
   )
     throw new Error('Invalid native snapshot');

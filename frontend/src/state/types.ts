@@ -10,6 +10,9 @@ export type HistoryItem = {
   domain: string;
   detail: string;
   createdAt: number;
+  clientIp?: string | null;
+  decisionSource?: string | null;
+  protection?: 'device' | 'network';
 };
 export type Snapshot = {
   detectionEnabled?: boolean;

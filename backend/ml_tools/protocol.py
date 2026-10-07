@@ -107,6 +107,8 @@ def metrics(y, score, thresholds, default_threshold):
         "binary_confusion_matrix": [[int(tn), int(fp)], [int(fn), int(tp)]],
         "binary_precision": float(precision_score(y, binary, zero_division=0)),
         "binary_recall": float(recall_score(y, binary, zero_division=0)),
+        "binary_sensitivity": float(recall_score(y, binary, zero_division=0)),
+        "binary_true_skill_statistic": float(tp / (tp + fn) + tn / (tn + fp) - 1),
         "binary_f1": float(f1_score(y, binary, zero_division=0)),
         "binary_accuracy": float(accuracy_score(y, binary)),
         "binary_false_positive_rate": float(fp / (tn + fp)), "binary_specificity": float(tn / (tn + fp)),

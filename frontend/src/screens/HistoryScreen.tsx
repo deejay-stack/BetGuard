@@ -10,9 +10,17 @@ export function HistoryScreen() {
   const { styles } = useTheme();
   const { snapshot, available } = useBetGuard();
   const [filter, setFilter] = useState<(typeof filters)[number]>('All');
+  const [source, setSource] = useState<'All protection' | 'Device' | 'Network'>(
+    'All protection',
+  );
   const events =
     snapshot?.history.filter(
-      item => filter === 'All' || activityKind(item.kind) === filter,
+      item =>
+        (filter === 'All' || activityKind(item.kind) === filter) &&
+        (source === 'All protection' ||
+          (item.kind.startsWith('network_')
+            ? source === 'Network'
+            : source === 'Device')),
     ) ?? [];
   const groups = events.reduce<Record<string, typeof events>>((all, item) => {
     const date = new Date(item.createdAt);
@@ -41,10 +49,21 @@ export function HistoryScreen() {
           />
         ))}
       </View>
+      <View style={styles.wrap}>
+        {(['All protection', 'Device', 'Network'] as const).map(option => (
+          <Button
+            key={option}
+            title={option}
+            secondary={source !== option}
+            selected={source === option}
+            onPress={() => setSource(option)}
+          />
+        ))}
+      </View>
       <Text style={styles.small}>
-        Blocked records a DNS response from the filter. Warning requests remain
-        allowed. Allowed is a DNS outcome, not a safety label or proof that a
-        page loaded.
+        Device events record DNS outcomes. Network events record proxy decisions
+        and identify the client IP. Warning requests remain allowed. Allowed is
+        not a safety label or proof that a page loaded.
       </Text>
       {!snapshot && available && <Loading />}
       {snapshot && !events.length && (
