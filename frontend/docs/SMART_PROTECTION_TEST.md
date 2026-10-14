@@ -6,7 +6,7 @@ The current policy blocks an unmatched domain when its ML score is at least `0.7
 
 ## Terminal 1: backend
 
-```powershell
+```powershell~
 Set-Location 'C:\Users\daniel jay bernadas\Desktop\BetGuard\betguard\backend'
 .\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload --no-access-log
 ```

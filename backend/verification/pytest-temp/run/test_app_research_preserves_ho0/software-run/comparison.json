@@ -1,0 +1,244 @@
+{
+  "audit": {
+    "class_counts": {
+      "gambling": 30,
+      "non_gambling": 30
+    },
+    "dataset_sha256": "f49503fe71810ce5b06d64aff285473d12e456056f43b327f105f7adf11b84e1",
+    "eligible_field_presence": {
+      "description": 60,
+      "keywords": 0,
+      "permissions": 0,
+      "reviews": 0
+    },
+    "eligible_rows": 60,
+    "excluded_rows": 0,
+    "feature_fields": [
+      "app_name",
+      "description",
+      "keywords",
+      "permissions",
+      "reviews"
+    ],
+    "independent_groups": 30,
+    "input": "application_metadata",
+    "rows": 60,
+    "synthetic_rows": 60
+  },
+  "development_rows": 48,
+  "human_expert_comparison": "not_collected",
+  "input": "application_metadata",
+  "limitations": [
+    "Metrics describe this dataset, not all apps or BISU students.",
+    "Permissions alone are not proof of gambling.",
+    "No calibrated confidence or on-device model.",
+    "Synthetic software fixtures never establish capstone results."
+  ],
+  "results": {
+    "logistic_regression": {
+      "cv_seconds": 0.06445710000116378,
+      "development_cv": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "development_fit": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "held_out": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            6,
+            0
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 12,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "latency_ms": {
+        "median": 2.889600000344217,
+        "p95": 3.1257149974408094,
+        "samples": 12,
+        "scope": "model_only_excludes_network_device"
+      },
+      "training_seconds": 0.012743800005409867
+    },
+    "random_forest": {
+      "cv_seconds": 1.3518919000052847,
+      "development_cv": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "development_fit": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "held_out": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            6,
+            0
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 12,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "latency_ms": {
+        "median": 17.301299998507602,
+        "p95": 19.27290499988885,
+        "samples": 12,
+        "scope": "model_only_excludes_network_device"
+      },
+      "training_seconds": 0.49802619999536546
+    },
+    "svm": {
+      "cv_seconds": 0.042332400000304915,
+      "development_cv": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "development_fit": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "held_out": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            6,
+            0
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 12,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "latency_ms": {
+        "median": 2.7059000021836255,
+        "p95": 4.106700000556884,
+        "samples": 12,
+        "scope": "model_only_excludes_network_device"
+      },
+      "training_seconds": 0.009119099995587021
+    }
+  },
+  "selected": "logistic_regression",
+  "selection_basis": "development_cv_only",
+  "student_exposure_reduction": "not_measured",
+  "test_rows": 12
+}

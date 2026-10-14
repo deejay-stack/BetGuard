@@ -1,0 +1,70 @@
+{
+    "model": "Character TF-IDF + Random Forest",
+    "tfidf": {
+        "analyzer": "char",
+        "ngram_range": [
+            3,
+            5
+        ],
+        "min_df": 2,
+        "sublinear_tf": true,
+        "norm": "l2"
+    },
+    "selected_configuration": {
+        "n_estimators": 500,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "max_features": "log2",
+        "class_weight": "balanced"
+    },
+    "selected_threshold": 0.444,
+    "train_size": 507,
+    "validation_size": 169,
+    "test_size": 170,
+    "validation_metrics": {
+        "threshold": 0.444,
+        "accuracy": 0.8698224852071006,
+        "precision": 0.9090909090909091,
+        "recall": 0.8235294117647058,
+        "f1": 0.8641975308641975,
+        "roc_auc": 0.9217086834733894,
+        "average_precision": 0.9372188481935204,
+        "true_negatives": 77,
+        "false_positives": 7,
+        "false_negatives": 15,
+        "true_positives": 70,
+        "confusion_matrix": [
+            [
+                77,
+                7
+            ],
+            [
+                15,
+                70
+            ]
+        ]
+    },
+    "test_metrics": {
+        "threshold": 0.444,
+        "accuracy": 0.8764705882352941,
+        "precision": 0.872093023255814,
+        "recall": 0.8823529411764706,
+        "f1": 0.8771929824561403,
+        "roc_auc": 0.9505882352941176,
+        "average_precision": 0.9598321901281125,
+        "true_negatives": 74,
+        "false_positives": 11,
+        "false_negatives": 10,
+        "true_positives": 75,
+        "confusion_matrix": [
+            [
+                74,
+                11
+            ],
+            [
+                10,
+                75
+            ]
+        ]
+    }
+}

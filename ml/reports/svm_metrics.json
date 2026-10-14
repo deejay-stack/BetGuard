@@ -1,0 +1,64 @@
+{
+    "model": "Character TF-IDF + Linear SVM",
+    "tfidf": {
+        "analyzer": "char",
+        "ngram_range": [
+            3,
+            5
+        ],
+        "min_df": 2,
+        "sublinear_tf": true,
+        "norm": "l2"
+    },
+    "selected_C": 0.5,
+    "selected_threshold": -0.07233326051015576,
+    "train_size": 507,
+    "validation_size": 169,
+    "test_size": 170,
+    "validation_metrics": {
+        "threshold": -0.07233326051015576,
+        "accuracy": 0.893491124260355,
+        "precision": 0.8941176470588236,
+        "recall": 0.8941176470588236,
+        "f1": 0.8941176470588236,
+        "roc_auc": 0.9289915966386555,
+        "average_precision": 0.9464416274708239,
+        "true_negatives": 75,
+        "false_positives": 9,
+        "false_negatives": 9,
+        "true_positives": 76,
+        "confusion_matrix": [
+            [
+                75,
+                9
+            ],
+            [
+                9,
+                76
+            ]
+        ]
+    },
+    "test_metrics": {
+        "threshold": -0.07233326051015576,
+        "accuracy": 0.8647058823529412,
+        "precision": 0.8229166666666666,
+        "recall": 0.9294117647058824,
+        "f1": 0.8729281767955801,
+        "roc_auc": 0.9696193771626297,
+        "average_precision": 0.9749932982611892,
+        "true_negatives": 68,
+        "false_positives": 17,
+        "false_negatives": 6,
+        "true_positives": 79,
+        "confusion_matrix": [
+            [
+                68,
+                17
+            ],
+            [
+                6,
+                79
+            ]
+        ]
+    }
+}

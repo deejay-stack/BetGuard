@@ -1,0 +1,8 @@
+{
+    "threshold": -0.07233326051015576,
+    "threshold_type": "LinearSVC decision_function score",
+    "selected_using": "validation F1",
+    "selected_C": 0.5,
+    "positive_class": 1,
+    "positive_class_name": "gambling"
+}

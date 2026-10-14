@@ -1,0 +1,62 @@
+[
+  {
+    "prediction": 0,
+    "record_id": "test-14",
+    "truth": 0
+  },
+  {
+    "prediction": 1,
+    "record_id": "test-15",
+    "truth": 1
+  },
+  {
+    "prediction": 0,
+    "record_id": "test-24",
+    "truth": 0
+  },
+  {
+    "prediction": 1,
+    "record_id": "test-25",
+    "truth": 1
+  },
+  {
+    "prediction": 0,
+    "record_id": "test-30",
+    "truth": 0
+  },
+  {
+    "prediction": 1,
+    "record_id": "test-31",
+    "truth": 1
+  },
+  {
+    "prediction": 0,
+    "record_id": "test-34",
+    "truth": 0
+  },
+  {
+    "prediction": 1,
+    "record_id": "test-35",
+    "truth": 1
+  },
+  {
+    "prediction": 0,
+    "record_id": "test-56",
+    "truth": 0
+  },
+  {
+    "prediction": 1,
+    "record_id": "test-57",
+    "truth": 1
+  },
+  {
+    "prediction": 0,
+    "record_id": "test-58",
+    "truth": 0
+  },
+  {
+    "prediction": 1,
+    "record_id": "test-59",
+    "truth": 1
+  }
+]

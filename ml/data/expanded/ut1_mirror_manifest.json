@@ -1,0 +1,67 @@
+{
+  "created_at_utc": "2026-10-11T00:38:07.582810+00:00",
+  "source": "UT1 GitHub mirror",
+  "historical_benchmark_families": 800,
+  "conflicting_domain_families": 252,
+  "gambling_candidates": 216986,
+  "benign_candidates": 105821,
+  "gambling_review_rows": 5000,
+  "benign_review_rows": 5000,
+  "sources": [
+    {
+      "category": "bank",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/bank/domains",
+      "sha256": "6028b816d861fa6ddb8fc450658c91388ca99f131b9fa73b79c0bcd57d5c7921",
+      "parsed_domains": 6645
+    },
+    {
+      "category": "press",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/press/domains",
+      "sha256": "d6586d33219000621678d531472dbea567a193c54ca47cf2502de7a1e6d35a51",
+      "parsed_domains": 4644
+    },
+    {
+      "category": "jobsearch",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/jobsearch/domains",
+      "sha256": "f48747d4f4ba46c1c530d89f5f67417d772d638214567ab8efff20ce5504ee9a",
+      "parsed_domains": 60740
+    },
+    {
+      "category": "cooking",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/cooking/domains",
+      "sha256": "743ac51cec036cb303b5b74eb33eeab3be5f1241f6825e631792afb89fb31f0f",
+      "parsed_domains": 37
+    },
+    {
+      "category": "translation",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/translation/domains",
+      "sha256": "3b910d1901c379dc0f903bcdcaec6965f43820972006a71b0a1b6f997a44bd86",
+      "parsed_domains": 175
+    },
+    {
+      "category": "webmail",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/webmail/domains",
+      "sha256": "60759b569fdd8ce66e239e48fcbf306ba96b4a9a5a32f0da6f767e41e4a845ba",
+      "parsed_domains": 404
+    },
+    {
+      "category": "social_networks",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/social_networks/domains",
+      "sha256": "fb30bdb5b1c6d806ffb2b6d4fd8e5e4fd64b2b2267829202fff20144051b4f9f",
+      "parsed_domains": 715
+    },
+    {
+      "category": "sports",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/sports/domains",
+      "sha256": "703f24e512a402aa3e5dcf8a584c0b3c561a0ac63cbc4e24f41cc541280835a9",
+      "parsed_domains": 2362
+    },
+    {
+      "category": "games",
+      "url": "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/games/domains",
+      "sha256": "3abb09e9ab78613772c19e39b25a9c487761fbe6f9690a149ec03a02e26752a5",
+      "parsed_domains": 33651
+    }
+  ],
+  "label_status": "unverified_candidates"
+}

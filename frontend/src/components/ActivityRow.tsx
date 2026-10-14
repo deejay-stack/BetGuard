@@ -13,13 +13,16 @@ import {
 export function activityKind(
   kind: string,
 ): 'Blocked' | 'Warnings' | 'Allowed' | 'Other' {
-  return ['dns_blocked', 'dns_detection_blocked', 'network_blocked'].includes(
-    kind,
-  )
+  return [
+    'dns_blocked',
+    'dns_detection_blocked',
+    'network_blocked',
+    'router_blocked',
+  ].includes(kind)
     ? 'Blocked'
-    : ['dns_warning', 'network_warning'].includes(kind)
+    : ['dns_warning', 'network_warning', 'router_warning'].includes(kind)
     ? 'Warnings'
-    : ['dns_forwarded', 'network_allowed'].includes(kind)
+    : ['dns_forwarded', 'network_allowed', 'router_allowed'].includes(kind)
     ? 'Allowed'
     : 'Other';
 }
@@ -38,11 +41,12 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
   const [expanded, setExpanded] = useState(false);
   const category = activityKind(item.kind);
   const network = item.kind.startsWith('network_');
+  const router = item.kind.startsWith('router_');
   const Icon =
     category === 'Blocked'
       ? Ban
       : category === 'Warnings' ||
-        ['dns_error', 'network_error'].includes(item.kind)
+        ['dns_error', 'network_error', 'router_error'].includes(item.kind)
       ? TriangleAlert
       : category === 'Allowed'
       ? CheckCircle2
@@ -51,7 +55,7 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
     category === 'Blocked'
       ? colors.blocked
       : category === 'Warnings' ||
-        ['dns_error', 'network_error'].includes(item.kind)
+        ['dns_error', 'network_error', 'router_error'].includes(item.kind)
       ? colors.review
       : category === 'Allowed'
       ? colors.allowed
@@ -61,7 +65,7 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
       ? 'WARNING · ALLOWED'
       : category !== 'Other'
       ? category.toUpperCase()
-      : ['dns_error', 'network_error'].includes(item.kind)
+      : ['dns_error', 'network_error', 'router_error'].includes(item.kind)
       ? network
         ? 'PROXY ERROR'
         : 'RESOLUTION ERROR'
@@ -70,36 +74,40 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
       : item.kind === 'link_check'
       ? 'LINK CHECK'
       : 'PROTECTION';
-  const reason =
-    item.kind === 'network_blocked'
-      ? item.decisionSource === 'user_blocklist'
-        ? 'Your block rule'
-        : item.decisionSource === 'verified_gambling_blocklist'
-        ? 'Known gambling domain'
-        : 'High risk detection'
-      : item.kind === 'dns_detection_blocked'
-      ? item.detail.includes('verified_gambling')
-        ? 'Known gambling domain'
-        : 'High risk detection'
-      : item.kind === 'dns_blocked'
+  const reason = ['network_blocked', 'router_blocked'].includes(item.kind)
+    ? item.decisionSource === 'user_blocklist'
       ? 'Your block rule'
-      : category === 'Warnings'
-      ? 'Review suggested; access stays allowed'
-      : category === 'Allowed'
-      ? network
-        ? 'Proxy connection permitted'
-        : 'DNS response returned'
-      : ['dns_error', 'network_error'].includes(item.kind)
-      ? 'Request could not be resolved'
-      : item.kind.startsWith('rule_')
-      ? 'Saved rules updated on this phone'
-      : 'Local protection event';
+      : item.decisionSource === 'verified_gambling_blocklist'
+      ? 'Known gambling domain'
+      : 'High risk detection'
+    : item.kind === 'dns_detection_blocked'
+    ? item.detail.includes('verified_gambling')
+      ? 'Known gambling domain'
+      : 'High risk detection'
+    : item.kind === 'dns_blocked'
+    ? 'Your block rule'
+    : category === 'Warnings'
+    ? 'Review suggested; access stays allowed'
+    : category === 'Allowed'
+    ? network
+      ? 'Proxy connection permitted'
+      : 'DNS response returned'
+    : ['dns_error', 'network_error', 'router_error'].includes(item.kind)
+    ? 'Request could not be resolved'
+    : item.kind.startsWith('rule_')
+    ? 'Saved rules updated on this phone'
+    : 'Local protection event';
   return (
     <View style={[local.row, { borderBottomColor: colors.border }]}>
       <View style={styles.spread}>
         <Icon size={20} color={color} accessible={false} />
         <Text selectable style={[styles.heading, styles.flex]}>
-          {item.domain || (network ? 'Network Protection' : 'DNS protection')}
+          {item.domain ||
+            (router
+              ? 'Router Protection'
+              : network
+              ? 'Network Protection'
+              : 'DNS protection')}
         </Text>
         <Text style={styles.small}>{relativeTime(item.createdAt)}</Text>
       </View>
@@ -110,7 +118,9 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
             category === 'Blocked'
               ? 'error'
               : category === 'Warnings' ||
-                ['dns_error', 'network_error'].includes(item.kind)
+                ['dns_error', 'network_error', 'router_error'].includes(
+                  item.kind,
+                )
               ? 'warning'
               : category === 'Allowed'
               ? 'success'
@@ -118,9 +128,9 @@ export function ActivityRow({ item }: { item: HistoryItem }) {
           }
         />
         <Text style={styles.small}>{reason}</Text>
-        <Badge text={network ? 'NETWORK' : 'DEVICE'} />
+        <Badge text={router ? 'ROUTER' : network ? 'NETWORK' : 'DEVICE'} />
       </View>
-      {network && (
+      {(network || router) && (
         <Text selectable style={styles.small}>
           Client: {item.clientIp ?? 'Unavailable'} · Source:{' '}
           {item.decisionSource ?? 'Unavailable'}

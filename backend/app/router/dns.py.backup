@@ -1,0 +1,247 @@
+"""Bounded UDP/TCP DNS forwarding using the existing shared decision service."""
+import asyncio
+import ipaddress
+import secrets
+import socket
+import struct
+import time
+
+from dnslib import DNSRecord, EDNS0, EDNSOption, QTYPE, RCODE
+
+
+class DnsFilter:
+    def __init__(self, settings, policy, store, session):
+        self.settings, self.policy, self.store, self.session = settings, policy, store, session
+        self.udp = self.tcp = None
+        self.tasks = set()
+        self.jobs = set()
+        self.connections = set()
+        self.running = False
+        self.errors = 0
+        self.probes = {}
+
+    async def work(self, call, *args, **kwargs):
+        job = asyncio.create_task(asyncio.to_thread(call, *args, **kwargs))
+        self.jobs.add(job)
+        job.add_done_callback(self.jobs.discard)
+        return await asyncio.shield(job)
+
+    async def start(self):
+        loop = asyncio.get_running_loop()
+        owner = self
+
+        class Receiver(asyncio.DatagramProtocol):
+            def datagram_received(self, data, addr):
+                if len(owner.tasks) >= 64:
+                    return
+                task = asyncio.create_task(owner.datagram(data, addr))
+                owner.tasks.add(task)
+                task.add_done_callback(owner.tasks.discard)
+
+            def error_received(self, _error):
+                owner.errors += 1
+
+        try:
+            self.udp, _ = await loop.create_datagram_endpoint(Receiver, local_addr=(self.settings.bind, self.settings.port))
+            self.tcp = await asyncio.start_server(self.connection, self.settings.bind, self.settings.port, limit=65536)
+            self.running = True
+        except Exception:
+            await self.close()
+            raise
+
+    async def datagram(self, data, addr):
+        try:
+            result = await self.answer(data, addr[0], tcp=False)
+            if result and self.udp:
+                self.udp.sendto(result, addr)
+        except Exception:
+            self.errors += 1
+
+    async def connection(self, reader, writer):
+        if len(self.connections) >= 32:
+            writer.close()
+            await writer.wait_closed()
+            return
+        self.connections.add(writer)
+        task = asyncio.current_task()
+        self.tasks.add(task)
+        try:
+            # Bound both idle connections and queries per connection.
+            for _ in range(32):
+                size = struct.unpack("!H", await asyncio.wait_for(reader.readexactly(2), 5))[0]
+                if not 12 <= size <= 65535:
+                    break
+                data = await asyncio.wait_for(reader.readexactly(size), 5)
+                result = await self.answer(data, writer.get_extra_info("peername")[0], tcp=True)
+                if not result:
+                    break
+                writer.write(struct.pack("!H", len(result)) + result)
+                await asyncio.wait_for(writer.drain(), 5)
+        except (asyncio.IncompleteReadError, TimeoutError, ConnectionError):
+            pass
+        finally:
+            self.connections.discard(writer)
+            self.tasks.discard(task)
+            writer.close()
+            await writer.wait_closed()
+
+    def client(self, query, peer):
+        # ECS is trusted only from an explicitly configured router peer, and
+        # only for full host addresses inside the verified LAN subnets.
+        addresses = []
+        for record in query.ar:
+            if record.rtype == QTYPE.OPT:
+                for option in record.rdata:
+                    if option.code == 8:
+                        data = option.data
+                        if len(data) < 4:
+                            raise ValueError()
+                        family, prefix, scope = struct.unpack("!HBB", data[:4])
+                        if scope != 0 or (family, prefix, len(data)) not in ((1, 32, 8), (2, 128, 20)):
+                            raise ValueError()
+                        addresses.append(str(ipaddress.ip_address(data[4:])))
+        if len(addresses) > 1:
+            raise ValueError()
+        if addresses and peer in self.settings.peers:
+            address = ipaddress.ip_address(addresses[0])
+            subnets = self.session().get("plan", {}).get("subnets", [])
+            if address.is_loopback or address == ipaddress.ip_address(peer):
+                return peer, False
+            if not any(address in ipaddress.ip_network(n) for n in subnets):
+                raise ValueError()
+            return str(address), True
+        return peer, False
+
+    @staticmethod
+    def reply(query, rcode):
+        response = query.reply()
+        response.header.rcode = rcode
+        response.header.aa = 0
+        response.header.ra = 1
+        response.header.ad = 0
+        return response
+
+    @staticmethod
+    def ecs_response(query, response):
+        options = [option for rr in query.ar if rr.rtype == QTYPE.OPT for option in rr.rdata if option.code == 8]
+        # Echo ECS locally for dnsmasq's request matching; never send it to the
+        # public resolver. Scope zero avoids client-dependent cache claims.
+        response.ar = [rr for rr in response.ar if rr.rtype != QTYPE.OPT]
+        if options:
+            response.add_ar(EDNS0(udp_len=1232, opts=[EDNSOption(8, options[0].data)]))
+
+    async def answer(self, data, peer, *, tcp):
+        if peer not in (*self.settings.peers, self.settings.bind) or len(data) > (65535 if tcp else 4096):
+            return None
+        try:
+            query = DNSRecord.parse(data)
+            if query.header.qr or query.header.opcode or len(query.questions) != 1 or query.q.qclass != 1 or query.rr or query.auth:
+                return self.reply(query, RCODE.REFUSED).pack()
+            domain = str(query.q.qname).rstrip(".")
+            client, track = self.client(query, peer)
+        except Exception:
+            return None
+        response = None
+        decision = {}
+        try:
+            if peer != self.settings.bind and self.session().get("state") in ("off", "preview"):
+                return self.reply(query, RCODE.REFUSED).pack()
+            decision = await self.work(self.policy.evaluate, domain)
+            if decision["enforcement_action"] == "BLOCK":
+                response = self.reply(query, RCODE.NXDOMAIN)
+            else:
+                response = await self.forward(query, tcp=tcp)
+                # Prevent an allowed name from resolving through a blocked
+                # CNAME/DNAME. Explicit Always Allow remains authoritative.
+                if decision.get("decision_source") != "user_allowlist":
+                    for rr in response.rr:
+                        if rr.rtype in (QTYPE.CNAME, QTYPE.DNAME):
+                            alias = await self.work(self.policy.evaluate, str(rr.rdata).rstrip("."))
+                            if alias["enforcement_action"] == "BLOCK":
+                                decision = alias
+                                response = self.reply(query, RCODE.NXDOMAIN)
+                                break
+                for rr in (*response.rr, *response.auth, *response.ar):
+                    if rr.rtype != QTYPE.OPT:
+                        rr.ttl = min(rr.ttl, 15)
+            if response.header.rcode not in (RCODE.NOERROR, RCODE.NXDOMAIN):
+                raise RuntimeError("Upstream resolution failed")
+            await self.work(self.store.event, domain, client, decision, track=track)
+            if peer in self.settings.peers and client == peer:
+                self.probes[(peer, domain)] = (time.monotonic(), decision["enforcement_action"], response.header.rcode)
+        except Exception:
+            self.errors += 1
+            response = self.reply(query, RCODE.SERVFAIL)
+            await self.work(self.store.event, domain, client, decision, error=True, track=track)
+        self.ecs_response(query, response)
+        packet = response.pack()
+        if not tcp:
+            maximum = min(1232, max(512, next((rr.rclass for rr in query.ar if rr.rtype == QTYPE.OPT), 512)))
+            if len(packet) > maximum:
+                response = self.reply(query, RCODE.NOERROR)
+                response.header.tc = 1
+                self.ecs_response(query, response)
+                packet = response.pack()
+        return packet
+
+    @staticmethod
+    def outgoing(query):
+        # Fresh ID and socket for each exchange; no ECS/MAC/private client
+        # options leave this host. Preserve DNSSEC's DO request bit only.
+        request = DNSRecord(q=query.q)
+        request.header.id = secrets.randbelow(65536)
+        request.header.cd = query.header.cd
+        if any(rr.rtype == QTYPE.OPT and rr.ttl & 0x8000 for rr in query.ar):
+            request.add_ar(EDNS0(udp_len=1232, flags="do"))
+        return request
+
+    async def forward(self, query, *, tcp):
+        request = self.outgoing(query)
+        payload = request.pack()
+        if tcp:
+            reader, writer = await asyncio.wait_for(asyncio.open_connection(self.settings.upstream, 53), 3)
+            try:
+                writer.write(struct.pack("!H", len(payload)) + payload)
+                await asyncio.wait_for(writer.drain(), 3)
+                size = struct.unpack("!H", await asyncio.wait_for(reader.readexactly(2), 3))[0]
+                raw = await asyncio.wait_for(reader.readexactly(size), 3)
+            finally:
+                writer.close()
+                await writer.wait_closed()
+        else:
+            family = socket.AF_INET6 if ":" in self.settings.upstream else socket.AF_INET
+            sock = socket.socket(family, socket.SOCK_DGRAM)
+            sock.setblocking(False)
+            try:
+                loop = asyncio.get_running_loop()
+                await loop.sock_connect(sock, (self.settings.upstream, 53))
+                await loop.sock_sendall(sock, payload)
+                raw = await asyncio.wait_for(loop.sock_recv(sock, 65535), 3)
+            finally:
+                sock.close()
+        response = DNSRecord.parse(raw)
+        if (not response.header.qr or response.header.id != request.header.id or len(response.questions) != 1
+                or response.q != request.q):
+            raise ValueError("Unmatched upstream response")
+        response.header.id = query.header.id
+        response.header.ad = 0  # This service does not claim DNSSEC validation.
+        return response
+
+    async def close(self):
+        self.running = False
+        if self.udp:
+            self.udp.close()
+            self.udp = None
+        if self.tcp:
+            self.tcp.close()
+            await self.tcp.wait_closed()
+            self.tcp = None
+        for writer in list(self.connections):
+            writer.close()
+        tasks = list(self.tasks)
+        for task in tasks:
+            task.cancel()
+        if tasks:
+            await asyncio.gather(*tasks, return_exceptions=True)
+        if self.jobs:
+            await asyncio.gather(*list(self.jobs), return_exceptions=True)

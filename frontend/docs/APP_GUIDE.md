@@ -2,6 +2,8 @@
 
 For the separate phone-hosted gateway, client setup and exact development commands, see [Network Protection](NETWORK_PROTECTION.md).
 
+For automatic conventional DNS filtering through an authorized compatible OpenWrt router, see [Router Protection](ROUTER_PROTECTION.md). Open **Home → Open Network Protection → Router Protection**. This mode requires its dedicated LAN filtering service; the current ISP router has not been confirmed compatible. Device and Hotspot Protection remain separate choices.
+
 BetGuard runs a DNS filter on your Android phone. You decide which websites to block or allow. Optional smart protection asks your FastAPI server to check unmatched hostnames against the verified gambling blocklist and trained model. Checking a link, saving a rule and enabling protection are three separate actions.
 
 The premium interface is documented in [the redesign report](PREMIUM_REDESIGN_REPORT.md); the capstone app-review update is documented in [the alignment report](../../docs/CAPSTONE_ALIGNMENT.md). The current build/version comes from the shared app.version.json; future builds use the update commands below.

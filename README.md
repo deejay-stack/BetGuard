@@ -1,5 +1,9 @@
 # BetGuard
 
+The [architecture, cleanup and SVM readiness audit](docs/audit/2026-10-11/AUDIT_REPORT.md)
+records the verified datasets, corrected algorithm comparison and offline SVM
+shadow artifact. Production detection remains on the baseline model.
+
 The [capstone alignment audit](docs/CAPSTONE_ALIGNMENT.md) maps the supplied thesis to student network protection, app review, the existing trained domain model and remaining research evidence.
 
 | Folder | Contents |

@@ -1,0 +1,132 @@
+{
+  "basis": "development_cv_only",
+  "results": {
+    "logistic_regression": {
+      "cv_seconds": 0.06445710000116378,
+      "development_cv": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "development_fit": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "training_seconds": 0.012743800005409867
+    },
+    "random_forest": {
+      "cv_seconds": 1.3518919000052847,
+      "development_cv": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "development_fit": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "training_seconds": 0.49802619999536546
+    },
+    "svm": {
+      "cv_seconds": 0.042332400000304915,
+      "development_cv": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "development_fit": {
+        "accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "f1": 1.0,
+        "precision": 1.0,
+        "rows": 48,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "true_skill_statistic": 1.0
+      },
+      "training_seconds": 0.009119099995587021
+    }
+  },
+  "selected": "logistic_regression"
+}

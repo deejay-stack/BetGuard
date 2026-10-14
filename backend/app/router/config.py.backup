@@ -1,0 +1,32 @@
+import ipaddress
+import os
+from dataclasses import dataclass
+from pathlib import Path
+
+
+@dataclass(frozen=True)
+class RouterSettings:
+    bind: str
+    port: int
+    peers: tuple[str, ...]
+    upstream: str
+    token: str
+    state_path: Path
+    ca_file: str | None = None
+
+    @classmethod
+    def environment(cls):
+        if os.getenv("BETGUARD_ROUTER_ENABLED", "0") != "1":
+            return None
+        bind = ipaddress.ip_address(os.environ["BETGUARD_ROUTER_DNS_BIND"])
+        peers = tuple(str(ipaddress.ip_address(x.strip())) for x in os.environ["BETGUARD_ROUTER_PEERS"].split(","))
+        upstream = ipaddress.ip_address(os.getenv("BETGUARD_ROUTER_UPSTREAM", "1.1.1.1"))
+        port = int(os.getenv("BETGUARD_ROUTER_DNS_PORT", "5353"))
+        token = os.environ["BETGUARD_ROUTER_ADMIN_TOKEN"]
+        if (bind.version != 4 or not bind.is_private or bind.is_loopback or bind.is_unspecified
+                or not 1024 <= port <= 65535 or len(token) < 32 or not upstream.is_global
+                or not peers or any(not ipaddress.ip_address(p).is_private or ipaddress.ip_address(p).is_loopback for p in peers)):
+            raise ValueError("Invalid router service configuration")
+        return cls(str(bind), port, peers, str(upstream), token,
+                   Path(os.getenv("BETGUARD_ROUTER_STATE_PATH", str(Path(__file__).resolve().parents[2] / ".local/router.sqlite3"))),
+                   os.getenv("BETGUARD_ROUTER_CA_FILE") or None)

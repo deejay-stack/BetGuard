@@ -1,5 +1,7 @@
 # Network Protection prototype
 
+Network Protection now offers **Router Protection** alongside the existing **Hotspot Protection** proxy. See [Router Protection setup and architecture](ROUTER_PROTECTION.md) for the authorized OpenWrt mode, automatic client DNS, preview/restoration and hardware prerequisites. The instructions below describe the existing phone proxy method.
+
 Network Protection adds an explicit HTTP/HTTPS proxy on the Android BetGuard phone. Device Protection remains its separate DNS VpnService. Joining the hotspot alone does not enable filtering: each demonstration client must use the displayed manual proxy.
 
 ## Architecture and decisions
@@ -60,8 +62,8 @@ USB forwarding continues to reach the laptop backend and Metro when the laptop s
 ## Hotspot first, home Wi-Fi second
 
 1. Turn on the Android phone's hotspot and internet connection. Connect the laptop and additional phone.
-2. In BetGuard, open Protection -> Network Protection. Refresh addresses, choose the hotspot interface, keep an available port, then Start.
-3. Read the actual gateway host/port. Do not assume the hotspot address is 192.168.43.1.
+2. On Home, tap **Open Network Protection** in the first card. You can also use Protection -> Network Protection. Tap Refresh gateway addresses, choose the hotspot interface, keep an available port, then Start Network Protection. Scroll down to reach the address choices and Start button.
+3. The setup screen shows **SELECTED GATEWAY IP** and **Proxy port** near the top before starting; these are setup values, not an active listener. After Start succeeds, read **GATEWAY HOST** and **Port** in the active card. Home also shows the active IP/port. Do not assume the hotspot address is 192.168.43.1. If no address appears, enable the phone's hotspot or Wi-Fi and refresh.
 4. Configure each client's manual proxy. On iPhone: Settings -> Wi-Fi -> information button beside the connected network -> Configure Proxy -> Manual; enter Server and Port, Authentication off, Save. On Android: edit the connected Wi-Fi network -> advanced options -> Proxy -> Manual. On Windows: Settings -> Network & internet -> Proxy -> Manual proxy; disable it after testing. A browser-specific proxy or curl `--proxy` avoids changing the whole Windows configuration.
 5. Test fresh pages in a proxy-aware browser: wikipedia.org should be allowed, stake.com should be blocked, microsoft.com exercises the current warning path. Confirm actual predictions and IP in Activity; do not interpret Microsoft as a confirmed gambling site.
 6. Open Network Review and Block Site for the warning. The next request from any proxy client should fail. Always Allow uses the same rule storage; Dismiss leaves the decision unchanged.
@@ -70,6 +72,14 @@ USB forwarding continues to reach the laptop backend and Metro when the laptop s
 9. After the hotspot demonstration, connect phone and laptop to the same home Wi-Fi, refresh, start with the phone's Wi-Fi interface address, update the clients' proxy address, and repeat the tests. No router settings or credentials are needed.
 
 Gateway address changes interrupt the session. Restart with the new address and update clients. Stopping clears protected clients and releases connections. The last session's counters remain until the next Start resets them; saved rules and history remain.
+
+## Connected iPhone cannot browse
+
+1. On the iPhone, open Settings -> Wi-Fi -> information button beside the hotspot -> Configure Proxy -> Off -> Save. Stay on that hotspot and try a fresh Wikipedia page. If it still fails, the hotspot's internet sharing needs investigation before testing BetGuard.
+2. If browsing works with the proxy off, enable the Android hotspot before selecting the gateway. In BetGuard, hold Stop Network Protection if it is already running, refresh gateway addresses, and select the hotspot interface (for example, `ap0`). The home Wi-Fi interface (`wlan0`) has a different address and must not be used for hotspot clients. Enabling the hotspot does not automatically move an existing listener from Wi-Fi to the hotspot.
+3. Tap Start Network Protection. Copy **GATEWAY HOST** and **Port** from the active card, then set those exact values under the iPhone's Configure Proxy -> Manual. Authentication stays off. At the time of this device check, the hotspot used `10.92.90.2:8080` and home Wi-Fi used `192.168.1.4:8080`; refresh rather than assuming these values will stay the same.
+4. In USB development, keep the backend running and USB forwarding for port 8000 active. Try Wikipedia and a blocked domain in fresh browser tabs, then check Network activity for the iPhone's requests. A listening gateway alone does not prove the client can reach it or that an allowed page loaded.
+5. Set the iPhone proxy back to Off whenever the gateway is stopped or unavailable. Update the proxy address whenever switching between hotspot and home Wi-Fi.
 
 ## Offline and saved APK
 

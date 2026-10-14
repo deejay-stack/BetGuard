@@ -82,8 +82,25 @@ export function NetworkProtectionScreen({
   return (
     <Page
       title="Network Protection"
-      subtitle="Protect other devices through this phone."
+      subtitle="Choose how to protect other devices."
     >
+      <Card>
+        <Text style={styles.heading}>Choose protection method</Text>
+        <Button
+          title="Router Protection"
+          secondary
+          onPress={() => navigation?.navigate('Router')}
+        />
+        <Text style={styles.small}>
+          Automatic DNS filtering through a configured, authorized OpenWrt
+          router. Clients join normally.
+        </Text>
+        <Badge text="HOTSPOT PROTECTION" />
+        <Text style={styles.small}>
+          Portable phone proxy. Use the setup below and configure each client's
+          manual proxy.
+        </Text>
+      </Card>
       <Badge text="CAPSTONE PROTOTYPE" />
       <Card>
         <Network size={38} color={active ? colors.protected : colors.primary} />
@@ -106,6 +123,21 @@ export function NetworkProtectionScreen({
             <Text style={styles.small}>
               Only devices configured to use this proxy send supported web
               traffic through BetGuard.
+            </Text>
+          </>
+        )}
+        {!running && !transitioning && chosen && (
+          <>
+            <Text style={styles.eyebrow}>SELECTED GATEWAY IP</Text>
+            <Text selectable style={styles.title}>
+              {chosen}
+            </Text>
+            <Text selectable style={styles.body}>
+              Proxy port: {validPort ? port : 'Enter a valid port below'}
+            </Text>
+            <Text style={styles.small}>
+              Not active yet. Choose the hotspot address below, then press Start
+              Network Protection to use this IP and port.
             </Text>
           </>
         )}

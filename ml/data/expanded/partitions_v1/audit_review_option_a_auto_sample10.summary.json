@@ -1,0 +1,21 @@
+{
+  "generated_at_utc": "2026-10-11T01:23:15.575385+00:00",
+  "definition": "Option A - direct real-money gambling websites only",
+  "input_file": "data\\expanded\\partitions_v1\\audit_review_option_a.csv",
+  "input_sha256": "6f7fe7b7931120599f2c5e552c7b31ca8c4326b8890a7323ce06a6287f7dde83",
+  "output_file": "data\\expanded\\partitions_v1\\audit_review_option_a_auto_sample10.csv",
+  "processed_domains": 10,
+  "web_fetch_enabled": true,
+  "findings": {
+    "unresolved": 10
+  },
+  "review_priorities": {
+    "NEEDS_EVIDENCE": 10
+  },
+  "fetch_states": {
+    "error": 9,
+    "http_error": 1
+  },
+  "human_verified_labels_created": 0,
+  "warning": "Automated suggestions are unverified. Human-reviewed evidence is required for final labels."
+}

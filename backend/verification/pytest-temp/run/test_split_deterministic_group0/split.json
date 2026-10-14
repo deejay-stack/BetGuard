@@ -1,0 +1,673 @@
+{
+  "audit": {
+    "class_counts_valid_rows": {
+      "gambling": 50,
+      "non_gambling": 50
+    },
+    "collected_at_range": [
+      "2025-12-01T00:00:00+00:00",
+      "2025-12-01T00:00:00+00:00"
+    ],
+    "conflicting_hostnames": [],
+    "dataset_sha256": "b04c439107904ac663148bb37f0c32263cc6ab3f0a02a9ab7cef5ec0a5e72d2b",
+    "duplicate_record_ids": [],
+    "duplicate_rows": 0,
+    "excluded_unreviewed_unknown_or_unlicensed": 0,
+    "invalid": [],
+    "invalid_rows": 0,
+    "licenses": {
+      "test-only": 100
+    },
+    "missing_fields": {},
+    "missing_null_or_blank_required_values": {},
+    "mixed_label_groups": 0,
+    "policy_version": "hostname-labels-v1",
+    "psl": {
+      "library": "5.3.2",
+      "private_suffixes": true,
+      "snapshot_sha256": "b69315c085d53972724b8f2df111ffc329b0c84fe0a47d62c8c91655cc774a38"
+    },
+    "related_groups": 100,
+    "review_counts": {
+      "reviewed": 100
+    },
+    "rows": 100,
+    "sources": {
+      "test://fixture": 100
+    },
+    "status": "validated_schema",
+    "supervised_class_counts": {
+      "gambling": 50,
+      "non_gambling": 50
+    },
+    "supervised_unique_rows": 100,
+    "synthetic_rows": 100,
+    "unique_hostnames": 100,
+    "valid_rows": 100
+  },
+  "config": {
+    "max_false_negative_rate": 0.05,
+    "max_false_positive_rate": 0.02,
+    "max_features": 200,
+    "max_latency_ms": 100.0,
+    "max_rows": 20000,
+    "min_class_per_split": 2,
+    "min_decisions": 5,
+    "min_predictive_value": 0.95,
+    "seed": 42,
+    "trees": 4
+  },
+  "dataset_sha256": "b04c439107904ac663148bb37f0c32263cc6ab3f0a02a9ab7cef5ec0a5e72d2b",
+  "psl": {
+    "library": "5.3.2",
+    "private_suffixes": true,
+    "snapshot_sha256": "b69315c085d53972724b8f2df111ffc329b0c84fe0a47d62c8c91655cc774a38"
+  },
+  "synthetic": true,
+  "test": [
+    {
+      "group": "domain:casino-fixture-19.com",
+      "hostname": "casino-fixture-19.com",
+      "label": 1,
+      "record_id": "fixture-19"
+    },
+    {
+      "group": "domain:casino-fixture-23.com",
+      "hostname": "casino-fixture-23.com",
+      "label": 1,
+      "record_id": "fixture-23"
+    },
+    {
+      "group": "domain:casino-fixture-35.com",
+      "hostname": "casino-fixture-35.com",
+      "label": 1,
+      "record_id": "fixture-35"
+    },
+    {
+      "group": "domain:casino-fixture-43.com",
+      "hostname": "casino-fixture-43.com",
+      "label": 1,
+      "record_id": "fixture-43"
+    },
+    {
+      "group": "domain:casino-fixture-53.com",
+      "hostname": "casino-fixture-53.com",
+      "label": 1,
+      "record_id": "fixture-53"
+    },
+    {
+      "group": "domain:casino-fixture-57.com",
+      "hostname": "casino-fixture-57.com",
+      "label": 1,
+      "record_id": "fixture-57"
+    },
+    {
+      "group": "domain:casino-fixture-77.com",
+      "hostname": "casino-fixture-77.com",
+      "label": 1,
+      "record_id": "fixture-77"
+    },
+    {
+      "group": "domain:casino-fixture-81.com",
+      "hostname": "casino-fixture-81.com",
+      "label": 1,
+      "record_id": "fixture-81"
+    },
+    {
+      "group": "domain:casino-fixture-83.com",
+      "hostname": "casino-fixture-83.com",
+      "label": 1,
+      "record_id": "fixture-83"
+    },
+    {
+      "group": "domain:casino-fixture-93.com",
+      "hostname": "casino-fixture-93.com",
+      "label": 1,
+      "record_id": "fixture-93"
+    },
+    {
+      "group": "domain:library-fixture-12.org",
+      "hostname": "library-fixture-12.org",
+      "label": 0,
+      "record_id": "fixture-12"
+    },
+    {
+      "group": "domain:library-fixture-16.org",
+      "hostname": "library-fixture-16.org",
+      "label": 0,
+      "record_id": "fixture-16"
+    },
+    {
+      "group": "domain:library-fixture-54.org",
+      "hostname": "library-fixture-54.org",
+      "label": 0,
+      "record_id": "fixture-54"
+    },
+    {
+      "group": "domain:library-fixture-56.org",
+      "hostname": "library-fixture-56.org",
+      "label": 0,
+      "record_id": "fixture-56"
+    },
+    {
+      "group": "domain:library-fixture-6.org",
+      "hostname": "library-fixture-6.org",
+      "label": 0,
+      "record_id": "fixture-6"
+    },
+    {
+      "group": "domain:library-fixture-60.org",
+      "hostname": "library-fixture-60.org",
+      "label": 0,
+      "record_id": "fixture-60"
+    },
+    {
+      "group": "domain:library-fixture-64.org",
+      "hostname": "library-fixture-64.org",
+      "label": 0,
+      "record_id": "fixture-64"
+    },
+    {
+      "group": "domain:library-fixture-66.org",
+      "hostname": "library-fixture-66.org",
+      "label": 0,
+      "record_id": "fixture-66"
+    },
+    {
+      "group": "domain:library-fixture-68.org",
+      "hostname": "library-fixture-68.org",
+      "label": 0,
+      "record_id": "fixture-68"
+    },
+    {
+      "group": "domain:library-fixture-72.org",
+      "hostname": "library-fixture-72.org",
+      "label": 0,
+      "record_id": "fixture-72"
+    }
+  ],
+  "train": [
+    {
+      "group": "altered",
+      "hostname": "casino-fixture-1.com",
+      "label": 1,
+      "record_id": "fixture-1"
+    },
+    {
+      "group": "domain:casino-fixture-11.com",
+      "hostname": "casino-fixture-11.com",
+      "label": 1,
+      "record_id": "fixture-11"
+    },
+    {
+      "group": "domain:casino-fixture-13.com",
+      "hostname": "casino-fixture-13.com",
+      "label": 1,
+      "record_id": "fixture-13"
+    },
+    {
+      "group": "domain:casino-fixture-15.com",
+      "hostname": "casino-fixture-15.com",
+      "label": 1,
+      "record_id": "fixture-15"
+    },
+    {
+      "group": "domain:casino-fixture-17.com",
+      "hostname": "casino-fixture-17.com",
+      "label": 1,
+      "record_id": "fixture-17"
+    },
+    {
+      "group": "domain:casino-fixture-21.com",
+      "hostname": "casino-fixture-21.com",
+      "label": 1,
+      "record_id": "fixture-21"
+    },
+    {
+      "group": "domain:casino-fixture-25.com",
+      "hostname": "casino-fixture-25.com",
+      "label": 1,
+      "record_id": "fixture-25"
+    },
+    {
+      "group": "domain:casino-fixture-27.com",
+      "hostname": "casino-fixture-27.com",
+      "label": 1,
+      "record_id": "fixture-27"
+    },
+    {
+      "group": "domain:casino-fixture-29.com",
+      "hostname": "casino-fixture-29.com",
+      "label": 1,
+      "record_id": "fixture-29"
+    },
+    {
+      "group": "domain:casino-fixture-31.com",
+      "hostname": "casino-fixture-31.com",
+      "label": 1,
+      "record_id": "fixture-31"
+    },
+    {
+      "group": "domain:casino-fixture-33.com",
+      "hostname": "casino-fixture-33.com",
+      "label": 1,
+      "record_id": "fixture-33"
+    },
+    {
+      "group": "domain:casino-fixture-37.com",
+      "hostname": "casino-fixture-37.com",
+      "label": 1,
+      "record_id": "fixture-37"
+    },
+    {
+      "group": "domain:casino-fixture-39.com",
+      "hostname": "casino-fixture-39.com",
+      "label": 1,
+      "record_id": "fixture-39"
+    },
+    {
+      "group": "domain:casino-fixture-45.com",
+      "hostname": "casino-fixture-45.com",
+      "label": 1,
+      "record_id": "fixture-45"
+    },
+    {
+      "group": "domain:casino-fixture-47.com",
+      "hostname": "casino-fixture-47.com",
+      "label": 1,
+      "record_id": "fixture-47"
+    },
+    {
+      "group": "domain:casino-fixture-5.com",
+      "hostname": "casino-fixture-5.com",
+      "label": 1,
+      "record_id": "fixture-5"
+    },
+    {
+      "group": "domain:casino-fixture-51.com",
+      "hostname": "casino-fixture-51.com",
+      "label": 1,
+      "record_id": "fixture-51"
+    },
+    {
+      "group": "domain:casino-fixture-55.com",
+      "hostname": "casino-fixture-55.com",
+      "label": 1,
+      "record_id": "fixture-55"
+    },
+    {
+      "group": "domain:casino-fixture-59.com",
+      "hostname": "casino-fixture-59.com",
+      "label": 1,
+      "record_id": "fixture-59"
+    },
+    {
+      "group": "domain:casino-fixture-61.com",
+      "hostname": "casino-fixture-61.com",
+      "label": 1,
+      "record_id": "fixture-61"
+    },
+    {
+      "group": "domain:casino-fixture-65.com",
+      "hostname": "casino-fixture-65.com",
+      "label": 1,
+      "record_id": "fixture-65"
+    },
+    {
+      "group": "domain:casino-fixture-69.com",
+      "hostname": "casino-fixture-69.com",
+      "label": 1,
+      "record_id": "fixture-69"
+    },
+    {
+      "group": "domain:casino-fixture-71.com",
+      "hostname": "casino-fixture-71.com",
+      "label": 1,
+      "record_id": "fixture-71"
+    },
+    {
+      "group": "domain:casino-fixture-73.com",
+      "hostname": "casino-fixture-73.com",
+      "label": 1,
+      "record_id": "fixture-73"
+    },
+    {
+      "group": "domain:casino-fixture-75.com",
+      "hostname": "casino-fixture-75.com",
+      "label": 1,
+      "record_id": "fixture-75"
+    },
+    {
+      "group": "domain:casino-fixture-85.com",
+      "hostname": "casino-fixture-85.com",
+      "label": 1,
+      "record_id": "fixture-85"
+    },
+    {
+      "group": "domain:casino-fixture-87.com",
+      "hostname": "casino-fixture-87.com",
+      "label": 1,
+      "record_id": "fixture-87"
+    },
+    {
+      "group": "domain:casino-fixture-9.com",
+      "hostname": "casino-fixture-9.com",
+      "label": 1,
+      "record_id": "fixture-9"
+    },
+    {
+      "group": "domain:casino-fixture-95.com",
+      "hostname": "casino-fixture-95.com",
+      "label": 1,
+      "record_id": "fixture-95"
+    },
+    {
+      "group": "domain:casino-fixture-99.com",
+      "hostname": "casino-fixture-99.com",
+      "label": 1,
+      "record_id": "fixture-99"
+    },
+    {
+      "group": "domain:library-fixture-0.org",
+      "hostname": "library-fixture-0.org",
+      "label": 0,
+      "record_id": "fixture-0"
+    },
+    {
+      "group": "domain:library-fixture-18.org",
+      "hostname": "library-fixture-18.org",
+      "label": 0,
+      "record_id": "fixture-18"
+    },
+    {
+      "group": "domain:library-fixture-2.org",
+      "hostname": "library-fixture-2.org",
+      "label": 0,
+      "record_id": "fixture-2"
+    },
+    {
+      "group": "domain:library-fixture-20.org",
+      "hostname": "library-fixture-20.org",
+      "label": 0,
+      "record_id": "fixture-20"
+    },
+    {
+      "group": "domain:library-fixture-26.org",
+      "hostname": "library-fixture-26.org",
+      "label": 0,
+      "record_id": "fixture-26"
+    },
+    {
+      "group": "domain:library-fixture-30.org",
+      "hostname": "library-fixture-30.org",
+      "label": 0,
+      "record_id": "fixture-30"
+    },
+    {
+      "group": "domain:library-fixture-32.org",
+      "hostname": "library-fixture-32.org",
+      "label": 0,
+      "record_id": "fixture-32"
+    },
+    {
+      "group": "domain:library-fixture-38.org",
+      "hostname": "library-fixture-38.org",
+      "label": 0,
+      "record_id": "fixture-38"
+    },
+    {
+      "group": "domain:library-fixture-4.org",
+      "hostname": "library-fixture-4.org",
+      "label": 0,
+      "record_id": "fixture-4"
+    },
+    {
+      "group": "domain:library-fixture-40.org",
+      "hostname": "library-fixture-40.org",
+      "label": 0,
+      "record_id": "fixture-40"
+    },
+    {
+      "group": "domain:library-fixture-42.org",
+      "hostname": "library-fixture-42.org",
+      "label": 0,
+      "record_id": "fixture-42"
+    },
+    {
+      "group": "domain:library-fixture-44.org",
+      "hostname": "library-fixture-44.org",
+      "label": 0,
+      "record_id": "fixture-44"
+    },
+    {
+      "group": "domain:library-fixture-46.org",
+      "hostname": "library-fixture-46.org",
+      "label": 0,
+      "record_id": "fixture-46"
+    },
+    {
+      "group": "domain:library-fixture-48.org",
+      "hostname": "library-fixture-48.org",
+      "label": 0,
+      "record_id": "fixture-48"
+    },
+    {
+      "group": "domain:library-fixture-50.org",
+      "hostname": "library-fixture-50.org",
+      "label": 0,
+      "record_id": "fixture-50"
+    },
+    {
+      "group": "domain:library-fixture-52.org",
+      "hostname": "library-fixture-52.org",
+      "label": 0,
+      "record_id": "fixture-52"
+    },
+    {
+      "group": "domain:library-fixture-58.org",
+      "hostname": "library-fixture-58.org",
+      "label": 0,
+      "record_id": "fixture-58"
+    },
+    {
+      "group": "domain:library-fixture-62.org",
+      "hostname": "library-fixture-62.org",
+      "label": 0,
+      "record_id": "fixture-62"
+    },
+    {
+      "group": "domain:library-fixture-70.org",
+      "hostname": "library-fixture-70.org",
+      "label": 0,
+      "record_id": "fixture-70"
+    },
+    {
+      "group": "domain:library-fixture-74.org",
+      "hostname": "library-fixture-74.org",
+      "label": 0,
+      "record_id": "fixture-74"
+    },
+    {
+      "group": "domain:library-fixture-76.org",
+      "hostname": "library-fixture-76.org",
+      "label": 0,
+      "record_id": "fixture-76"
+    },
+    {
+      "group": "domain:library-fixture-78.org",
+      "hostname": "library-fixture-78.org",
+      "label": 0,
+      "record_id": "fixture-78"
+    },
+    {
+      "group": "domain:library-fixture-8.org",
+      "hostname": "library-fixture-8.org",
+      "label": 0,
+      "record_id": "fixture-8"
+    },
+    {
+      "group": "domain:library-fixture-80.org",
+      "hostname": "library-fixture-80.org",
+      "label": 0,
+      "record_id": "fixture-80"
+    },
+    {
+      "group": "domain:library-fixture-82.org",
+      "hostname": "library-fixture-82.org",
+      "label": 0,
+      "record_id": "fixture-82"
+    },
+    {
+      "group": "domain:library-fixture-86.org",
+      "hostname": "library-fixture-86.org",
+      "label": 0,
+      "record_id": "fixture-86"
+    },
+    {
+      "group": "domain:library-fixture-88.org",
+      "hostname": "library-fixture-88.org",
+      "label": 0,
+      "record_id": "fixture-88"
+    },
+    {
+      "group": "domain:library-fixture-90.org",
+      "hostname": "library-fixture-90.org",
+      "label": 0,
+      "record_id": "fixture-90"
+    },
+    {
+      "group": "domain:library-fixture-92.org",
+      "hostname": "library-fixture-92.org",
+      "label": 0,
+      "record_id": "fixture-92"
+    },
+    {
+      "group": "domain:library-fixture-98.org",
+      "hostname": "library-fixture-98.org",
+      "label": 0,
+      "record_id": "fixture-98"
+    }
+  ],
+  "validation": [
+    {
+      "group": "domain:casino-fixture-3.com",
+      "hostname": "casino-fixture-3.com",
+      "label": 1,
+      "record_id": "fixture-3"
+    },
+    {
+      "group": "domain:casino-fixture-41.com",
+      "hostname": "casino-fixture-41.com",
+      "label": 1,
+      "record_id": "fixture-41"
+    },
+    {
+      "group": "domain:casino-fixture-49.com",
+      "hostname": "casino-fixture-49.com",
+      "label": 1,
+      "record_id": "fixture-49"
+    },
+    {
+      "group": "domain:casino-fixture-63.com",
+      "hostname": "casino-fixture-63.com",
+      "label": 1,
+      "record_id": "fixture-63"
+    },
+    {
+      "group": "domain:casino-fixture-67.com",
+      "hostname": "casino-fixture-67.com",
+      "label": 1,
+      "record_id": "fixture-67"
+    },
+    {
+      "group": "domain:casino-fixture-7.com",
+      "hostname": "casino-fixture-7.com",
+      "label": 1,
+      "record_id": "fixture-7"
+    },
+    {
+      "group": "domain:casino-fixture-79.com",
+      "hostname": "casino-fixture-79.com",
+      "label": 1,
+      "record_id": "fixture-79"
+    },
+    {
+      "group": "domain:casino-fixture-89.com",
+      "hostname": "casino-fixture-89.com",
+      "label": 1,
+      "record_id": "fixture-89"
+    },
+    {
+      "group": "domain:casino-fixture-91.com",
+      "hostname": "casino-fixture-91.com",
+      "label": 1,
+      "record_id": "fixture-91"
+    },
+    {
+      "group": "domain:casino-fixture-97.com",
+      "hostname": "casino-fixture-97.com",
+      "label": 1,
+      "record_id": "fixture-97"
+    },
+    {
+      "group": "domain:library-fixture-10.org",
+      "hostname": "library-fixture-10.org",
+      "label": 0,
+      "record_id": "fixture-10"
+    },
+    {
+      "group": "domain:library-fixture-14.org",
+      "hostname": "library-fixture-14.org",
+      "label": 0,
+      "record_id": "fixture-14"
+    },
+    {
+      "group": "domain:library-fixture-22.org",
+      "hostname": "library-fixture-22.org",
+      "label": 0,
+      "record_id": "fixture-22"
+    },
+    {
+      "group": "domain:library-fixture-24.org",
+      "hostname": "library-fixture-24.org",
+      "label": 0,
+      "record_id": "fixture-24"
+    },
+    {
+      "group": "domain:library-fixture-28.org",
+      "hostname": "library-fixture-28.org",
+      "label": 0,
+      "record_id": "fixture-28"
+    },
+    {
+      "group": "domain:library-fixture-34.org",
+      "hostname": "library-fixture-34.org",
+      "label": 0,
+      "record_id": "fixture-34"
+    },
+    {
+      "group": "domain:library-fixture-36.org",
+      "hostname": "library-fixture-36.org",
+      "label": 0,
+      "record_id": "fixture-36"
+    },
+    {
+      "group": "domain:library-fixture-84.org",
+      "hostname": "library-fixture-84.org",
+      "label": 0,
+      "record_id": "fixture-84"
+    },
+    {
+      "group": "domain:library-fixture-94.org",
+      "hostname": "library-fixture-94.org",
+      "label": 0,
+      "record_id": "fixture-94"
+    },
+    {
+      "group": "domain:library-fixture-96.org",
+      "hostname": "library-fixture-96.org",
+      "label": 0,
+      "record_id": "fixture-96"
+    }
+  ]
+}

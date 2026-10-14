@@ -1,0 +1,173 @@
+{
+  "results": {
+    "logistic_regression": {
+      "inference_latency": {
+        "median_ms": 4.765699999552453,
+        "p95_ms": 5.597389999093139,
+        "samples": 20
+      },
+      "test": {
+        "abstained": 2,
+        "binary_accuracy": 1.0,
+        "binary_confusion_matrix": [
+          [
+            10,
+            0
+          ],
+          [
+            0,
+            10
+          ]
+        ],
+        "binary_f1": 1.0,
+        "binary_false_positive_rate": 0.0,
+        "binary_precision": 1.0,
+        "binary_recall": 1.0,
+        "binary_sensitivity": 1.0,
+        "binary_specificity": 1.0,
+        "binary_true_skill_statistic": 1.0,
+        "calibration": "not_evaluated_no_probability_exposed",
+        "class_counts": {
+          "gambling": 10,
+          "non_gambling": 10
+        },
+        "coverage": 0.9,
+        "false_negative_rate_including_abstention": 0.0,
+        "false_positive_rate_including_abstention": 0.0,
+        "gambling_precision": 1.0,
+        "gambling_recall_including_abstention": 0.8,
+        "non_gambling_predictive_value": 1.0,
+        "pr_auc_average_precision": 0.9999999999999999,
+        "roc_auc": 1.0,
+        "rows": 20,
+        "selective_accuracy": 1.0,
+        "selective_confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            2
+          ]
+        ]
+      }
+    },
+    "random_forest": {
+      "inference_latency": {
+        "median_ms": 6.177100000058999,
+        "p95_ms": 8.434379999016528,
+        "samples": 20
+      },
+      "test": {
+        "abstained": 0,
+        "binary_accuracy": 1.0,
+        "binary_confusion_matrix": [
+          [
+            10,
+            0
+          ],
+          [
+            0,
+            10
+          ]
+        ],
+        "binary_f1": 1.0,
+        "binary_false_positive_rate": 0.0,
+        "binary_precision": 1.0,
+        "binary_recall": 1.0,
+        "binary_sensitivity": 1.0,
+        "binary_specificity": 1.0,
+        "binary_true_skill_statistic": 1.0,
+        "calibration": "not_evaluated_no_probability_exposed",
+        "class_counts": {
+          "gambling": 10,
+          "non_gambling": 10
+        },
+        "coverage": 1.0,
+        "false_negative_rate_including_abstention": 0.0,
+        "false_positive_rate_including_abstention": 0.0,
+        "gambling_precision": 1.0,
+        "gambling_recall_including_abstention": 1.0,
+        "non_gambling_predictive_value": 1.0,
+        "pr_auc_average_precision": 1.0,
+        "roc_auc": 1.0,
+        "rows": 20,
+        "selective_accuracy": 1.0,
+        "selective_confusion_matrix": [
+          [
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    "svm": {
+      "inference_latency": {
+        "median_ms": 4.869149997830391,
+        "p95_ms": 7.063489999200106,
+        "samples": 20
+      },
+      "test": {
+        "abstained": 3,
+        "binary_accuracy": 1.0,
+        "binary_confusion_matrix": [
+          [
+            10,
+            0
+          ],
+          [
+            0,
+            10
+          ]
+        ],
+        "binary_f1": 1.0,
+        "binary_false_positive_rate": 0.0,
+        "binary_precision": 1.0,
+        "binary_recall": 1.0,
+        "binary_sensitivity": 1.0,
+        "binary_specificity": 1.0,
+        "binary_true_skill_statistic": 1.0,
+        "calibration": "not_evaluated_no_probability_exposed",
+        "class_counts": {
+          "gambling": 10,
+          "non_gambling": 10
+        },
+        "coverage": 0.85,
+        "false_negative_rate_including_abstention": 0.0,
+        "false_positive_rate_including_abstention": 0.0,
+        "gambling_precision": 1.0,
+        "gambling_recall_including_abstention": 0.8,
+        "non_gambling_predictive_value": 1.0,
+        "pr_auc_average_precision": 0.9999999999999999,
+        "roc_auc": 1.0,
+        "rows": 20,
+        "selective_accuracy": 1.0,
+        "selective_confusion_matrix": [
+          [
+            9,
+            0,
+            1
+          ],
+          [
+            0,
+            8,
+            2
+          ]
+        ]
+      }
+    }
+  },
+  "scope": "This dataset and fixed grouped split only; no claim of general website performance.",
+  "selected_before_test": "logistic_regression",
+  "split_sha256": "78775112cda65fea49c83f6b08c68a5319757d019b43eaf9d00757c9751c6f37",
+  "training_sha256": "ef1e71d6a3f8c07ecc1440b23f867ba98216ff85e8b74d735e89fc91b8fcb50a"
+}

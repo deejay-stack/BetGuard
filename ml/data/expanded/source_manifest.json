@@ -1,0 +1,95 @@
+{
+  "collected_at_utc": "2026-10-11T00:32:45.390949+00:00",
+  "sources": [
+    {
+      "name": "hagezi_medium",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/gambling.medium-onlydomains.txt",
+      "sha256": "9e905c041e5e7c233a8b336599c6e5f03bc53bf9b71a81b77658c58e1ea2e565",
+      "parsed_domain_count": 208016,
+      "status": "downloaded"
+    },
+    {
+      "name": "shadowwhisperer",
+      "url": "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Gambling",
+      "sha256": "71ddc3aae743102b58ce8e57a945594f174a307fc42f9a218f8192cf6c896d81",
+      "parsed_domain_count": 9653,
+      "status": "downloaded"
+    },
+    {
+      "name": "anti_gambling_indonesia",
+      "url": "https://raw.githubusercontent.com/arfshl/anti-gambling-domains/main/domains.txt",
+      "sha256": "6b4745a33004e21c09cbb7dd87f43c76d4df1b77a52155bf02b4f7d6a8b7b70b",
+      "parsed_domain_count": 508,
+      "status": "downloaded"
+    },
+    {
+      "name": "bet_blocker",
+      "url": "https://raw.githubusercontent.com/bet-blocker/bet-blocker/main/blocklist.txt",
+      "sha256": "241431c241837be006cd888f43c00832986352a31b3b3a3b44c63ca0e260d905",
+      "parsed_domain_count": 2350,
+      "status": "downloaded"
+    },
+    {
+      "name": "ut1_bank",
+      "url": "https://dsi.ut-capitole.fr/blacklists/download/bank.tar.gz",
+      "status": "failed",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>"
+    },
+    {
+      "name": "ut1_press",
+      "url": "https://dsi.ut-capitole.fr/blacklists/download/press.tar.gz",
+      "status": "failed",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>"
+    },
+    {
+      "name": "ut1_jobsearch",
+      "url": "https://dsi.ut-capitole.fr/blacklists/download/jobsearch.tar.gz",
+      "status": "failed",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>"
+    },
+    {
+      "name": "ut1_cooking",
+      "url": "https://dsi.ut-capitole.fr/blacklists/download/cooking.tar.gz",
+      "status": "failed",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>"
+    },
+    {
+      "name": "ut1_translation",
+      "url": "https://dsi.ut-capitole.fr/blacklists/download/translation.tar.gz",
+      "status": "failed",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>"
+    },
+    {
+      "name": "ut1_webmail",
+      "url": "https://dsi.ut-capitole.fr/blacklists/download/webmail.tar.gz",
+      "status": "failed",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>"
+    },
+    {
+      "name": "ut1_social_networks",
+      "url": "https://dsi.ut-capitole.fr/blacklists/download/social_networks.tar.gz",
+      "status": "failed",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>"
+    },
+    {
+      "name": "ut1_sports",
+      "url": "https://dsi.ut-capitole.fr/blacklists/download/sports.tar.gz",
+      "status": "failed",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>"
+    },
+    {
+      "name": "ut1_games",
+      "url": "https://dsi.ut-capitole.fr/blacklists/download/games.tar.gz",
+      "status": "failed",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>"
+    }
+  ],
+  "counts": {
+    "original_benchmark_families": 800,
+    "excluded_existing_domains": 275,
+    "conflicting_families": 0,
+    "gambling_candidates": 217652,
+    "benign_candidates": 0,
+    "review_queue": 5000
+  }
+}

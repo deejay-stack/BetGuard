@@ -11,6 +11,7 @@ import {
 import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import type { Tabs } from '../../App';
 import { useBetGuard } from '../state/BetGuardContext';
+import { useNetworkProtection } from '../state/NetworkProtectionContext';
 import { Badge, Button, Card, Empty, Loading, Page } from '../components/ui';
 import { ActivityRow, activityKind } from '../components/ActivityRow';
 import { HowItWorks } from '../components/HowItWorks';
@@ -24,6 +25,9 @@ import { API_BASE_URL } from '../api/config';
 export function HomeScreen({ navigation }: BottomTabScreenProps<Tabs, 'Home'>) {
   const { colors, styles } = useTheme();
   const { snapshot, available, busy, error, start, stop } = useBetGuard();
+  const { snapshot: network } = useNetworkProtection();
+  const networkRunning =
+    network?.state === 'active' || network?.state === 'degraded';
   const [online, setOnline] = useState(false);
   const [intro, setIntro] = useState(false);
   const [explained, setExplained] = useState(false);
@@ -101,6 +105,30 @@ export function HomeScreen({ navigation }: BottomTabScreenProps<Tabs, 'Home'>) {
       title="Your security, at a glance."
       subtitle="Stay in control of where you browse."
     >
+      <Card>
+        <Text style={styles.heading}>Network Protection</Text>
+        <Text style={styles.body}>
+          Choose Router Protection for an authorized OpenWrt network, or Hotspot
+          Protection using this phone's proxy.
+        </Text>
+        {networkRunning && network?.address ? (
+          <Text selectable style={styles.body}>
+            Gateway IP: {network.address}
+            {'\n'}Port: {network.port}
+          </Text>
+        ) : (
+          <Text style={styles.small}>
+            Open setup to choose a method. Hotspot setup shows this phone's IP
+            and proxy port; Router setup previews the network's DNS changes.
+          </Text>
+        )}
+        <Button
+          title="Open Network Protection"
+          icon={Wifi}
+          secondary
+          onPress={() => navigation.navigate('Network')}
+        />
+      </Card>
       <Card>
         <ProtectionRing state={snapshot?.state} blockedEvent={latestBlock} />
         <View style={local.center}>

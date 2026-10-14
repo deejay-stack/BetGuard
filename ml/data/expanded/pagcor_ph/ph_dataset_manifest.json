@@ -1,0 +1,63 @@
+{
+  "generated_at_utc": "2026-10-11T02:13:08.080553+00:00",
+  "project": "BetGuard",
+  "version": "pagcor_ph_builder_v2",
+  "jurisdiction": "Philippines",
+  "label_definition": {
+    "1": "Direct real-money online gambling",
+    "0": "No direct real-money online gambling"
+  },
+  "dataset_status": "UNVERIFIED_CANDIDATES",
+  "official_sources": {
+    "pagcor_gsa": {
+      "source_id": "pagcor_gsa",
+      "official_url": "https://www.pagcor.ph/regulatory/pdf/App%20Kits/List-of-PAGCOR-Accredited-Gaming-System-Administrators-and-Registered-Brands-and-Domain-Names-URLs.pdf",
+      "loaded_from": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\source_snapshots\\pagcor_gsa.pdf",
+      "sha256": "00366a98dbabfb7e59bbbe1c5ef5bd86dff4958327595d7431515d8d455aeeca",
+      "size_bytes": 682233,
+      "loaded_at_utc": "2026-10-11T02:13:05.988502+00:00",
+      "document_date": "October 8, 2026",
+      "page_count": 15,
+      "pages_with_text": 15,
+      "extracted_hosts": 450
+    },
+    "pagcor_licensed_casinos": {
+      "source_id": "pagcor_licensed_casinos",
+      "official_url": "https://www.pagcor.ph/regulatory/pdf/App%20Kits/List-of-Registered-Brands-and-Domain-Names-URLs-of-Licensed-Casinos.pdf",
+      "loaded_from": "https://www.pagcor.ph/regulatory/pdf/App%20Kits/List-of-Registered-Brands-and-Domain-Names-URLs-of-Licensed-Casinos.pdf",
+      "sha256": "73c26be949e0d8de694d9baa71c7d6aab394511455311ef05de52e073d22cc7d",
+      "size_bytes": 179624,
+      "loaded_at_utc": "2026-10-11T02:13:07.913523+00:00",
+      "document_date": "October 8, 2026",
+      "page_count": 3,
+      "pages_with_text": 3,
+      "extracted_hosts": 74
+    }
+  },
+  "benign_seed_file": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\ph_benign_seeds.csv",
+  "benign_seed_sha256": "3124dc6a8b4cd0e4dd969ba579b8178718f7f484e5a6a1b6d7986aed90be0067",
+  "counts": {
+    "positive_candidate_hosts": 518,
+    "positive_domain_families": 468,
+    "benign_candidate_hosts": 26,
+    "benign_domain_families": 26,
+    "conflicting_benign_families": 0,
+    "total_review_candidates": 544,
+    "human_verified_labels": 0
+  },
+  "outputs": {
+    "positive_candidates": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\pagcor_positive_candidates.csv",
+    "benign_candidates": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\ph_benign_candidates.csv",
+    "review_queue": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\ph_review_queue_unreviewed.csv",
+    "family_conflicts": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\ph_family_conflicts.csv"
+  },
+  "limitations": [
+    "PDF text extraction may include domains outside registered gaming entries and requires source review.",
+    "PAGCOR registration alone does not prove direct real-money wagering.",
+    "The dataset does not represent all illegal gambling domains in the Philippines.",
+    "Benign starters require independent verification.",
+    "Future training splits must exclude historical benchmark families and prevent train-test family overlap.",
+    "No new independent test set has been created.",
+    "No deployed BetGuard model has been modified."
+  ]
+}

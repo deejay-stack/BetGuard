@@ -1,0 +1,44 @@
+{
+  "generated_at_utc": "2026-10-11T02:22:27.106753+00:00",
+  "project": "BetGuard",
+  "jurisdiction": "Philippines",
+  "source": "PAGCOR official PDFs",
+  "classification": "Option A: direct real-money online gambling only",
+  "audit_seed": 42,
+  "counts": {
+    "positive_hosts": 518,
+    "positive_families": 468,
+    "benign_hosts": 26,
+    "random_audit_families": 100,
+    "targeted_review_hosts": 154,
+    "historical_family_overlap": 86
+  },
+  "historical_benchmark_files_checked": [
+    "baseline_train.csv",
+    "baseline_validation.csv",
+    "baseline_test.csv"
+  ],
+  "historical_check_complete": true,
+  "review_flag_counts": {
+    "multiple_hosts_in_family": 83,
+    "historical_benchmark_family": 117,
+    "possible_promotion_or_support": 41,
+    "www_alias_also_listed": 22,
+    "deep_hostname_review": 1
+  },
+  "outputs": [
+    "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\ph_candidate_inventory.csv",
+    "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\ph_random_100_family_audit.csv",
+    "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\ph_targeted_priority_review.csv",
+    "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\ph_benign_26_review.csv"
+  ],
+  "warnings": [
+    "Candidate labels are not verified.",
+    "Audit flags are not classification decisions.",
+    "Random audit samples domain families; it does not verify all hosts per family.",
+    "Targeted review cannot be used as an unbiased label-error estimate.",
+    "PDF table-entry membership and actual direct wagering remain to be confirmed.",
+    "Existing benchmark overlap must be accounted for in any new evaluation.",
+    "No production ML model changed."
+  ]
+}

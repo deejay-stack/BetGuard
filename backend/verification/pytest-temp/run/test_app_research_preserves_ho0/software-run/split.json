@@ -1,0 +1,309 @@
+{
+  "dataset_sha256": "f49503fe71810ce5b06d64aff285473d12e456056f43b327f105f7adf11b84e1",
+  "development": [
+    {
+      "group": "family:fixture-family-0",
+      "label": 0,
+      "record_id": "test-0"
+    },
+    {
+      "group": "family:fixture-family-0",
+      "label": 1,
+      "record_id": "test-1"
+    },
+    {
+      "group": "family:fixture-family-5",
+      "label": 0,
+      "record_id": "test-10"
+    },
+    {
+      "group": "family:fixture-family-5",
+      "label": 1,
+      "record_id": "test-11"
+    },
+    {
+      "group": "family:fixture-family-6",
+      "label": 0,
+      "record_id": "test-12"
+    },
+    {
+      "group": "family:fixture-family-6",
+      "label": 1,
+      "record_id": "test-13"
+    },
+    {
+      "group": "family:fixture-family-8",
+      "label": 0,
+      "record_id": "test-16"
+    },
+    {
+      "group": "family:fixture-family-8",
+      "label": 1,
+      "record_id": "test-17"
+    },
+    {
+      "group": "family:fixture-family-9",
+      "label": 0,
+      "record_id": "test-18"
+    },
+    {
+      "group": "family:fixture-family-9",
+      "label": 1,
+      "record_id": "test-19"
+    },
+    {
+      "group": "family:fixture-family-1",
+      "label": 0,
+      "record_id": "test-2"
+    },
+    {
+      "group": "family:fixture-family-10",
+      "label": 0,
+      "record_id": "test-20"
+    },
+    {
+      "group": "family:fixture-family-10",
+      "label": 1,
+      "record_id": "test-21"
+    },
+    {
+      "group": "family:fixture-family-11",
+      "label": 0,
+      "record_id": "test-22"
+    },
+    {
+      "group": "family:fixture-family-11",
+      "label": 1,
+      "record_id": "test-23"
+    },
+    {
+      "group": "family:fixture-family-13",
+      "label": 0,
+      "record_id": "test-26"
+    },
+    {
+      "group": "family:fixture-family-13",
+      "label": 1,
+      "record_id": "test-27"
+    },
+    {
+      "group": "family:fixture-family-14",
+      "label": 0,
+      "record_id": "test-28"
+    },
+    {
+      "group": "family:fixture-family-14",
+      "label": 1,
+      "record_id": "test-29"
+    },
+    {
+      "group": "family:fixture-family-1",
+      "label": 1,
+      "record_id": "test-3"
+    },
+    {
+      "group": "family:fixture-family-16",
+      "label": 0,
+      "record_id": "test-32"
+    },
+    {
+      "group": "family:fixture-family-16",
+      "label": 1,
+      "record_id": "test-33"
+    },
+    {
+      "group": "family:fixture-family-18",
+      "label": 0,
+      "record_id": "test-36"
+    },
+    {
+      "group": "family:fixture-family-18",
+      "label": 1,
+      "record_id": "test-37"
+    },
+    {
+      "group": "family:fixture-family-19",
+      "label": 0,
+      "record_id": "test-38"
+    },
+    {
+      "group": "family:fixture-family-19",
+      "label": 1,
+      "record_id": "test-39"
+    },
+    {
+      "group": "family:fixture-family-2",
+      "label": 0,
+      "record_id": "test-4"
+    },
+    {
+      "group": "family:fixture-family-20",
+      "label": 0,
+      "record_id": "test-40"
+    },
+    {
+      "group": "family:fixture-family-20",
+      "label": 1,
+      "record_id": "test-41"
+    },
+    {
+      "group": "family:fixture-family-21",
+      "label": 0,
+      "record_id": "test-42"
+    },
+    {
+      "group": "family:fixture-family-21",
+      "label": 1,
+      "record_id": "test-43"
+    },
+    {
+      "group": "family:fixture-family-22",
+      "label": 0,
+      "record_id": "test-44"
+    },
+    {
+      "group": "family:fixture-family-22",
+      "label": 1,
+      "record_id": "test-45"
+    },
+    {
+      "group": "family:fixture-family-23",
+      "label": 0,
+      "record_id": "test-46"
+    },
+    {
+      "group": "family:fixture-family-23",
+      "label": 1,
+      "record_id": "test-47"
+    },
+    {
+      "group": "family:fixture-family-24",
+      "label": 0,
+      "record_id": "test-48"
+    },
+    {
+      "group": "family:fixture-family-24",
+      "label": 1,
+      "record_id": "test-49"
+    },
+    {
+      "group": "family:fixture-family-2",
+      "label": 1,
+      "record_id": "test-5"
+    },
+    {
+      "group": "family:fixture-family-25",
+      "label": 0,
+      "record_id": "test-50"
+    },
+    {
+      "group": "family:fixture-family-25",
+      "label": 1,
+      "record_id": "test-51"
+    },
+    {
+      "group": "family:fixture-family-26",
+      "label": 0,
+      "record_id": "test-52"
+    },
+    {
+      "group": "family:fixture-family-26",
+      "label": 1,
+      "record_id": "test-53"
+    },
+    {
+      "group": "family:fixture-family-27",
+      "label": 0,
+      "record_id": "test-54"
+    },
+    {
+      "group": "family:fixture-family-27",
+      "label": 1,
+      "record_id": "test-55"
+    },
+    {
+      "group": "family:fixture-family-3",
+      "label": 0,
+      "record_id": "test-6"
+    },
+    {
+      "group": "family:fixture-family-3",
+      "label": 1,
+      "record_id": "test-7"
+    },
+    {
+      "group": "family:fixture-family-4",
+      "label": 0,
+      "record_id": "test-8"
+    },
+    {
+      "group": "family:fixture-family-4",
+      "label": 1,
+      "record_id": "test-9"
+    }
+  ],
+  "protocol": "grouped_80_20_with_3_fold_development_selection",
+  "seed": 42,
+  "test": [
+    {
+      "group": "family:fixture-family-7",
+      "label": 0,
+      "record_id": "test-14"
+    },
+    {
+      "group": "family:fixture-family-7",
+      "label": 1,
+      "record_id": "test-15"
+    },
+    {
+      "group": "family:fixture-family-12",
+      "label": 0,
+      "record_id": "test-24"
+    },
+    {
+      "group": "family:fixture-family-12",
+      "label": 1,
+      "record_id": "test-25"
+    },
+    {
+      "group": "family:fixture-family-15",
+      "label": 0,
+      "record_id": "test-30"
+    },
+    {
+      "group": "family:fixture-family-15",
+      "label": 1,
+      "record_id": "test-31"
+    },
+    {
+      "group": "family:fixture-family-17",
+      "label": 0,
+      "record_id": "test-34"
+    },
+    {
+      "group": "family:fixture-family-17",
+      "label": 1,
+      "record_id": "test-35"
+    },
+    {
+      "group": "family:fixture-family-28",
+      "label": 0,
+      "record_id": "test-56"
+    },
+    {
+      "group": "family:fixture-family-28",
+      "label": 1,
+      "record_id": "test-57"
+    },
+    {
+      "group": "family:fixture-family-29",
+      "label": 0,
+      "record_id": "test-58"
+    },
+    {
+      "group": "family:fixture-family-29",
+      "label": 1,
+      "record_id": "test-59"
+    }
+  ]
+}

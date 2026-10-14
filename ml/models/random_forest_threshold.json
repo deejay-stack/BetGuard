@@ -1,0 +1,13 @@
+{
+    "threshold": 0.444,
+    "selected_using": "validation F1",
+    "positive_class": 1,
+    "positive_class_name": "gambling",
+    "selected_configuration": {
+        "n_estimators": 500,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "max_features": "log2",
+        "class_weight": "balanced"
+    }
+}

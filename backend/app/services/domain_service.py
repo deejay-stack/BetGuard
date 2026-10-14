@@ -32,7 +32,11 @@ def get_betguard_runtime(request: Request):
     return runtime
 
 
-def evaluate(runtime, domains: list[str], *, batch: bool = False):
+def get_svm_shadow(request: Request):
+    return getattr(request.app.state, "svm_shadow", None)
+
+
+def evaluate(runtime, domains: list[str], *, batch: bool = False, shadow=None):
     try:
         results = runtime.evaluate_many(domains) if batch else [runtime.evaluate(domains[0])]
         if any("error" in result for result in results):
@@ -43,7 +47,15 @@ def evaluate(runtime, domains: list[str], *, batch: bool = False):
             logger.debug("domain=%s enforcement=%s intervention=%s source=%s cache_hit=%s",
                          result["domain"], result["enforcement_action"], result["intervention"],
                          result["decision_source"], result.get("cache_hit", False))
-        return decisions
     except Exception as error:
         logger.error("BetGuard detection evaluation failed (%s)", type(error).__name__)
         raise HTTPException(status_code=503, detail="BetGuard detection service is unavailable.") from None
+    # Production has already completed and validated. Shadow diagnostics never
+    # participate in its error handling, response schema or enforcement policy.
+    if shadow is not None:
+        try:
+            for decision in decisions:
+                shadow.observe(decision)
+        except Exception as error:
+            logger.warning("SVM shadow observation failed (%s); production unchanged.", type(error).__name__)
+    return decisions

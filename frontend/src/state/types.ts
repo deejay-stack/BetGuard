@@ -12,7 +12,7 @@ export type HistoryItem = {
   createdAt: number;
   clientIp?: string | null;
   decisionSource?: string | null;
-  protection?: 'device' | 'network';
+  protection?: 'device' | 'network' | 'router';
 };
 export type Snapshot = {
   detectionEnabled?: boolean;

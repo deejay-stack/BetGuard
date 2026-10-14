@@ -1,0 +1,85 @@
+{
+  "generated_at_utc": "2026-10-11T01:38:36.780078+00:00",
+  "classification_definition": "Option A: direct real-money gambling websites only",
+  "mode": "offline_v1_evidence_reanalysis",
+  "input_path": "data\\expanded\\partitions_v1\\audit_review_option_a_auto.csv",
+  "input_sha256": "639fc1d8ecc811b4986d28e67bf568e2c70a5c8c4a7c1dc3766c0557e1fee4f2",
+  "output_path": "data\\expanded\\partitions_v1\\audit_review_option_a_v2.csv",
+  "processed_domains": 200,
+  "source_label_counts": {
+    "1": 100,
+    "0": 100
+  },
+  "v1_findings": {
+    "possible_affiliate_or_review": 3,
+    "gambling_related_unconfirmed": 16,
+    "unresolved": 110,
+    "insufficient_evidence": 62,
+    "possible_non_gambling_service": 4,
+    "possible_direct_gambling": 5
+  },
+  "v2_findings": {
+    "non_gambling_service_candidate": 11,
+    "affiliate_or_review_candidate": 5,
+    "physical_casino_venue_candidate": 1,
+    "direct_gambling_candidate": 6,
+    "gambling_content_only": 12,
+    "unresolved_fetch": 110,
+    "insufficient_content_evidence": 55
+  },
+  "v1_proposals": {
+    "0": 7,
+    "": 188,
+    "1": 5
+  },
+  "v2_proposals": {
+    "0": 16,
+    "": 178,
+    "1": 6
+  },
+  "technical_fetch_categories": {
+    "page_retrieved": 90,
+    "connection_timeout": 14,
+    "tls_handshake_failure": 2,
+    "access_denied_403": 21,
+    "dns_resolution_failure": 42,
+    "external_redirect_not_followed": 19,
+    "tls_certificate_failure": 7,
+    "server_error_5xx": 3,
+    "other_network_failure": 1,
+    "page_not_found_404": 1
+  },
+  "review_priorities": {
+    "P1_POSSIBLE_LABEL_CONFLICT": 7,
+    "P1_POLICY_REVIEW": 1,
+    "P2_CHECK_DIRECT_WAGERING": 6,
+    "P2_AMBIGUOUS_CONTENT": 12,
+    "P3_FETCH_EVIDENCE_NEEDED": 110,
+    "P4_ROUTINE_REVIEW": 64
+  },
+  "changed_automated_suggestions": 13,
+  "changed_suggestion_domains": [
+    "licasinotransportation.com",
+    "locowincasinohubes.com",
+    "srp-malerbetrieb.ch",
+    "valtercasino.bet",
+    "betsson.org.pl",
+    "website-totosloto.sbs",
+    "win55.ink",
+    "spinobonscasino.co.uk",
+    "kansascity.com",
+    "kentucky.com",
+    "lowellsun.com",
+    "pekintimes.com",
+    "thesunchronicle.com"
+  ],
+  "human_labels_created": 0,
+  "notes": [
+    "V2 makes no network requests.",
+    "Existing source labels are unverified.",
+    "A label proposal is not ground truth.",
+    "Fetched evidence may be incomplete.",
+    "Human reviewers must confirm labels.",
+    "No training or production files changed."
+  ]
+}

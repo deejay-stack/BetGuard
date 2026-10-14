@@ -71,10 +71,10 @@ export function HowItWorks() {
             when available. The existing website model checks hostnames, not app
             descriptions.
           </Text>
-          <Text style={styles.heading}>Device and Network Protection</Text>
+          <Text style={styles.heading}>Protection Modes</Text>
           <Text style={styles.body}>
             Home's Device Protection filters supported DNS on this phone.
-            Network Protection runs a separate phone-hosted proxy for other
+            Hotspot Protection runs a separate phone-hosted proxy for other
             devices. Both use the same saved rules and existing online detector.
             The model stays on the FastAPI server; HTTPS traffic stays
             encrypted.
@@ -98,7 +98,38 @@ export function HowItWorks() {
             Connect this phone and the client to the same router. Start Network
             Protection using this phone's Wi-Fi address, then set that address
             and port as the client's manual proxy. Confirm its requests in
-            Activity. BetGuard does not change your router's settings.
+            Activity. This proxy method does not change router settings.
+          </Text>
+          <Text style={styles.heading}>Router Protection</Text>
+          <Text style={styles.body}>
+            This mode configures an authorized OpenWrt router to send
+            conventional DNS requests to the existing BetGuard runtime on a
+            dedicated server. Clients connect to Wi-Fi normally, with no
+            BetGuard installation or manual proxy. The administrator phone
+            synchronizes its existing Block and Allow rules. Warnings remain
+            allowed for review.
+          </Text>
+          <Text style={styles.small}>
+            Client → protected router → BetGuard DNS filter → saved rules →
+            verified gambling domains → existing ML → Allow / Warn / Block.
+          </Text>
+          <Text style={styles.heading}>How to protect a router</Text>
+          <Text style={styles.body}>
+            Prepare a compatible OpenWrt router and a stable BetGuard server on
+            its LAN. Open Network Protection → Router Protection. Confirm that
+            you own or administer the network, authenticate securely, review the
+            proposed changes and tap Apply Router Protection. Wait for verified
+            Network Active before connecting test clients normally. Hold Stop
+            restores the saved router settings. If recovery is required,
+            reconnect to the original router and restore before shutting down
+            the filter.
+          </Text>
+          <Text style={styles.small}>
+            Router Protection is a small-network capstone prototype. ISP routers
+            are unsupported unless compatibility is confirmed. Encrypted DNS,
+            VPNs, cached answers and existing connections can bypass DNS
+            filtering. Production needs dedicated gateway infrastructure,
+            availability controls and broader router support.
           </Text>
           {network?.address &&
             ['active', 'degraded'].includes(network.state) && (

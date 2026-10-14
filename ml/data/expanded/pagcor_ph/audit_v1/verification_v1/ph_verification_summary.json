@@ -1,0 +1,105 @@
+{
+  "generated_at_utc": "2026-10-11T02:39:17.050509+00:00",
+  "project": "BetGuard",
+  "version": "pagcor_ph_verification_preparation_v1",
+  "jurisdiction": "Philippines",
+  "classification_definition": {
+    "1": "Direct real-money online gambling",
+    "0": "No direct real-money online gambling"
+  },
+  "counts": {
+    "total_candidates": 544,
+    "positive_candidates": 518,
+    "benign_candidates": 26,
+    "random_sample_domains": 100,
+    "random_sample_unique_families": 100,
+    "targeted_priority_domains": 154,
+    "historical_overlap_hosts": 117,
+    "historical_overlap_families": 86,
+    "random_historical_overlap": 22,
+    "secondary_domain_review_hosts": 63,
+    "possible_brand_alias_hosts": 277,
+    "human_verified_labels_created": 0
+  },
+  "audit_flag_counts": {
+    "multiple_hosts_in_family": 83,
+    "historical_benchmark_family": 117,
+    "possible_promotion_or_support": 41,
+    "www_alias_also_listed": 22,
+    "deep_hostname_review": 1
+  },
+  "historical_benchmark_sources": {
+    "train": {
+      "path": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\processed\\splits\\baseline_train.csv",
+      "rows": 507,
+      "sha256": "71b448c2390afd5693f69d38b18e1f4d45a217d4dfaf6f6b2264302ca302c6b3"
+    },
+    "validation": {
+      "path": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\processed\\splits\\baseline_validation.csv",
+      "rows": 169,
+      "sha256": "acffd215c930a5be3600600cd36e91cdbc9707054b6bbd96962a6757ed9de430"
+    },
+    "test": {
+      "path": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\processed\\splits\\baseline_test.csv",
+      "rows": 170,
+      "sha256": "e093d6dd6b58c2ed087327783752a344eb57774960c689b75189a39db7d797de"
+    }
+  },
+  "input_sha256": {
+    "ph_candidate_inventory.csv": "e8b80db37c54c6a951e107762c2b0f70057fba906e42775e114368a720b8a0ac",
+    "ph_random_100_family_audit.csv": "fb868e4d66e16bc99f673d7f794e57ea58344330c113f8a6bd078a451b53131d",
+    "ph_targeted_priority_review.csv": "eb0e1c77afc37bbe12bda7a3acf7b84dab7394d7380778b57ddee9eafcf5042f",
+    "ph_benign_26_review.csv": "5cde1826ee455526845ba92ff79031429e8904a68df4fa51ff7a1f2ffc823976"
+  },
+  "verification_policy": [
+    "PAGCOR PDF membership must be checked against the actual table.",
+    "Positive labels require independently supported direct real-money wagering.",
+    "A registered promotional domain is not automatically a direct operator.",
+    "A negative label requires positive evidence of non-gambling function.",
+    "Uncertain cases must remain unresolved or be excluded, not guessed.",
+    "Domains already in historical benchmark families cannot be used as an untouched holdout.",
+    "Brand name hints are unverified and must not be treated as proof of shared ownership.",
+    "The random audit is fixed and must not be replaced after review.",
+    "No labels are verified automatically.",
+    "No model training or deployment changes are performed."
+  ],
+  "outputs": {
+    "master": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\verification_v1\\ph_verification_master.csv",
+    "random": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\verification_v1\\ph_random_100_review_queue.csv",
+    "historical": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\verification_v1\\ph_historical_overlap_review_queue.csv",
+    "secondary": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\verification_v1\\ph_secondary_domain_review_queue.csv",
+    "targeted": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\verification_v1\\ph_targeted_priority_review_queue.csv",
+    "benign": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\verification_v1\\ph_benign_26_review_queue.csv",
+    "brand": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\verification_v1\\ph_possible_brand_aliases.csv",
+    "summary": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\audit_v1\\verification_v1\\ph_verification_summary.json"
+  },
+  "prior_quality_report_sha256": "b0e2b0441ad198c53ce8f5e3f4b1460b9115663aa1477aea055b2e4d6a1e72e9",
+  "pagcor_manifest_sha256": "9e42e87654e9a811c628a37567675c0a71af823ea1b82673393a52b833ae4109",
+  "master_review_instructions": {
+    "editable_file": "ph_verification_master.csv",
+    "queue_files": "Reference views only; edit the corresponding row in the master.",
+    "review_status_options": [
+      "pending",
+      "confirmed",
+      "corrected",
+      "excluded"
+    ],
+    "verified_label_options": [
+      "0",
+      "1",
+      "blank_if_unresolved"
+    ],
+    "source_pdf_entry_checked_options": [
+      "YES",
+      "NO",
+      "UNCERTAIN"
+    ],
+    "direct_real_money_wagering_checked_options": [
+      "YES",
+      "NO",
+      "UNCERTAIN"
+    ],
+    "evidence_required": true,
+    "no_automatic_acceptance": true
+  }
+}

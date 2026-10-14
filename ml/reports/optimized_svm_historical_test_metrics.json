@@ -1,0 +1,52 @@
+{
+    "evaluation_type": "historical_test_benchmark",
+    "independent_new_holdout": false,
+    "configuration": {
+        "model": "linear_svm",
+        "ngram_range": [
+            2,
+            6
+        ],
+        "min_df": 1,
+        "C": 0.5,
+        "threshold": -0.05278699316952151,
+        "threshold_selected_for": "validation accuracy",
+        "validation_accuracy": 0.9349112426035503,
+        "validation_precision": 0.9625,
+        "validation_recall": 0.9058823529411765,
+        "validation_f1": 0.9333333333333333,
+        "false_positives": 3,
+        "false_negatives": 8,
+        "roc_auc": 0.9658263305322129,
+        "average_precision": 0.971922687651905,
+        "uses_lexical_features": true
+    },
+    "validation_reproduction": {
+        "accuracy": 0.9349112426035503,
+        "precision": 0.9625,
+        "recall": 0.9058823529411765,
+        "f1": 0.9333333333333333,
+        "roc_auc": 0.9658263305322129,
+        "average_precision": 0.971922687651905,
+        "true_negatives": 81,
+        "false_positives": 3,
+        "false_negatives": 8,
+        "true_positives": 77,
+        "correct": 158,
+        "total": 169
+    },
+    "test_metrics": {
+        "accuracy": 0.9235294117647059,
+        "precision": 0.8829787234042553,
+        "recall": 0.9764705882352941,
+        "f1": 0.9273743016759777,
+        "roc_auc": 0.9791003460207612,
+        "average_precision": 0.9779683941728998,
+        "true_negatives": 74,
+        "false_positives": 11,
+        "false_negatives": 2,
+        "true_positives": 83,
+        "correct": 157,
+        "total": 170
+    }
+}

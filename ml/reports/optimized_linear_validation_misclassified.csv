@@ -1,0 +1,12 @@
+domain,label,source,category,domain_family,optimization_score,predicted_label,correct,distance_from_threshold
+mp3sland.com,0,UT1_non_gambling_category,audio-video,mp3sland.com,0.06120514745659611,1,False,0.11399214062611762
+midnite.com,1,verified_gambling,gambling,midnite.com,-0.21908664049150628,0,False,0.16629964732198477
+lotusbook.io,1,verified_gambling,gambling,lotusbook.io,-0.2671133094958007,0,False,0.2143263163262792
+nopeampi.com,1,verified_gambling,gambling,nopeampi.com,-0.2911801777157509,0,False,0.23839318454622938
+comeon.com,1,verified_gambling,gambling,comeon.com,-0.3315205017346583,0,False,0.2787335085651368
+peachygames.com,1,verified_gambling,gambling,peachygames.com,-0.4057254979801559,0,False,0.3529385048106344
+okapp.chat,1,verified_gambling,gambling,okapp.chat,-0.44545781719149175,0,False,0.39267082402197023
+discoveryplus.com,0,UT1_non_gambling_category,audio-video,discoveryplus.com,0.34135547429195,1,False,0.3941424674614715
+matchbook.com,1,verified_gambling,gambling,matchbook.com,-0.4533299331376826,0,False,0.4005429399681611
+wsop.com,1,verified_gambling,gambling,wsop.com,-0.4632144835855304,0,False,0.4104274904160089
+ddtonline.com,0,UT1_non_gambling_category,press,ddtonline.com,0.5597306315082362,1,False,0.6125176246777577

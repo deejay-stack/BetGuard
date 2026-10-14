@@ -57,6 +57,15 @@ not read shared user text lists or upload rules. Standalone runtime/CLI use keep
 the original text-list behavior. Enable optional online detection from the
 existing protection dialog; manual mode works without the backend.
 
+Optional optimized SVM shadow comparison is disabled by default. Set
+`$env:BETGUARD_SVM_SHADOW_ENABLED='true'` before starting uvicorn to load the
+reviewed `ml/models/optimized_svm_shadow_2026-10-11/` artifact in a background
+worker. Baseline decisions remain authoritative; no SVM margin enters API or
+DNS responses. Set the flag to `'false'` and restart to return to baseline-only
+operation. The private `.env` is not modified. See the
+[shadow integration report](../docs/audit/2026-10-11/SVM_SHADOW_INTEGRATION.md)
+for Windows commands, internal diagnostics, test results and remaining gates.
+
 The existing `/v1/check` reviewed-catalog contract and optional model service are
 preserved separately:
 

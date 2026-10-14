@@ -1,0 +1,55 @@
+{
+  "generated_at_utc": "2026-10-11T03:27:29.227777+00:00",
+  "project": "BetGuard",
+  "version": "ph_verification_merge_v1",
+  "jurisdiction": "Philippines",
+  "dataset_status": "UNVERIFIED_CANDIDATES_WITH_PRESERVED_REVIEW_FIELDS",
+  "counts": {
+    "original_master_records": 544,
+    "benign_expansion_inputs": 106,
+    "already_present_benign_records": 26,
+    "new_benign_records_added": 80,
+    "merged_total": 624,
+    "positive_candidates": 518,
+    "benign_candidates": 106,
+    "original_review_progress_preserved": 0,
+    "new_benign_review_progress_imported": 0,
+    "new_benign_historical_overlap": 0,
+    "new_verified_labels_automatically_created": 0
+  },
+  "benign_category_counts": {
+    "banking": 5,
+    "education": 7,
+    "employment": 6,
+    "entertainment": 4,
+    "finance_fintech": 9,
+    "food_restaurants": 9,
+    "gaming_esports_review": 4,
+    "government": 14,
+    "healthcare": 7,
+    "news_media": 9,
+    "real_estate": 7,
+    "shopping_retail": 12,
+    "telecommunications": 6,
+    "transport_logistics": 7
+  },
+  "input_checksums": {
+    "verification_master_sha256": "b29139e5553ec6b582f0e8e84e1c009fd8828c290a2499899f0ce689f898a5df",
+    "benign_expansion_sha256": "295cc98338cee12ec7f1f6e21491289055be59e1bf476cce5eabdd26ce93975d"
+  },
+  "verification_rules": [
+    "Only human-supported labels are eligible for future training.",
+    "PAGCOR registration by itself is not proof of direct wagering.",
+    "Unresolved domains must not be automatically labeled benign.",
+    "Previous evaluation families must not enter a virgin holdout.",
+    "Original random audit remains fixed.",
+    "Original reviewer fields remain unchanged.",
+    "No training or deployment performed."
+  ],
+  "output_filenames": {
+    "merged_master": "ph_verification_master_merged.csv",
+    "new_benign_review": "ph_new_benign_80_review_queue.csv",
+    "all_benign_review": "ph_all_benign_106_review_queue.csv",
+    "summary": "ph_merge_summary.json"
+  }
+}

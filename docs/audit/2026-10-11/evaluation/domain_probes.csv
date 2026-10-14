@@ -1,0 +1,17 @@
+domain,baseline_score,baseline_source,baseline_enforcement,svm_margin,svm_predicted_label
+stake.com,,verified_gambling_blocklist,BLOCK,-0.047472829071130374,1
+draftkings.com,,verified_gambling_blocklist,BLOCK,0.33895204066610396,1
+wikipedia.org,0.203321,ml_low_risk,ALLOW,-0.4914852969304796,0
+microsoft.com,0.583148,ml_warning,ALLOW,-0.35125042959406755,0
+alphabet.com,0.867758,ml_high_risk,BLOCK,1.2126594835540643,1
+bsp.gov.ph,0.63487,ml_warning,ALLOW,0.20742565755621656,1
+bdo.com.ph,0.534218,ml_warning,ALLOW,0.1515760490646182,1
+bpi.com.ph,0.402461,ml_low_risk,ALLOW,0.08338494444152555,1
+up.edu.ph,0.589223,ml_warning,ALLOW,-0.21591448053547369,0
+deped.gov.ph,0.54592,ml_warning,ALLOW,-0.12210630954336832,0
+doh.gov.ph,0.63487,ml_warning,ALLOW,-0.06534599071655778,0
+gcash.com,0.422604,ml_low_risk,ALLOW,-0.15989822521871577,0
+grab.com,0.380848,ml_low_risk,ALLOW,0.05306568560796021,1
+bethel.edu,0.532803,ml_warning,ALLOW,0.8679963540652633,1
+alphabet.edu,0.687129,ml_warning,ALLOW,0.9135968435999005,1
+xn--bcher-kva.example,0.317758,ml_low_risk,ALLOW,-0.7143194654126203,0

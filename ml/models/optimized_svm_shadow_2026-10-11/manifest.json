@@ -1,0 +1,99 @@
+{
+  "adapter_sha256": "2de840c7e3aa5b1499389f1f84e48bd5c6a3df294ea7ae03523d7490cb651316",
+  "calibrated_probability": false,
+  "classes": [
+    0,
+    1
+  ],
+  "configuration": {
+    "C": 0.5,
+    "average_precision": 0.971922687651905,
+    "false_negatives": 8,
+    "false_positives": 3,
+    "min_df": 1,
+    "model": "linear_svm",
+    "ngram_range": [
+      2,
+      6
+    ],
+    "roc_auc": 0.9658263305322129,
+    "threshold": -0.05278699316952151,
+    "threshold_selected_for": "validation accuracy",
+    "uses_lexical_features": true,
+    "validation_accuracy": 0.9349112426035503,
+    "validation_f1": 0.9333333333333333,
+    "validation_precision": 0.9625,
+    "validation_recall": 0.9058823529411765
+  },
+  "environment": {
+    "joblib": "1.6.0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "python": "3.14",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "tldextract": "5.3.2"
+  },
+  "feature_sha256": "2f65227741a73d7332f303dd80631d3445d2635ff2829b3a6ab14c1675607937",
+  "fit_split": "train_only_507",
+  "format": "betguard-optimized-svm-shadow-v1",
+  "historical_test_metrics": {
+    "accuracy": 0.9235294117647059,
+    "f1": 0.9273743016759777,
+    "false_negatives": 2,
+    "false_positives": 11,
+    "precision": 0.8829787234042553,
+    "recall": 0.9764705882352941,
+    "roc_auc": 0.9791003460207612,
+    "total": 170,
+    "true_negatives": 74,
+    "true_positives": 83
+  },
+  "independent_new_holdout": false,
+  "inputs": {
+    "configuration": {
+      "path": "reports/optimized_svm_frozen_candidate.json",
+      "sha256": "f1b9420585df2a9dde47ddf5dd3cf8802341a5da67ece462e74f43429408fad4"
+    },
+    "historical_metrics": {
+      "path": "reports/optimized_svm_historical_test_metrics.json",
+      "sha256": "af8543789e4e10f7b788a66997b9e99a3affd0d2a37b35db1e72e58ec4eac997"
+    },
+    "historical_predictions": {
+      "path": "reports/optimized_svm_historical_test_predictions.csv",
+      "sha256": "c50257ab3298f795cb93d2e4b0f15c59ea391e10b02f5c3f41cc8c1e2f95a467"
+    },
+    "test": {
+      "path": "data/processed/splits/baseline_test.csv",
+      "sha256": "e093d6dd6b58c2ed087327783752a344eb57774960c689b75189a39db7d797de"
+    },
+    "train": {
+      "path": "data/processed/splits/baseline_train.csv",
+      "sha256": "71b448c2390afd5693f69d38b18e1f4d45a217d4dfaf6f6b2264302ca302c6b3"
+    },
+    "validation": {
+      "path": "data/processed/splits/baseline_validation.csv",
+      "sha256": "acffd215c930a5be3600600cd36e91cdbc9707054b6bbd96962a6757ed9de430"
+    }
+  },
+  "lexical_features": 25,
+  "max_saved_margin_difference": 2.220446049250313e-16,
+  "model_file": "model.joblib",
+  "model_sha256": "81d61e71ba422aad3277887d3e6315866e7015d72d2c1ab68e996626d747a416",
+  "production_approved": false,
+  "purpose": "offline_shadow",
+  "tfidf_features": 14051,
+  "total_features": 14076,
+  "validation_metrics": {
+    "accuracy": 0.9349112426035503,
+    "f1": 0.9333333333333333,
+    "false_negatives": 8,
+    "false_positives": 3,
+    "precision": 0.9625,
+    "recall": 0.9058823529411765,
+    "roc_auc": 0.9658263305322129,
+    "total": 169,
+    "true_negatives": 81,
+    "true_positives": 77
+  }
+}

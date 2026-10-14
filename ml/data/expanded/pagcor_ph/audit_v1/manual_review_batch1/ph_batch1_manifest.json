@@ -1,0 +1,17 @@
+{
+  "generated_at_utc": "2026-10-11T03:31:48.522518+00:00",
+  "project": "BetGuard",
+  "jurisdiction": "Philippines",
+  "status": "UNREVIEWED",
+  "random_pagcor_audit": 100,
+  "hard_negative_candidates": 17,
+  "total_review_rows": 117,
+  "historical_overlap_in_batch": 22,
+  "human_verified_labels": 0,
+  "source_sha256": {
+    "merged_master": "eb41be713d8de40eff038611e0e3e4900d4f599f4d2505fc94a20714e0b74721",
+    "frozen_audit": "fb868e4d66e16bc99f673d7f794e57ea58344330c113f8a6bd078a451b53131d"
+  },
+  "template_sha256": "61cc61f080e50b8b0188185e270a20628b7fd86c63b8d8b698bffa9489216fa1",
+  "warning": "No domain is training-eligible without independent human review."
+}

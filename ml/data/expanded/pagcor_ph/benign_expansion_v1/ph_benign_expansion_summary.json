@@ -1,0 +1,70 @@
+{
+  "generated_at_utc": "2026-10-11T02:45:30.418194+00:00",
+  "project": "BetGuard",
+  "version": "ph_benign_expansion_v1",
+  "jurisdiction": "Philippines",
+  "dataset_status": "UNVERIFIED_CANDIDATES",
+  "counts": {
+    "existing_benign_inputs": 26,
+    "new_seed_inputs": 80,
+    "expanded_candidates": 106,
+    "unique_benign_families": 106,
+    "excluded_records": 0,
+    "historical_overlap": 0,
+    "human_verified_labels": 0
+  },
+  "category_counts": {
+    "banking": 5,
+    "education": 7,
+    "employment": 6,
+    "entertainment": 4,
+    "finance_fintech": 9,
+    "food_restaurants": 9,
+    "gaming_esports_review": 4,
+    "government": 14,
+    "healthcare": 7,
+    "news_media": 9,
+    "real_estate": 7,
+    "shopping_retail": 12,
+    "telecommunications": 6,
+    "transport_logistics": 7
+  },
+  "review_priorities": {
+    "HIGH_HARD_NEGATIVE_REVIEW": 17,
+    "STANDARD_REVIEW": 89
+  },
+  "historical_sources": {
+    "baseline_train.csv": {
+      "rows": 507,
+      "sha256": "71b448c2390afd5693f69d38b18e1f4d45a217d4dfaf6f6b2264302ca302c6b3"
+    },
+    "baseline_validation.csv": {
+      "rows": 169,
+      "sha256": "acffd215c930a5be3600600cd36e91cdbc9707054b6bbd96962a6757ed9de430"
+    },
+    "baseline_test.csv": {
+      "rows": 170,
+      "sha256": "e093d6dd6b58c2ed087327783752a344eb57774960c689b75189a39db7d797de"
+    }
+  },
+  "source_checksums": {
+    "pagcor_positive_candidates": "bede9476ec7f5547127604934d740d1ff083ba346e1a296f1702dbfc93bb3d5d",
+    "existing_benign_candidates": "4ae5354cd68fc46c8191f79584edd7876cd3624c7a281f911910a4eea38b5a46",
+    "expansion_seeds": "92349678f4b935441e4db7c07cd7a1800897260e72dea7f536b6a8d9a0935b8e"
+  },
+  "outputs": {
+    "candidates": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\benign_expansion_v1\\ph_benign_expanded_candidates.csv",
+    "review": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\benign_expansion_v1\\ph_benign_diverse_review_queue.csv",
+    "excluded": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\benign_expansion_v1\\ph_benign_excluded_conflicts.csv",
+    "summary": "C:\\Users\\daniel jay bernadas\\Desktop\\BetGuard\\betguard\\ml\\data\\expanded\\pagcor_ph\\benign_expansion_v1\\ph_benign_expansion_summary.json"
+  },
+  "limitations": [
+    "Domains are proposed research candidates, not verified benign examples.",
+    "Philippine relevance and current ownership have not been verified.",
+    "A candidate homepage URL does not count as independent evidence.",
+    "Gaming and esports websites require special review.",
+    "Historical overlaps cannot be used in a virgin test set.",
+    "Source and brand-family leakage must be addressed before evaluation.",
+    "No model or production data has been changed."
+  ]
+}

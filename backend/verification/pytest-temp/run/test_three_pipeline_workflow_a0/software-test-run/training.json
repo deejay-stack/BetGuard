@@ -1,0 +1,256 @@
+{
+  "candidate_manifests": {
+    "logistic_regression": "b14b01da37d1a42475b51765892e345832959dc2a5e8d20f1ad9f462ec3ebb09",
+    "random_forest": "16dfdc3ea8f5c8ff36247cf1ff901dbaf06e109ccd5a9079d18bf6b6804459b1",
+    "svm": "f265bb9a27a5f39fb654c842998fe29fe8fb5a173c41a70d7159d93c17d2dddd"
+  },
+  "results": {
+    "logistic_regression": {
+      "algorithm": "logistic_regression",
+      "config": {
+        "max_false_negative_rate": 0.05,
+        "max_false_positive_rate": 0.02,
+        "max_features": 200,
+        "max_latency_ms": 100.0,
+        "max_rows": 20000,
+        "min_class_per_split": 2,
+        "min_decisions": 1,
+        "min_predictive_value": 0.95,
+        "seed": 42,
+        "trees": 4
+      },
+      "created_at": "2026-10-07T09:00:24.195571+00:00",
+      "dataset_sha256": "b04c439107904ac663148bb37f0c32263cc6ab3f0a02a9ab7cef5ec0a5e72d2b",
+      "evaluation": {
+        "validation": {
+          "abstained": 0,
+          "binary_accuracy": 1.0,
+          "binary_confusion_matrix": [
+            [
+              10,
+              0
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "binary_f1": 1.0,
+          "binary_false_positive_rate": 0.0,
+          "binary_precision": 1.0,
+          "binary_recall": 1.0,
+          "binary_sensitivity": 1.0,
+          "binary_specificity": 1.0,
+          "binary_true_skill_statistic": 1.0,
+          "calibration": "not_evaluated_no_probability_exposed",
+          "class_counts": {
+            "gambling": 10,
+            "non_gambling": 10
+          },
+          "coverage": 1.0,
+          "false_negative_rate_including_abstention": 0.0,
+          "false_positive_rate_including_abstention": 0.0,
+          "gambling_precision": 1.0,
+          "gambling_recall_including_abstention": 1.0,
+          "non_gambling_predictive_value": 1.0,
+          "pr_auc_average_precision": 0.9999999999999999,
+          "roc_auc": 1.0,
+          "rows": 20,
+          "selective_accuracy": 1.0,
+          "selective_confusion_matrix": [
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ]
+          ]
+        }
+      },
+      "inference_latency": {
+        "median_ms": 5.177449998882366,
+        "p95_ms": 6.077019996882883,
+        "samples": 20
+      },
+      "model_version": "software-test-run-logistic_regression-78775112cda6",
+      "purpose": "software_test",
+      "split_sha256": "78775112cda65fea49c83f6b08c68a5319757d019b43eaf9d00757c9751c6f37",
+      "synthetic": true,
+      "thresholds": {
+        "gambling_min": 1.7598176639044874,
+        "non_gambling_max": -1.6653798821887162
+      },
+      "training_seconds": 0.019939600002544466
+    },
+    "random_forest": {
+      "algorithm": "random_forest",
+      "config": {
+        "max_false_negative_rate": 0.05,
+        "max_false_positive_rate": 0.02,
+        "max_features": 200,
+        "max_latency_ms": 100.0,
+        "max_rows": 20000,
+        "min_class_per_split": 2,
+        "min_decisions": 1,
+        "min_predictive_value": 0.95,
+        "seed": 42,
+        "trees": 4
+      },
+      "created_at": "2026-10-07T09:00:24.771741+00:00",
+      "dataset_sha256": "b04c439107904ac663148bb37f0c32263cc6ab3f0a02a9ab7cef5ec0a5e72d2b",
+      "evaluation": {
+        "validation": {
+          "abstained": 0,
+          "binary_accuracy": 1.0,
+          "binary_confusion_matrix": [
+            [
+              10,
+              0
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "binary_f1": 1.0,
+          "binary_false_positive_rate": 0.0,
+          "binary_precision": 1.0,
+          "binary_recall": 1.0,
+          "binary_sensitivity": 1.0,
+          "binary_specificity": 1.0,
+          "binary_true_skill_statistic": 1.0,
+          "calibration": "not_evaluated_no_probability_exposed",
+          "class_counts": {
+            "gambling": 10,
+            "non_gambling": 10
+          },
+          "coverage": 1.0,
+          "false_negative_rate_including_abstention": 0.0,
+          "false_positive_rate_including_abstention": 0.0,
+          "gambling_precision": 1.0,
+          "gambling_recall_including_abstention": 1.0,
+          "non_gambling_predictive_value": 1.0,
+          "pr_auc_average_precision": 1.0,
+          "roc_auc": 1.0,
+          "rows": 20,
+          "selective_accuracy": 1.0,
+          "selective_confusion_matrix": [
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ]
+          ]
+        }
+      },
+      "inference_latency": {
+        "median_ms": 4.606750004313653,
+        "p95_ms": 6.40663499943912,
+        "samples": 20
+      },
+      "model_version": "software-test-run-random_forest-78775112cda6",
+      "purpose": "software_test",
+      "split_sha256": "78775112cda65fea49c83f6b08c68a5319757d019b43eaf9d00757c9751c6f37",
+      "synthetic": true,
+      "thresholds": {
+        "gambling_min": 1.0,
+        "non_gambling_max": 0.0
+      },
+      "training_seconds": 0.03173190000234172
+    },
+    "svm": {
+      "algorithm": "svm",
+      "config": {
+        "max_false_negative_rate": 0.05,
+        "max_false_positive_rate": 0.02,
+        "max_features": 200,
+        "max_latency_ms": 100.0,
+        "max_rows": 20000,
+        "min_class_per_split": 2,
+        "min_decisions": 1,
+        "min_predictive_value": 0.95,
+        "seed": 42,
+        "trees": 4
+      },
+      "created_at": "2026-10-07T09:00:24.502400+00:00",
+      "dataset_sha256": "b04c439107904ac663148bb37f0c32263cc6ab3f0a02a9ab7cef5ec0a5e72d2b",
+      "evaluation": {
+        "validation": {
+          "abstained": 0,
+          "binary_accuracy": 1.0,
+          "binary_confusion_matrix": [
+            [
+              10,
+              0
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "binary_f1": 1.0,
+          "binary_false_positive_rate": 0.0,
+          "binary_precision": 1.0,
+          "binary_recall": 1.0,
+          "binary_sensitivity": 1.0,
+          "binary_specificity": 1.0,
+          "binary_true_skill_statistic": 1.0,
+          "calibration": "not_evaluated_no_probability_exposed",
+          "class_counts": {
+            "gambling": 10,
+            "non_gambling": 10
+          },
+          "coverage": 1.0,
+          "false_negative_rate_including_abstention": 0.0,
+          "false_positive_rate_including_abstention": 0.0,
+          "gambling_precision": 1.0,
+          "gambling_recall_including_abstention": 1.0,
+          "non_gambling_predictive_value": 1.0,
+          "pr_auc_average_precision": 0.9999999999999999,
+          "roc_auc": 1.0,
+          "rows": 20,
+          "selective_accuracy": 1.0,
+          "selective_confusion_matrix": [
+            [
+              10,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              0
+            ]
+          ]
+        }
+      },
+      "inference_latency": {
+        "median_ms": 5.79479999942123,
+        "p95_ms": 7.580949995826816,
+        "samples": 20
+      },
+      "model_version": "software-test-run-svm-78775112cda6",
+      "purpose": "software_test",
+      "split_sha256": "78775112cda65fea49c83f6b08c68a5319757d019b43eaf9d00757c9751c6f37",
+      "synthetic": true,
+      "thresholds": {
+        "gambling_min": 0.9319893037643368,
+        "non_gambling_max": -0.8981034670345085
+      },
+      "training_seconds": 0.0233042000036221
+    }
+  },
+  "selected": "logistic_regression",
+  "selection_basis": "validation recall under precision/FPR and latency constraints, coverage, fixed simpler-model preference",
+  "split_sha256": "78775112cda65fea49c83f6b08c68a5319757d019b43eaf9d00757c9751c6f37",
+  "test_evaluated": false
+}

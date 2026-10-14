@@ -1,0 +1,12 @@
+{
+  "original_noncache_files_checked": 412,
+  "unexpected_changes": [],
+  "preexisting_tracked_diff_preserved": true,
+  "validated_cache_files_removed": 64,
+  "cache_bytes_removed": 643267,
+  "allowed_changes": [
+    "README.md",
+    "ml/src/audit_local_evidence.py"
+  ],
+  "production_svm_activated": false
+}

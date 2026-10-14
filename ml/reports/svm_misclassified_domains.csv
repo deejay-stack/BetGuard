@@ -1,0 +1,24 @@
+domain,label,source,category,domain_family,svm_decision_score,predicted_label,correct,distance_from_threshold
+airfryer-tips.us,0,UT1_non_gambling_category,cooking,airfryer-tips.us,-0.07199574288971539,1,False,0.00033751762044037514
+playtime.com.ph,1,verified_gambling,gambling,playtime.com.ph,-0.0943301954282105,0,False,0.02199693491805474
+denimjunkies.com,0,UT1_non_gambling_category,shopping,denimjunkies.com,-0.03233854276545847,1,False,0.03999471774469729
+tricentury.com,0,UT1_non_gambling_category,bank,tricentury.com,-0.02620247722357244,1,False,0.04613078328658332
+euchrelinks.com,0,UT1_non_gambling_category,games,euchrelinks.com,-0.018679642948855796,1,False,0.053653617561299966
+doingtobeing.com,0,UT1_non_gambling_category,jobsearch,doingtobeing.com,-0.012092257710080573,1,False,0.06024100280007519
+jeux-pour-enfants.com,0,UT1_non_gambling_category,"child, games",jeux-pour-enfants.com,0.009251312763295189,1,False,0.08158457327345095
+3chardons.com,0,UT1_non_gambling_category,child,3chardons.com,0.013653895631749763,1,False,0.08598715614190552
+slamz.com,1,verified_gambling,gambling,slamz.com,-0.18599481154763026,0,False,0.1136615510374745
+castpost.com,0,UT1_non_gambling_category,audio-video,castpost.com,0.06741910723816733,1,False,0.1397523677483231
+capoeuropa.com,0,UT1_non_gambling_category,sports,capoeuropa.com,0.09921763354890348,1,False,0.17155089405905924
+haha777.world,1,verified_gambling,gambling,haha777.world,-0.2594767941715318,0,False,0.18714353366137604
+godcures.online,0,UT1_non_gambling_category,jobsearch,godcures.online,0.12103998988845863,1,False,0.1933732503986144
+ab-cds.com,0,UT1_non_gambling_category,shopping,ab-cds.com,0.12105869035818803,1,False,0.1933919508683438
+topshift.com,0,UT1_non_gambling_category,games,topshift.com,0.12151586680363582,1,False,0.19384912731379159
+kajotgames.com,1,verified_gambling,gambling,kajotgames.com,-0.28889587528477506,0,False,0.2165626147746193
+filmstreaming.cc,0,UT1_non_gambling_category,audio-video,filmstreaming.cc,0.16322251995014778,1,False,0.23555578046030354
+juegopc10.com,0,UT1_non_gambling_category,games,juegopc10.com,0.16346867017176978,1,False,0.23580193068192554
+mcb1980.com,0,UT1_non_gambling_category,bank,mcb1980.com,0.17415329939881216,1,False,0.24648655990896792
+750g.com,0,UT1_non_gambling_category,cooking,750g.com,0.18931412573707876,1,False,0.2616473862472345
+babu88bd.com,1,verified_gambling,gambling,babu88bd.com,-0.405621699057208,0,False,0.33328843854705226
+game-focus.com,0,UT1_non_gambling_category,games,game-focus.com,0.3109753478691608,1,False,0.3833086083793166
+w88kub.com,1,verified_gambling,gambling,w88kub.com,-0.5363334311737156,0,False,0.4640001706635598

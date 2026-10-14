@@ -1,0 +1,27 @@
+{
+  "created_at_utc": "2026-10-11T00:42:38.781686+00:00",
+  "random_seed": 42,
+  "source_file": "data\\expanded\\balanced_review_queue_v2.csv",
+  "source_sha256": "42d444c10f6025daaacedf7d8774ad4f9af3a4c127ca2955f77880407a3f56d5",
+  "label_type": "unverified_source_suggestion",
+  "counts": {
+    "development": 9400,
+    "audit": 200,
+    "holdout": 400
+  },
+  "partitions": {
+    "development": {
+      "path": "data\\expanded\\partitions_v1\\development_candidates.csv",
+      "sha256": "3377b2963c11033f8dd251d4a2f704f96d9a46fb2a8555cd3d4d53b8bca98281"
+    },
+    "audit": {
+      "path": "data\\expanded\\partitions_v1\\audit_review_template.csv",
+      "sha256": "95c1038fd6edcefbf7a616fa061d4ca9239c685ebf9880915584e1fb0d6bf4f7"
+    },
+    "holdout": {
+      "path": "data\\expanded\\partitions_v1\\holdout_review_template.csv",
+      "sha256": "b6b2541a1797d917df505ef5c86fed24e27b84ba5f0c12623b1ae64d46cd9d9a"
+    }
+  },
+  "holdout_policy": "Reserve before model development. Do not tune models or thresholds on holdout predictions."
+}

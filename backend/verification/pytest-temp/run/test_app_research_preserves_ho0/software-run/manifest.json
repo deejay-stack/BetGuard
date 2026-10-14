@@ -1,0 +1,41 @@
+{
+  "algorithm": "logistic_regression",
+  "approval": null,
+  "dataset_sha256": "f49503fe71810ce5b06d64aff285473d12e456056f43b327f105f7adf11b84e1",
+  "environment": {
+    "numpy": "2.5.3",
+    "python": "3.14",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "skops": "0.15.0"
+  },
+  "feature_sha256": "f662e6e843828c500ee0d13673a66522387d1685e54edb6131ad97428805843b",
+  "format": "betguard-app-metadata-v1",
+  "held_out_evaluation": {
+    "accuracy": 1.0,
+    "confusion_matrix": [
+      [
+        6,
+        0
+      ],
+      [
+        0,
+        6
+      ]
+    ],
+    "f1": 1.0,
+    "precision": 1.0,
+    "rows": 12,
+    "sensitivity": 1.0,
+    "specificity": 1.0,
+    "true_skill_statistic": 1.0
+  },
+  "labels": {
+    "gambling": 1,
+    "non_gambling": 0
+  },
+  "model_sha256": "68b75ddd75ba9017474a79985c3f5e8effec5a2c713abb4bf7ccfbc2417ef211",
+  "model_version": "app-logistic_regression-f49503fe7181",
+  "purpose": "software_test",
+  "synthetic": true
+}

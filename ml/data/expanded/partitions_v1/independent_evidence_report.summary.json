@@ -1,0 +1,46 @@
+{
+  "generated_at_utc": "2026-10-11T01:52:12.356098+00:00",
+  "classification": "Option A - direct real-money online gambling only",
+  "mode": "official_registry_matching_and_manual_evidence_triage",
+  "input": "data\\expanded\\partitions_v1\\audit_review_option_a_v2.csv",
+  "input_sha256": "cd0196a2c9c945cd2bde90b9f4b11234f463f2e77b8084d4c3a0b84311c02349",
+  "processed_domains": 200,
+  "source_status": {
+    "pagcor": {
+      "available": true,
+      "origin": "https://www.pagcor.ph/regulatory/pdf/App%20Kits/List-of-PAGCOR-Accredited-Gaming-System-Administrators-and-Registered-Brands-and-Domain-Names-URLs.pdf",
+      "sha256": "00366a98dbabfb7e59bbbe1c5ef5bd86dff4958327595d7431515d8d455aeeca",
+      "retrieved_at_utc": "2026-10-11T01:52:09.323369+00:00"
+    },
+    "ukgc_domains": {
+      "available": false,
+      "origin": "https://www.gamblingcommission.gov.uk/downloads/business-licence-register-domain-names.csv"
+    },
+    "ukgc_businesses": {
+      "available": false,
+      "origin": "https://www.gamblingcommission.gov.uk/downloads/business-licence-register-businesses.csv"
+    }
+  },
+  "pagcor_document_date": "October 8, 2026",
+  "pagcor_registry_domains": 432,
+  "ukgc_registry_domains": 0,
+  "findings": {
+    "NO_POSITIVE_REGISTRY_EVIDENCE": 200
+  },
+  "review_priorities": {
+    "P1_SOURCE_CONFLICT_OR_POLICY": 8,
+    "P2_VERIFY_DIRECT_WAGERING": 18,
+    "P3_FIND_INDEPENDENT_EVIDENCE": 110,
+    "P4_ROUTINE_EVIDENCE_REVIEW": 64
+  },
+  "human_labels_created": 0,
+  "deployed_models_changed": 0,
+  "limitations": [
+    "Exact registry matches are evidence, not final classifications.",
+    "A missing registry match is not negative evidence of gambling.",
+    "Official registries cover only their respective jurisdictions.",
+    "Current real-money functionality still requires confirmation.",
+    "Search URLs are research shortcuts, not evidence that searches occurred.",
+    "Original audit and production model remain unchanged."
+  ]
+}
